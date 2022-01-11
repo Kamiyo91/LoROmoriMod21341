@@ -27,7 +27,7 @@ namespace Omori_Om21341.DiceEffects
         {
             base.OnGiveDamage();
             var map = Map;
-            if (map != null) map.BoomFirst();
+            if (map != null) OmoriBoomEffectMap_Om21341MapManager.BoomFirst();
             PrintSound();
             isRunning = false;
         }

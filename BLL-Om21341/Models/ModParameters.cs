@@ -21,6 +21,8 @@ namespace BLL_Om21341.Models
                 new List<int> { 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 }, 10000001)
         };
 
+        public static BlackSilence4thMapManager BoomEffectMap = null;
+
         public static readonly Dictionary<int, int> DynamicNames = new Dictionary<int, int>
         {
             { 10000001, 12 }

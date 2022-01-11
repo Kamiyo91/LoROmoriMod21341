@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BLL_Om21341.Models;
+using UnityEngine;
 using Util_Om21341.CustomMapUtility.Assemblies;
 
 namespace Util_Om21341.CommonMaps
@@ -6,16 +7,12 @@ namespace Util_Om21341.CommonMaps
     public class OmoriBoomEffectMap_Om21341MapManager : CustomMapManager
     {
         private GameObject _aura;
-        private BlackSilence4thMapManager _mapGameObject;
         protected internal override string[] CustomBGMs => new[] { "Silence_Om21341.mp3" };
 
         public override void InitializeMap()
         {
             base.InitializeMap();
-            var map = Util.LoadPrefab("InvitationMaps/InvitationMap_BlackSilence4",
-                SingletonBehavior<BattleSceneRoot>.Instance.transform);
-            _mapGameObject = map.GetComponent<MapManager>() as BlackSilence4thMapManager;
-            Destroy(map);
+            if (ModParameters.BoomEffectMap == null) MapUtil.LoadBoomEffect();
         }
 
         public override void EnableMap(bool b)
@@ -24,9 +21,9 @@ namespace Util_Om21341.CommonMaps
             base.EnableMap(b);
         }
 
-        public void BoomFirst()
+        public static void BoomFirst()
         {
-            var gameObject = Instantiate(_mapGameObject.areaBoomEffect);
+            var gameObject = Instantiate(ModParameters.BoomEffectMap.areaBoomEffect);
             var battleUnitModel = BattleObjectManager.instance.GetList(Faction.Enemy)[0];
             gameObject.transform.SetParent(battleUnitModel.view.gameObject.transform);
             gameObject.transform.localPosition = Vector3.zero;

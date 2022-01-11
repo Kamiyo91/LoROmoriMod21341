@@ -26,6 +26,20 @@ namespace Util_Om21341
             MapChangedValue(true);
         }
 
+        public static void LoadBoomEffect()
+        {
+            var map = Util.LoadPrefab("InvitationMaps/InvitationMap_BlackSilence4",
+                SingletonBehavior<BattleSceneRoot>.Instance.transform);
+            ModParameters.BoomEffectMap = map.GetComponent<MapManager>() as BlackSilence4thMapManager;
+            Object.Destroy(map);
+        }
+
+        public static void UnloadBoomEffect()
+        {
+            Object.Destroy(ModParameters.BoomEffectMap);
+            ModParameters.BoomEffectMap = null;
+        }
+
         private static bool CheckStageMap(int id)
         {
             return Singleton<StageController>.Instance.GetStageModel().ClassInfo.id ==
