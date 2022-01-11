@@ -35,7 +35,7 @@ namespace BLL_Om21341.Models
 
         public static readonly Dictionary<string, List<int>> SpritePreviewChange = new Dictionary<string, List<int>>
         {
-            { "FragmentDefault_Om21341", new List<int> { 10000008, 10000009, 10000010, 10000011, 10000012 } },
+            { "FragmentDefault_Om21341", new List<int> { 10000015, 10000016, 10000017, 10000018 } },
             { "OmoriDefault_Om21341", new List<int> { 10000001 } }
         };
 
