@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFDCA036-F151-46A9-919F-AA3ABC08DEC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmotionalBurstPassive_Om21341</RootNamespace>
+    <AssemblyName>EmotionalBurstPassive-Om21341</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\BattleUnitBuf_Afraid_Om21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Angry_Om21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Happy_Om21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Mock_Om21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Neutral_Om21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Sad_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Angry_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Comeback_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Happy_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Headbutt_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_LuckySlice_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Mock_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Neutral_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Sad_Om21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Stab_Om21341.cs" />
+    <Compile Include="EmotionalBurstUtil.cs" />
+    <Compile Include="Passives\PassiveAbility_Angry_Om21341.cs" />
+    <Compile Include="Passives\PassiveAbility_EmotionalBurst_Om21341.cs" />
+    <Compile Include="Passives\PassiveAbility_Happy_Om21341.cs" />
+    <Compile Include="Passives\PassiveAbility_Neutral_Om21341.cs" />
+    <Compile Include="Passives\PassiveAbility_Sad_Om21341.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL-Om21341\BLL-Om21341.csproj">
+      <Project>{1DF30575-B636-45B5-B748-A37D420C63F0}</Project>
+      <Name>BLL-Om21341</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util-Om21341\Util-Om21341.csproj">
+      <Project>{dacdc2ea-d97b-47b0-ba6a-1e0d27800c68}</Project>
+      <Name>Util-Om21341</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
