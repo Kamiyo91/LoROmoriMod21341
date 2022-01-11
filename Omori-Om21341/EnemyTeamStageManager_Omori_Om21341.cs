@@ -20,7 +20,6 @@ namespace Omori_Om21341
         private NpcMechUtil_Omori _mechUtil;
         private bool _notSuccumb;
         private BattleUnitModel _omoriModel;
-
         public override void OnWaveStart()
         {
             CustomMapHandler.InitCustomMap("Omori1_Om21341", new Omori1_Om21341MapManager(), false, true, 0.5f, 0.55f);
@@ -39,7 +38,7 @@ namespace Omori_Om21341
             {
                 unit.forceRetreat = true;
                 PrepareUnitsPassives(unit);
-                unit.RecoverHP(unit.MaxHp);
+                unit.SetHp((int)unit.passiveDetail.GetStartHp(unit.MaxHp));
             }
             _linesCount = 0;
             _notSuccumb = false;
