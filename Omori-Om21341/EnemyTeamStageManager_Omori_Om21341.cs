@@ -159,7 +159,11 @@ namespace Omori_Om21341
                 {
                     _mechUtil.IncreasePhase();
                     if (_mechUtil.GetPhase() == 3)
+                    {
                         _omoriModel.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 54));
+                        foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player))
+                            unit.forceRetreat = true;
+                    }
                     else
                         _linesCount = 0;
                 }
