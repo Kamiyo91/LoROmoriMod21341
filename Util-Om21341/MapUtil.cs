@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using BLL_Om21341.Models;
+using CustomMapUtility;
 using HarmonyLib;
 using UnityEngine;
-using Util_Om21341.CustomMapUtility.Assemblies;
 
 namespace Util_Om21341
 {

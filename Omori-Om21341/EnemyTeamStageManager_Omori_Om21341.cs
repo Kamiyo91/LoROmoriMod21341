@@ -3,6 +3,7 @@ using System.Linq;
 using BLL_Om21341.Models;
 using BLL_Om21341.Models.Enum;
 using BLL_Om21341.Models.MechUtilModels;
+using CustomMapUtility;
 using EmotionalBurstPassive_Om21341.Passives;
 using LOR_XML;
 using Omori_Om21341.Buffs;
@@ -10,7 +11,6 @@ using Omori_Om21341.MapManagers;
 using Omori_Om21341.MechUtil;
 using Util_Om21341;
 using Util_Om21341.CommonBuffs;
-using Util_Om21341.CustomMapUtility.Assemblies;
 
 namespace Omori_Om21341
 {
@@ -36,12 +36,7 @@ namespace Omori_Om21341
             _omoriModel?.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_PlayerShimmeringBuf_Om21341());
             _omoriModel?.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_Immortal_Om21341());
             foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player))
-            {
-                unit.forceRetreat = true;
                 PrepareUnitsPassives(unit);
-                unit.SetHp((int)unit.passiveDetail.GetStartHp(unit.MaxHp));
-            }
-
             _linesCount = 0;
             _notSuccumb = false;
         }

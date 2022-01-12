@@ -59,11 +59,12 @@ namespace OmoriHarmony_Om21341.Harmony
             method = typeof(OmoriHarmony_Om21341).GetMethod("StageController_BonusRewardWithPopup");
             harmony.Patch(typeof(StageController).GetMethod("BonusRewardWithPopup", AccessTools.all),
                 null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("DropBookInventoryModel_LoadFromSaveData");
-            harmony.Patch(typeof(DropBookInventoryModel).GetMethod("LoadFromSaveData", AccessTools.all),
+            method = typeof(OmoriHarmony_Om21341).GetMethod("UICharacterListPanel_RefreshBattleUnitDataModel");
+            harmony.Patch(typeof(UICharacterListPanel).GetMethod("RefreshBattleUnitDataModel", AccessTools.all),
                 null, new HarmonyMethod(method));
             ModParameters.Language = GlobalGameManager.Instance.CurrentOption.language;
             MapUtil.GetArtWorks(new DirectoryInfo(ModParameters.Path + "/ArtWork"));
+            UnitUtil.AddBookOnGameStart(Singleton<DropBookInventoryModel>.Instance);
             UnitUtil.ChangeCardItem(ItemXmlDataList.instance);
             UnitUtil.ChangePassiveItem();
             SkinUtil.PreLoadBufIcons();
@@ -218,10 +219,24 @@ namespace OmoriHarmony_Om21341.Harmony
                 .Desc);
         }
 
-        public static void DropBookInventoryModel_LoadFromSaveData(DropBookInventoryModel __instance)
+        public static void UICharacterListPanel_RefreshBattleUnitDataModel(UICharacterListPanel __instance,
+            UnitDataModel data)
         {
-            var bookCount = __instance.GetBookCount(new LorId(ModParameters.PackageId, 10));
-            if (bookCount < 99) __instance.AddBook(new LorId(ModParameters.PackageId, 10), 99 - bookCount);
+            if (Singleton<StageController>.Instance.GetStageModel() == null ||
+                Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.packageId != ModParameters.PackageId ||
+                Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.id != 8) return;
+            var slot =
+                typeof(UICharacterListPanel).GetField("CharacterList", AccessTools.all)?.GetValue(__instance) as
+                    UICharacterList;
+            var stageModel = Singleton<StageController>.Instance.GetStageModel();
+            var list = UnitUtil.UnitsToRecover(stageModel, data);
+            foreach (var unit in list)
+            {
+                unit.Refreshhp();
+                var uicharacterSlot = slot?.slotList.Find(x => x.unitBattleData == unit);
+                if (uicharacterSlot == null || uicharacterSlot.unitBattleData == null) continue;
+                uicharacterSlot.ReloadHpBattleSettingSlot();
+            }
         }
     }
 }

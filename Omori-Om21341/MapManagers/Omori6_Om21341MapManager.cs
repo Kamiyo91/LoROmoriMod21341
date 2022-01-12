@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using Util_Om21341.CustomMapUtility.Assemblies;
+﻿using CustomMapUtility;
+using UnityEngine;
 
 namespace Omori_Om21341.MapManagers
 {

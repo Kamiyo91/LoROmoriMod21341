@@ -1,6 +1,6 @@
 ﻿using BLL_Om21341.Models;
+using CustomMapUtility;
 using UnityEngine;
-using Util_Om21341.CustomMapUtility.Assemblies;
 
 namespace Util_Om21341.CommonMaps
 {
