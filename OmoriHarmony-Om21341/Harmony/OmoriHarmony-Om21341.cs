@@ -62,9 +62,11 @@ namespace OmoriHarmony_Om21341.Harmony
             method = typeof(OmoriHarmony_Om21341).GetMethod("UICharacterListPanel_RefreshBattleUnitDataModel");
             harmony.Patch(typeof(UICharacterListPanel).GetMethod("RefreshBattleUnitDataModel", AccessTools.all),
                 null, new HarmonyMethod(method));
+            method = typeof(OmoriHarmony_Om21341).GetMethod("DropBookInventoryModel_LoadFromSaveData");
+            harmony.Patch(typeof(DropBookInventoryModel).GetMethod("LoadFromSaveData", AccessTools.all),
+                null, new HarmonyMethod(method));
             ModParameters.Language = GlobalGameManager.Instance.CurrentOption.language;
             MapUtil.GetArtWorks(new DirectoryInfo(ModParameters.Path + "/ArtWork"));
-            UnitUtil.AddBookOnGameStart(Singleton<DropBookInventoryModel>.Instance);
             UnitUtil.ChangeCardItem(ItemXmlDataList.instance);
             UnitUtil.ChangePassiveItem();
             SkinUtil.PreLoadBufIcons();
@@ -217,6 +219,11 @@ namespace OmoriHarmony_Om21341.Harmony
                     x.Key.Contains(parameters.Value.MessageId))
                 .Value
                 .Desc);
+        }
+        public static void DropBookInventoryModel_LoadFromSaveData(DropBookInventoryModel __instance)
+        {
+            var bookCount = __instance.GetBookCount(new LorId(ModParameters.PackageId, 10));
+            if (bookCount < 99) __instance.AddBook(new LorId(ModParameters.PackageId, 10), 99 - bookCount);
         }
 
         public static void UICharacterListPanel_RefreshBattleUnitDataModel(UICharacterListPanel __instance,

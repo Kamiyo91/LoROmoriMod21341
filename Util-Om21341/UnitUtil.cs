@@ -271,11 +271,5 @@ namespace Util_Om21341
                          value.Contains(passive.id.id)))
                 passive.InnerTypeId = key;
         }
-
-        public static void AddBookOnGameStart(DropBookInventoryModel instance)
-        {
-            var bookCount = instance.GetBookCount(new LorId(ModParameters.PackageId, 10));
-            if (bookCount < 99) instance.AddBook(new LorId(ModParameters.PackageId, 10), 99 - bookCount);
-        }
     }
 }

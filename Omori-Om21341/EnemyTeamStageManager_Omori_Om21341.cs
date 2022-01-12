@@ -20,9 +20,11 @@ namespace Omori_Om21341
         private NpcMechUtil_Omori _mechUtil;
         private bool _notSuccumb;
         private BattleUnitModel _omoriModel;
+        private List<BattleUnitModel> _playerUnits;
 
         public override void OnWaveStart()
         {
+            _playerUnits = new List<BattleUnitModel>();
             CustomMapHandler.InitCustomMap("Omori1_Om21341", new Omori1_Om21341MapManager(), false, true, 0.5f, 0.55f);
             CustomMapHandler.InitCustomMap("Omori2_Om21341", new Omori2_Om21341MapManager(), false, true, 0.5f, 0.55f);
             CustomMapHandler.InitCustomMap("Omori3_Om21341", new Omori3_Om21341MapManager(), false, true, 0.5f, 0.55f);
@@ -186,12 +188,17 @@ namespace Omori_Om21341
 
         private void BattleEnding()
         {
-            foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player)) unit.Die();
+            foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player))
+            {
+                _playerUnits.Add(unit);
+                unit.Die();
+            }
             _omoriModel.DieFake();
         }
 
         public override void OnEndBattle()
         {
+            foreach (var unit in _playerUnits) unit.Revive(1);
             MapUtil.UnloadBoomEffect();
         }
     }
