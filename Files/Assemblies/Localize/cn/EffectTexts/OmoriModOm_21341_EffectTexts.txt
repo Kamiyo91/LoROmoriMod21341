@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <effectTextList>
+-<BattleEffectText ID="OmoriModPage_Om21341">
+	<Name>大森的模组页面</Name>
+	<Desc>大森的模组添加的页面</Desc>
+</BattleEffectText>
+<BattleEffectText ID="Angry_Om21341">
+      <Name>生气的</Name>
+<Desc>获得1点[力量]，每个场景对自身造成1个[缴械]和3个[脆弱]。此角色每次受到伤害时获得1个[负面情绪币]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Enraged_Om21341">
+      <Name>被激怒</Name>
+<Desc>获得2【力量】，每个场景对自身造成2【缴械】和6【脆弱】。角色每次受到伤害获得1【负面情绪币】</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Furious_Om21341">
+      <Name>狂怒</Name>
+<Desc>获得3点【力量】，每个场景对自身造成3点【缴械】和9点【脆弱】。此角色每次受到伤害获得1点【负面情绪币】</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Happy_Om21341">
+      <Name>快乐的</Name>
+<Desc>每个场景获得 1 个 [急速]。[掷骰子时]以 10% 的几率将最大掷骰子提高 1 点或将最大掷骰子降低 1 个。在每个场景结束时更改 [正硬币] 中的所有情绪硬币类型</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Ecstatic_Om21341">
+      <Name>欣喜若狂</Name>
+<Desc>每个场景获得 2 [急速]。[掷骰子时]以 20% 的几率将最大掷骰子提高 2 点或将最大掷骰子降低 2 点。在每个场景结束时，将所有情绪硬币类型更改为 [正硬币]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Manic_Om21341">
+      <Name>狂躁症</Name>
+<Desc>每个场景获得 3 [急速]。[掷骰子时]以 30% 的几率将最大掷骰子提高 3 或降低最大掷骰子 3。在每个场景结束时，将所有情绪硬币类型更改为 [正硬币]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Sad_Om21341">
+      <Name>伤心</Name>
+<Desc>获得1个[耐力]和1个[保护]，每个场景对自己造成1个[绑定]。每个场景结束时改变[负硬币]中的所有情绪硬币类型</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Depressed_Om21341">
+      <Name>郁闷</Name>
+<Desc>获得2个[耐力]和2个[保护]，每个场景给自己2个[绑定]。每个场景结束时改变[负硬币]中的所有情绪硬币类型</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Miserable_Om21341">
+      <Name>悲惨的</Name>
+<Desc>获得3点[耐力]和3点[保护]，每个场景给自己3个[绑定]。每个场景结束时改变[负币]中的所有情绪币类型</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Neutral_Om21341">
+      <Name>中性的</Name>
+<Desc>多画一页并为每个场景恢复 1 盏灯。</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Mock_Om21341">
+	<Name>嘲笑</Name>
+	<Desc>将最小和最大掷骰子降低 {0}。</Desc>
+</BattleEffectText>
+<BattleEffectText ID="ModName_Om21341">
+      <Name>大森的模组</Name>
+<Desc>Mod's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="CredenzaName_Om21341">
+      <Name>大森</Name>
+<Desc>Credenza's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Afraid_Om21341">
+      <Name>害怕</Name>
+<Desc>在场景结束时获得 {0} 急速。不能使用任何群体攻击卡、自我卡、情绪卡和原始成本超过 3 的卡。额外受到 50% 的伤害。</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPage_Om21341">
+	<Name>大森的专属页面</Name>
+	<Desc>只能在大森的关键页面的牌组中设置</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriDropBook_Om21341">
+	<Name>Omori Drop</Name>
+	<Desc>获得大森之书。</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriFinalLine_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你应该死</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive1_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>大森没有屈服</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive2_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>大森不会屈服</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你造成了如此多的痛苦……但你什么也没做。所以你没有得到任何回报</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你的朋友永远不会原谅你。他们会像你一样抛弃你……这是你应得的</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你告诉自己你不想给别人增加负担……但事实是你很自私。你只是不想让人们依赖你</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你怎么看别人？你要让别人照顾你多久？你说你在乎，但你是个骗子</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你从来没有为别人做过任何事。你没用……还不如没用。你生病了</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>像你这样的人不配活下去</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你的朋友对你有误解。他们爱的人根本不是你。你让他们相信谎言来保护自己</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你只不过是个骗子……当他们看到真相时……他们会像你恨自己一样恨你</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>如果他们知道真相，您将永远无法重新获得他们的信任。无论你做什么，都将是无望的</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你要做的就是让事情变得更糟。死了会更好</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>死了会更好</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你杀了玛丽。她爱你而你杀了她</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>英雄爱她而你杀了她</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>奥布里爱她而你杀了她</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>凯尔爱她而你杀了她</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>巴兹尔爱她而你杀了她</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>你爱她却杀了她</Desc>
+    </BattleEffectText>
+  </effectTextList>
+</BattleEffectTextRoot>

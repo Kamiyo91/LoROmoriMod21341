@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bookDescList>
+    <BookDesc BookID="1">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000001">
+      <BookName>오모리의 책장</BookName>
+      <TextList>
+        <Desc>
+	</Desc>
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="12">
+      <BookName>오모리의 책장</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000012">
+      <BookName>Not Used</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="15">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000015">
+      <BookName>분노의 조각의 책장</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="16">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000016">
+      <BookName>행복의 조각의 책장</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="17">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000017">
+      <BookName>슬픔의 조각의 책장</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="18">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000018">
+      <BookName>무표정의 조각의 책장</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+  </bookDescList>
+</BookDescRoot>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cardDescList>
+        <BattleCardDesc ID="907">
+            <LocalizedName>Erase Enemies</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="32">
+            <LocalizedName>Angry</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="33">
+            <LocalizedName>Sad</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="34">
+            <LocalizedName>Happy</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="35">
+            <LocalizedName>Neutral</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="61">
+            <LocalizedName>Comeback</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="62">
+            <LocalizedName>Headbutt</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="63">
+            <LocalizedName>Lucky Slice</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="64">
+            <LocalizedName>Mock</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="65">
+            <LocalizedName>Stab</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="66">
+            <LocalizedName>Erase Enemies</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="67">
+            <LocalizedName>Hack Away</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="68">
+            <LocalizedName>Memory : Basil</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="69">
+            <LocalizedName>Broken Hope</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="70">
+            <LocalizedName>Memory : Flower Crown</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="71">
+            <LocalizedName>Memory : Friends</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="72">
+            <LocalizedName>Hopeless</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="73">
+            <LocalizedName>Memory : Picnic</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="74">
+            <LocalizedName>Something</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="75">
+            <LocalizedName>Guiltiness</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="76">
+            <LocalizedName>Omori's Stab</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="77">
+            <LocalizedName>Where Everything Began</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="78">
+            <LocalizedName>Mari's Protection?</LocalizedName>
+        </BattleCardDesc>
+  </cardDescList>
+</BattleCardDescRoot>

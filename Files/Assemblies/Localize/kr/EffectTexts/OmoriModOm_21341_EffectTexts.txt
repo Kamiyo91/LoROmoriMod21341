@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <effectTextList>
+-<BattleEffectText ID="OmoriModPage_Om21341">
+	<Name>오모리 모드 책장</Name>
+	<Desc>오모리 모드에 의해 추가됨</Desc>
+</BattleEffectText>
+<BattleEffectText ID="Angry_Om21341">
+      <Name>분노</Name>
+<Desc>막 시작시 힘 1, 무장 해제 1, 취약 3을 얻는다. 피격시 부정 감정 코인을 1 얻는다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Enraged_Om21341">
+      <Name>격노</Name>
+<Desc>막 시작시 힘 2, 무장 해제 2, 취약 6을 얻는다. 피격시 부정 감정 코인을 1 얻는다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Furious_Om21341">
+      <Name>폭주</Name>
+<Desc>막 시작시 힘 3, 무장 해제 3, 취약 9를 얻는다. 피격시 부정 감정 코인을 1 얻는다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Happy_Om21341">
+      <Name>행복</Name>
+<Desc>막 시작시 신속 1을 얻는다. 모든 주사위의 최댓값이 2 감소한다. 혹은 10% 확률로 2 증가한다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Ecstatic_Om21341">
+      <Name>희열</Name>
+<Desc>막 시작시 신속 2를 얻는다. 모든 주사위의 최댓값이 2 감소한다. 혹은 20% 확률로 2 증가한다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Manic_Om21341">
+      <Name>광기</Name>
+<Desc>막 시작시 신속 3을 얻는다. 모든 주사위의 최댓값이 2 감소한다. 혹은 30% 확률로 2 증가한다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Sad_Om21341">
+      <Name>슬픔</Name>
+<Desc>막 시작시 인내 1, 보호 1, 속박 1을 얻는다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Depressed_Om21341">
+      <Name>우울</Name>
+<Desc>막 시작시 인내 2, 보호 2, 속박 2를 얻는다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Miserable_Om21341">
+      <Name>비참</Name>
+<Desc>막 시작시 인내 3, 보호 3, 속박 3을 얻는다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Neutral_Om21341">
+      <Name>무표정</Name>
+<Desc>막 시작시 책장을 1장 뽑고 빛을 1 회복한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Mock_Om21341">
+	<Name>조롱</Name>
+	<Desc>모든 주사위의 최솟값과 최댓값 -{0}</Desc>
+</BattleEffectText>
+<BattleEffectText ID="ModName_Om21341">
+      <Name>오모리 모드</Name>
+<Desc>Mod's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="CredenzaName_Om21341">
+      <Name>오모리</Name>
+<Desc>Credenza's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Afraid_Om21341">
+      <Name>공포</Name>
+<Desc>막 시작 시 신속 {0}을 얻고, 원래 비용이 4 이상인 모든 책장을 사용할 수 없다. 또한, 받는 피해량이 50% 증가한다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPage_Om21341">
+	<Name>오모리 전용 책장</Name>
+	<Desc>오모리의 책장에만 장착가능</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriDropBook_Om21341">
+	<Name>Omori Drop</Name>
+	<Desc>오모리의 책 획득</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriFinalLine_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>넌 죽어야 해.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive1_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>오모리는 굴복하지 않았다.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive2_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>오모리는 굴복하지 않으리라.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>넌 너무나도 많은 고통을 줬어... 그러면서도 아무것도 하지 않았지. 그래서 아무런 대가도 없었어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>네 친구들은 널 용서하지 않을거야. 네가 그랬듯이, 너를 버려버릴 거야... 너는 그게 어울리는 녀석이야.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>남에게 부담을 주고 싶진 않다고 스스로에게 말하고는 있겠지만... 사실 너는 이기적이야. 사람들이 네게 의지하지 않았으면 하지.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>네가 타인을 생각해본 게 언제지? 언제까지 사람들의 보살핌만 받을 생각이지? 신경쓴다곤 말하지만, 넌 거짓말쟁이야.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>누구를 위해서도, 그 무엇도 해 본 적 없잖아. 너는 형편없어... 형편없는 것 이상이야. 너는 역겨워.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>너 같은 사람은 살 자격이 없어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>네 친구들은 널 모르고 있어. 그들이 사랑하는 사람은 전혀 네가 아냐. 너는 자신을 지키기 위해, 저들이 거짓말을 믿어도 내버려두었지.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>너는 거짓말쟁이일 뿐이야... 네 친구들은 진실을 마주하면... 네가 네 자신을 혐오하는 만큼 널 혐오하게 될거야.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>진실을 알게 되면, 넌 이제 친구들의 신뢰를 얻을 수 없을거야. 네가 뭘 하든간에, 가망은 없어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>모든 일을 심각하게만 만들 뿐이야. 차라리 죽는 게 나아.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>그냥 죽어버리는 게 나아.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>너는 마리를 죽였어. 마리는 널 정말 사랑했는데, 너는 마리를 죽였어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>히로가 정말 사랑했는데, 너는 마리를 죽였어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>오브리가 정말 사랑했는데, 너는 마리를 죽였어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>켈이 정말 사랑했는데, 너는 마리를 죽였어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>바질이 정말 사랑했는데, 너는 마리를 죽였어.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>네가 정말 사랑했으면서, 너는 마리를 죽였어.</Desc>
+    </BattleEffectText>
+  </effectTextList>
+</BattleEffectTextRoot>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cardDescList>
+        <BattleCardDesc ID="907">
+            <LocalizedName>적 지우기</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="32">
+            <LocalizedName>분노</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="33">
+            <LocalizedName>슬픔</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="34">
+            <LocalizedName>행복</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="35">
+            <LocalizedName>무표정</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="61">
+            <LocalizedName>복귀</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="62">
+            <LocalizedName>박치기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="63">
+            <LocalizedName>행운의 자르기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="64">
+            <LocalizedName>조롱하기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="65">
+            <LocalizedName>찌르기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="66">
+            <LocalizedName>적 지우기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="67">
+            <LocalizedName>마구 베기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="68">
+            <LocalizedName>기억 : 바질</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="69">
+            <LocalizedName>부서진 희망</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="70">
+            <LocalizedName>기억 : 화관</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="71">
+            <LocalizedName>기억 : 친구</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="72">
+            <LocalizedName>절망</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="73">
+            <LocalizedName>기억 : 소풍</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="74">
+            <LocalizedName>무언가</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="75">
+            <LocalizedName>죄책감</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="76">
+            <LocalizedName>오모리의 찌르기</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="77">
+            <LocalizedName>모든 것이 시작된 곳</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="78">
+            <LocalizedName>마리의 보호?</LocalizedName>
+        </BattleCardDesc>
+  </cardDescList>
+</BattleCardDescRoot>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PassiveDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<PassiveDesc ID="29">
+		<Name>ハッピー</Name>
+    <Desc>各シーン1[速攻]を獲得。[サイコロロールについて]*マキシマム*サイコロロールを2倍にするか、*マキシマム*サイコロロールを2倍に10%の確率で下げます。 各シーンの終わりには、すべての感情コインタイプを[正のコイン]に変更します。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="30">
+		<Name>怒っている</Name>
+    <Desc>それぞれのシーンで1[強さ]を獲得し、1[武装解除]と3[壊れやすい]を自分に与える。このキャラクターがダメージを受けるたびに、1つの[負の感情コイン]が得られます。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="31">
+		<Name>悲しい。</Name>
+    <Desc>1つの[持久力]と2つの[保護]を獲得し、それぞれ1つの[バインド]を自分に与えるScene.At 各シーンの終わりは、[負のコイン]ですべての感情コインタイプを変更します。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="32">
+		<Name>ニュートラル</Name>
+    <Desc>追加のページを一つ描き、シーンごとに1つのライトを復元します。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="35">
+		<Name>装備できません</Name>
+    <Desc>このキーページは装備できません。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="28">
+		<Name>感情的なバースト-怒り</Name>
+    <Desc>任意のキャラクター（味方、敵、または自己）で使用できる特別な戦闘ページを1つ獲得します。 [怒り]は[悲しい]に対して最も強いです。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="46">
+		<Name>エモーショナルバースト-ハッピー</Name>
+    <Desc>任意のキャラクター（味方、敵、または自己）で使用できる特別な戦闘ページを1つ獲得します。 [幸せ]は[怒り]に対して最も強いです。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="47">
+		<Name>感情的なバースト-悲しい</Name>
+    <Desc>任意のキャラクター（味方、敵、または自己）で使用できる特別な戦闘ページを1つ獲得します。 [悲しい]は[幸せ]に対して最も強いです。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="48">
+		<Name>エモーショナルバースト-ニュートラル</Name>
+    <Desc>任意のキャラクター（味方、敵、または自己）で使用できる特別な戦闘ページを1つ獲得します。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="51">
+		<Name>大森</Name>
+    <Desc>戦闘開始時にEGOページを追加します。 [致命的なダメージの場合]シーンが終了するまですべてのダメージの影響を受けなくなり、20 Hpを回復すると、このキャラクターは次のシーンをターゲットにすることもターゲットにすることもできなくなります（この効果は5シーン後に再充電されます）</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="52">
+		<Name>大森</Name>
+    <Desc>このキャラクターは毎ターンランダムに[エモーションバフカード]を使用します。 [致命的なダメージの場合]シーンの終わりまですべてのダメージの影響を受けなくなり、このキャラクターは次のシーンをターゲットにすることもターゲットにすることもできません。フェーズを変更した後。フェーズ2の開始時に、フェーズ3からの特別なマスアタックカードを使用し、各シーンで特別なマスアタックカードを使用します。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="53">
+		<Name>マリの保護？</Name>
+    <Desc>戦闘開始時にカウンターダイス（ブロック、4-8）を得る。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="54">
+		<Name>あなたはただ死ぬべきです</Name>
+    <Desc>各シーンの終わりに、ランダムなキャラクターにパワーヌルが与えられ、このキャラクターは3の強さと3の耐久性を獲得します。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="55">
+		<Name>包丁</Name>
+    <Desc>[ヒット時] 1ブリードを与えます。</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

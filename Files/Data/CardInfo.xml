@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Card ID="907">
+    <Name>Erase Enemies</Name>
+    <TextId>-1</TextId>
+    <Artwork>EraseEnemy.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="0" Affection="Team" EmotionLimit="0" />
+    <Script>OmoriMassAttackErase_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="OmoriCustomEgoAreaStrong_Om21341" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>3</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="32">
+    <Name>Angry</Name>
+    <TextId>-1</TextId>
+    <Artwork>Angry.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Instance" Cost="0" Affection="One" EmotionLimit="0" />
+    <Script>Angry_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList />
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="33">
+    <Name>Sad</Name>
+    <TextId>-1</TextId>
+    <Artwork>Sad.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Instance" Cost="0" Affection="One" EmotionLimit="0" />
+    <Script>Sad_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList />
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="34">
+    <Name>Happy</Name>
+    <TextId>-1</TextId>
+    <Artwork>Happy.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Instance" Cost="0" Affection="One" EmotionLimit="0" />
+    <Script>Happy_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList />
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="35">
+    <Name>Neutral</Name>
+    <TextId>-1</TextId>
+    <Artwork>Neutral.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Instance" Cost="0" Affection="One" EmotionLimit="0" />
+    <Script>Neutral_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList />
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="61">
+    <Name>Comeback</Name>
+    <TextId>-1</TextId>
+    <Artwork>ComeBack.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="0" Affection="One" EmotionLimit="0" />
+    <Script>Comeback_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="8" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="62">
+    <Name>Headbutt</Name>
+    <TextId>-1</TextId>
+    <Artwork>Headbutt.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>Headbutt_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="21" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="Kurokumo_G" Script="weak1pw" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="63">
+    <Name>Lucky Slice</Name>
+    <TextId>-1</TextId>
+    <Artwork>LuckySlice.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="1" Affection="One" EmotionLimit="0" />
+    <Script>LuckySlice_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="ch1_H" Script="bleeding1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="ch1_J" Script="bleeding1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="64">
+    <Name>Mock</Name>
+    <TextId>-1</TextId>
+    <Artwork>Mock.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>Mock_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Hook_Z" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="Hook_Crazy_J" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Hook_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="65">
+    <Name>Stab</Name>
+    <TextId>-1</TextId>
+    <Artwork>Stab.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>Stab_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="20" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="ch1_Z" Script="paralysis1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Def" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="66">
+    <Name>Erase Enemies</Name>
+    <TextId>-1</TextId>
+    <Artwork>EraseEnemy.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="5" Affection="Team" EmotionLimit="0" />
+    <Script>OmoriMassAttackErase_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="9" Type="Atk" Detail="Hit" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="OmoriCustomEgoAreaStrong_Om21341" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>3</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="67">
+    <Name>Hack Away</Name>
+    <TextId>-1</TextId>
+    <Artwork>HackAway.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="4" Affection="Team" EmotionLimit="0" />
+    <Script>OmoriMassAttackSlash_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="12" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="OmoriHackAway_Om21341" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>5</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="68">
+    <Name>Memory : Basil</Name>
+    <TextId>-1</TextId>
+    <Artwork>Basil.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>Basil_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Def" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="69">
+    <Name>Broken Hope</Name>
+    <TextId>-1</TextId>
+    <Artwork>BrokenHope.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>BrokenHope_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="2" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="2" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="1" Dice="20" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="weakDisarmBinding1atk" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="70">
+    <Name>Memory : Flower Crown</Name>
+    <TextId>-1</TextId>
+    <Artwork>FlowerCrown.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>FlowerCrown_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="10" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="71">
+    <Name>Memory : Friends</Name>
+    <TextId>-1</TextId>
+    <Artwork>Friends.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>Friends_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="" Script="strength1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="72">
+    <Name>Hopeless</Name>
+    <TextId>-1</TextId>
+    <Artwork>Hopeless.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>Hopeless_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="73">
+    <Name>Memory : Picnic</Name>
+    <TextId>-1</TextId>
+    <Artwork>Picnic.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>Picnic_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="74">
+    <Name>Something</Name>
+    <TextId>-1</TextId>
+    <Artwork>Something.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>SomethingGuilt_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="7" Dice="8" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="" Script="AfraidDice_Om21341" ActionScript="" Desc="" />
+      <Behaviour Min="7" Dice="8" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="" Script="AfraidDice_Om21341" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="75">
+    <Name>Guiltiness</Name>
+    <TextId>-1</TextId>
+    <Artwork>SomethingMari.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="4" Affection="One" EmotionLimit="0" />
+    <Script>SomethingGuilt_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Hit" Motion="H" MotionDefault="N" EffectRes="" Script="AfraidDice_Om21341" ActionScript="" Desc="" />
+      <Behaviour Min="6" Dice="9" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="" Script="AfraidDice_Om21341" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="76">
+    <Name>Omori's Stab</Name>
+    <TextId>-1</TextId>
+    <Artwork>Stab.png</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>OmoriStab_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="20" Type="Atk" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="" Script="paralysis1atk" ActionScript="" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Standby" Detail="Evasion" Motion="E" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="77">
+    <Name>Where Everything Began</Name>
+    <TextId>-1</TextId>
+    <Artwork>Tree.png</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>SomethingGuilt_Om21341</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="5" Dice="10" Type="Def" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="paralysis1pw" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="10" Type="Def" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="paralysis1pw" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+  <Card ID="78">
+    <Name>Mari's Protection?</Name>
+    <TextId>-1</TextId>
+    <Artwork>Something.png</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" Affection="One" EmotionLimit="0" />
+    <Script />
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Guard" Motion="G" MotionDefault="N" EffectRes="" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <SpecialEffect />
+    <SkinChange />
+    <SkinChangeType>EGO</SkinChangeType>
+    <SkinHeight>0</SkinHeight>
+    <MapChange />
+    <Priority>0</Priority>
+    <PriorityScript />
+    <Category>None</Category>
+    <MaxCooltimeForEgo>9</MaxCooltimeForEgo>
+    <MaxNum>150</MaxNum>
+  </Card>
+</DiceCardXmlRoot>

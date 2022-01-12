@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <effectTextList>
+-<BattleEffectText ID="OmoriModPage_Om21341">
+	<Name>Omori's Mod Page</Name>
+	<Desc>Page added by Omori's Mod</Desc>
+</BattleEffectText>
+<BattleEffectText ID="Angry_Om21341">
+      <Name>Angry</Name>
+<Desc>Gain 1 [Strength],inflict on self 1 [Disarm] and 3 [Fragile] each Scene.Each time this Character takes damage Gain 1 [Negative Emotion Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Enraged_Om21341">
+      <Name>Enraged</Name>
+<Desc>Gain 2 [Strength],inflict on self 2 [Disarm] and 6 [Fragile] each Scene.Each time this Character takes damage Gain 1 [Negative Emotion Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Furious_Om21341">
+      <Name>Furious</Name>
+<Desc>Gain 3 [Strength],inflict on self 3 [Disarm] and 9 [Fragile] each Scene.Each time this Character takes damage Gain 1 [Negative Emotion Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Happy_Om21341">
+      <Name>Happy</Name>
+<Desc>Gain 1 [Haste] each Scene.[On Dice Roll]Boost the maximum Dice Roll by 1 or Lower the maximum Dice Roll by 1 at 10% chance.At the end of each Scene change all Emotions Coin Type in [Positive Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Ecstatic_Om21341">
+      <Name>Ecstatic</Name>
+<Desc>Gain  2 [Haste] each Scene.[On Dice Roll]Boost the maximum Dice Roll by 2 or Lower the maximum Dice Roll by 2 at 20% chance.At the end of each Scene change all Emotions Coin Type in [Positive Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Manic_Om21341">
+      <Name>Manic</Name>
+<Desc>Gain  3 [Haste] each Scene.[On Dice Roll]Boost the maximum Dice Roll by 3 or Lower the maximum Dice Roll by 3 at 30% chance.At the end of each Scene change all Emotions Coin Type in [Positive Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Sad_Om21341">
+      <Name>Sad</Name>
+<Desc>Gain 1 [Endurance] and 1 [Protection], inflict on self 1 [Bind] each Scene.At the end of each Scene change all Emotions Coin Type in [Negative Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Depressed_Om21341">
+      <Name>Depressed</Name>
+<Desc>Gain 2 [Endurance] and 2 [Protection], inflict on self 2 [Bind] each Scene.At the end of each Scene change all Emotions Coin Type in [Negative Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Miserable_Om21341">
+      <Name>Miserable</Name>
+<Desc>Gain 3 [Endurance] and 3 [Protection], inflict on self 3 [Bind] each Scene.At the end of each Scene change all Emotions Coin Type in [Negative Coin]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Neutral_Om21341">
+      <Name>Neutral</Name>
+<Desc>Draw one additional page and Restore 1 Light each Scene.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Mock_Om21341">
+	<Name>Mock</Name>
+	<Desc>Lower *min* and *max* Dice Roll by {0}.</Desc>
+</BattleEffectText>
+<BattleEffectText ID="ModName_Om21341">
+      <Name>Omori's Mod</Name>
+<Desc>Mod's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="CredenzaName_Om21341">
+      <Name>Omori</Name>
+<Desc>Credenza's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Afraid_Om21341">
+      <Name>Afraid</Name>
+<Desc>At the end of Scene gain {0} Haste. Cannot use any Mass Attack Cards, Ego Cards,Emotions Cards and Cards where original Cost is over 3. Take 50% additional Damage.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPage_Om21341">
+	<Name>Omori's Exclusive Page</Name>
+	<Desc>Can only be set in the deck of Omori's Key page</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriDropBook_Om21341">
+	<Name>Omori Drop</Name>
+	<Desc>Gained Book of Omori.</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriFinalLine_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You should just die</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive1_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>Omori did not succumb</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive2_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>Omori will not succumb</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You've caused so much suffering... yet you do nothing. And so you've earned nothing in return</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>Your friends will never forgive you. They'll abandon you like you did them... and that's what you deserve</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You tell yourself that you don't want to burden others... But the truth is that you're selfish. You just don't want people to depend on you</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>What do you think about others? How long are you going to let people take care of you?You say you care but you're a liar</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You've never done anything for anyone else. You're useless...less than useless. You're sick</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>People like you don't deserve to live</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>Your friends are wrong about you. The person they love isn't you at all. You let them believe in a lie to protect yourself</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You are nothing but a liar...and when they see the truth... They'll hate you as much as you hate yourself</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>If they know the truth, you'll never be able to regain their trust. No matter what you do, it will be hopeless</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>All you'll do is make things worse. It would be better to just die</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>It would be better to just die</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You killed MARI. She loved you and you killed her</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>HERO loved her and you killed her</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>AUBREY loved her and you killed her</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>KEL loved her and you killed her</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>BASIL loved her and you killed her</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>You loved her and you killed her</Desc>
+    </BattleEffectText>
+  </effectTextList>
+</BattleEffectTextRoot>

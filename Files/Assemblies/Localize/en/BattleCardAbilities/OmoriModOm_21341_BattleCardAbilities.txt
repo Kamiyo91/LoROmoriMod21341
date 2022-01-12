@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BattleCardAbility ID="Happy_Om21341">
+    <Desc>[On Play]Add Emotion [Happy] ([Using it more times will increase its effects]) and remove other Emotions this Scene
+[Happy]: Gain 1/2/3 [Haste] each Scene.[On Dice Roll]Boost the *maximum* Dice Roll by 1/2/3 or Lower the *maximum* Dice Roll by 1/2/3 at 10%/20%/30% chance.At the end of each Scene change all Emotions Coin Type in [Positive Coin]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Angry_Om21341">
+    <Desc>[On Play]Add Emotion [Angry] ([Using it more times will increase its effects]) and remove other Emotions this Scene
+[Angry]: Gain 1/2/3 [Strength],inflict on self 1/2/3 [Disarm] and 3/6/9 [Fragile] each Scene.Each time this Character takes damage Gain 1 [Negative Emotion Coin]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Sad_Om21341">
+    <Desc>[On Play]Add Emotion [Sad] ([Using it more times will increase its effects]) and remove other Emotions this Scene
+[Sad]: Gain 1/2/3 [Endurance] and 1/2/3 [Protection], inflict on self 1/2/3 [Bind] each Scene.At the end of each Scene change all Emotions Coin Type in [Negative Coin]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Neutral_Om21341">
+    <Desc>[On Play]Add Emotion [Neutral] and remove other Emotions this Scene [Neutral]: Draw one additional page and Restore 1 Light each Scene.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Headbutt_Om21341">
+    <Desc>[On Use] If the user is [Angry],draw 1 card and the dices of this page gain the effect "[On hit] Deal 10 damage to self,deal 25% more damage and 10 more extra damage to the target"</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Comeback_Om21341">
+    <Desc>Can be used only if the User's current Hp is lower than 25%
+[On Combat Start] Draw 1 Card. Makes the user [Happy]. If [Sad] was removed, recover 10/20/30 HP,10/20/30 Stagger Resist,restore 1/2/3 Light,gain 1/2/3 [Strength] and 1/2/3 [Endurance] this Scene based on [Sad] level.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="LuckySlice_Om21341">
+    <Desc>[On Use] If the user is [Happy] restore 2 Light and deal 10% more damage with this page.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Mock_Om21341">
+    <Desc>[On Combat Start] If the target is [Angry], lower target's *min* and *max* Dice Roll by 1 (it can be stacked 3 times) until the end of the Scene.[On Use] Draw 1 Card.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Stab_Om21341">
+    <Desc>[On Use] Draw 1 Card, if the user is [Sad] deal 25% more damage. If the target is [Happy] deal an additional 25% extra damage and draw 1 Card.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Basil_Om21341">
+    <Desc>[On Use] Restore 1 Light,if the user is [Happy] lower the [Cost] of other copies of this page by 1 and restore an additional Light.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="BrokenHope_Om21341">
+    <Desc>[On Use] Draw 1 Card,if the user is [Sad] the target become [Sad] too.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="FlowerCrown_Om21341">
+    <Desc>[On Use] Draw 1 Card,if the user is [Happy] lower the [Cost] of other copies of this page by 1.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Friends_Om21341">
+    <Desc>[On Use] Draw 1 Card,if each Character of the same team has one [Emotion Buff],lower the [Cost] of other copies of this page by 1 and Gain 1 [Strength] and 1 [Endurance] next Scene. (This effect cannot be triggered if no other allies are alive)</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Hopeless_Om21341">
+    <Desc>[On Use] Draw 1 Page. If the user is [Miserable], all [Dice] on this page gain +2 Power.</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriMassAttackErase_Om21341">
+    <Desc>[On Use] At Emotion Level 3/5 add the same [Dice] to this page 1/2 times. Each Dice on this page gain the effect "[On hit] Inflict 1 Afraid" (Cannot be used together with [Hack Away])</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriMassAttackSlash_Om21341">
+    <Desc>[On Use] At Emotion Level 5 add the same [Dice] to this page 1 time.Each Dice on this page gain the effect "[On hit] Inflict 1 Bleeding" (Cannot be used together with [Erase Enemies])</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriStab_Om21341">
+    <Desc>[On Use] If the user is [Sad] deal 25% more damage. If the target is [Happy] deal an additional 25% extra damage and draw 1 Card. If the user is [Miserable] lower the [Cost] of the other copies of this page by 1</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Picnic_Om21341">
+    <Desc>[On Use] Draw 1 Card,if each Character of the same team is [Happy], lower the [Cost] of the other copies of this page by 1, all allies (expect the user) Draw 1 Card and restore 1 Light. (This effect cannot be triggered if no other allies are alive)</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="SomethingGuilt_Om21341">
+    <Desc>[On Combat Start] Make the user [Sad].</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="AfraidDice_Om21341">
+    <Desc>[On hit] Inflict 1 stack of Afraid</Desc>
+    </BattleCardAbility>
+</BattleCardAbilityDescRoot>

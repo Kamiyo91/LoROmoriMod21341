@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bookDescList>
+    <BookDesc BookID="1">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000001">
+      <BookName>Omori's Page</BookName>
+      <TextList>
+        <Desc>
+	</Desc>
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="12">
+      <BookName>Omori's Page</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000012">
+      <BookName>Not Used</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="15">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000015">
+      <BookName>Fragment of Angry's Page</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="16">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000016">
+      <BookName>Fragment of Happy's Page</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="17">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000017">
+      <BookName>Fragment of Sad's Page</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+<BookDesc BookID="18">
+      <BookName>Not Used</BookName>
+    </BookDesc>
+    <BookDesc BookID="10000018">
+      <BookName>Fragment of Neutral's Page</BookName>
+      <TextList>
+        <Desc />
+      </TextList>
+    </BookDesc>
+  </bookDescList>
+</BookDescRoot>

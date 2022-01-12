@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PassiveXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Passive ID="28">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>EmotionalBurst_Om21341</Script>
+    <Name>Emotional Burst - Angry</Name>
+    <Desc>Gain one special Combat pages that benefit the user. Only one of the Four pages can be played per Scene.</Desc>
+  </Passive>
+  <Passive ID="29">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Happy_Om21341</Script>
+    <Name>Happy</Name>
+    <Desc>Gain 1 [Haste] each Scene.[On Dice Roll]Boost the *maximum* Dice Roll by 2 or Lower the *maximum* Dice Roll by 2 at 10% chance.At the end of each Scene change all Emotions Coin Type in [Positive Coin].</Desc>
+  </Passive>
+  <Passive ID="30">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Angry_Om21341</Script>
+    <Name>Angry</Name>
+    <Desc>Gain 1 [Strength],inflict on self 1 [Disarm] and 3 [Fragile] each Scene.Each time this Character takes damage Gain 1 [Negative Emotion Coin].</Desc>
+  </Passive>
+  <Passive ID="31">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Sad_Om21341</Script>
+    <Name>Sad</Name>
+    <Desc>Gain 1 [Endurance] and 2 [Protection], inflict on self 1 [Bind] each Scene.At the end of each Scene change all Emotions Coin Type in [Negative Coin].</Desc>
+  </Passive>
+  <Passive ID="32">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Neutral_Om21341</Script>
+    <Name>Neutral</Name>
+    <Desc>Draw one additional page and Restore 1 Light each Scene.</Desc>
+  </Passive>
+  <Passive ID="35">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>NotEquip_Om21341</Script>
+    <Name>Cannot Equip</Name>
+    <Desc>This Keypage cannot be equippped.</Desc>
+  </Passive>
+  <Passive ID="46">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>EmotionalBurst_Om21341</Script>
+    <Name>Emotional Burst - Happy</Name>
+    <Desc>Gain one special Combat pages that benefit the user. Only one of the Four pages can be played per Scene.</Desc>
+  </Passive>
+  <Passive ID="47">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>EmotionalBurst_Om21341</Script>
+    <Name>Emotional Burst - Sad</Name>
+    <Desc>Gain one special Combat pages that benefit the user. Only one of the Four pages can be played per Scene.</Desc>
+  </Passive>
+  <Passive ID="48">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>3</Cost>
+    <Script>EmotionalBurst_Om21341</Script>
+    <Name>Emotional Burst - Neutral</Name>
+    <Desc>Gain one special Combat pages that benefit the user. Only one of the Four pages can be played per Scene.</Desc>
+  </Passive>
+  <Passive ID="51">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>Omori_Om21341</Script>
+    <Name>Omori</Name>
+    <Desc>Omori Player</Desc>
+  </Passive>
+  <Passive ID="52">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>OmoriNpc_Om21341</Script>
+    <Name>Omori</Name>
+    <Desc>Omori Npc</Desc>
+  </Passive>
+  <Passive ID="53">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>5</Cost>
+    <Script>MariProtection_Om21341</Script>
+    <Name>Mari's Protection?</Name>
+    <Desc>Counter Dice</Desc>
+  </Passive>
+  <Passive ID="54">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>YouShouldJustDie_Om21341</Script>
+    <Name>You Should Just Die</Name>
+    <Desc>Last Phase Buff</Desc>
+  </Passive>
+  <Passive ID="55">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Rare</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>2</Cost>
+    <Script>KitchenKnife_Om21341</Script>
+    <Name>Kitchen Knife</Name>
+    <Desc>[On hit] Inflict 1 Bleed</Desc>
+  </Passive>
+</PassiveXmlRoot>

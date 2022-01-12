@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cardDescList>
+        <BattleCardDesc ID="907">
+            <LocalizedName>敵を消去する</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="32">
+            <LocalizedName>怒っている</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="33">
+            <LocalizedName>悲しい。</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="34">
+            <LocalizedName>ハッピー</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="35">
+            <LocalizedName>ニュートラル</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="61">
+            <LocalizedName>戻って</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="62">
+            <LocalizedName>頭突き</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="63">
+            <LocalizedName>ラッキースライス</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="64">
+            <LocalizedName>モック</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="65">
+            <LocalizedName>刺す</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="66">
+            <LocalizedName>敵を消去する</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="67">
+            <LocalizedName>ハックアウェイ</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="68">
+            <LocalizedName>記憶：バジル</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="69">
+            <LocalizedName>壊れた希望</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="70">
+            <LocalizedName>記憶：フラワークラウン</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="71">
+            <LocalizedName>記憶：友達</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="72">
+            <LocalizedName>絶望的</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="73">
+            <LocalizedName>記憶：ピクニック</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="74">
+            <LocalizedName>何か</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="75">
+            <LocalizedName>罪悪感</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="76">
+            <LocalizedName>大森の刺し傷</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="77">
+            <LocalizedName>すべてが始まった場所</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="78">
+            <LocalizedName>マリの保護？</LocalizedName>
+        </BattleCardDesc>
+  </cardDescList>
+</BattleCardDescRoot>

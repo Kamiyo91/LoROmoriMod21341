@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PassiveDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PassiveDesc ID="29">
+		<Name>Happy</Name>
+    <Desc>Gain 1 [Haste] each Scene.[On Dice Roll]Boost the *maximum* Dice Roll by 2 or Lower the *maximum* Dice Roll by 2 at 10% chance.At the end of each Scene change all Emotions Coin Type in [Positive Coin].</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="30">
+		<Name>Angry</Name>
+    <Desc>Gain 1 [Strength],inflict on self 1 [Disarm] and 3 [Fragile] each Scene.Each time this Character takes damage Gain 1 [Negative Emotion Coin].</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="31">
+		<Name>Sad</Name>
+    <Desc>Gain 1 [Endurance] and 2 [Protection], inflict on self 1 [Bind] each Scene.At the end of each Scene change all Emotions Coin Type in [Negative Coin].</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="32">
+		<Name>Neutral</Name>
+    <Desc>Draw one additional page and Restore 1 Light each Scene.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="35">
+		<Name>Cannot Equip</Name>
+    <Desc>This Keypage cannot be equipped.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="28">
+		<Name>Emotional Burst - Angry</Name>
+    <Desc>Gain one special Combat pages that can be used on any Character(allies,enemies or self). [Angry] is strongest against [Sad].</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="46">
+		<Name>Emotional Burst - Happy</Name>
+    <Desc>Gain one special Combat pages that can be used on any Character(allies,enemies or self). [Happy] is strongest against [Angry].</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="47">
+		<Name>Emotional Burst - Sad</Name>
+    <Desc>Gain one special Combat pages that can be used on any Character(allies,enemies or self). [Sad] is strongest against [Happy].</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="48">
+		<Name>Emotional Burst - Neutral</Name>
+    <Desc>Gain one special Combat pages that can be used on any Character(allies,enemies or self).</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="51">
+		<Name>Omori</Name>
+    <Desc>Add a EGO page on combat start. [On lethal damage] become immune to all damage until the end of the Scene, recover 20 Hp and this character cannot target or be targeted the next Scene.(This effect is recharged after 5 Scenes)</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="52">
+		<Name>Omori</Name>
+    <Desc>This character use a random [Emotion Buff Card] each turn. [On lethal damage] become immune to all damage until the end of the Scene, this character cannot target or be targeted the next Scene. After it change phase.At the start of Phase 2 use a special Mass Attack card, from the Phase 3 and on use a special Mass Attack Card each Scene.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="53">
+		<Name>Mari's Protection?</Name>
+    <Desc>Gain a counter die (Block, 4-8) at combat start.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="54">
+		<Name>You Should Just Die</Name>
+    <Desc>At the end of each Scene a random Character is inflicted with Powernull and this Character gain 3 Strength and 3 Endurance.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="55">
+		<Name>Kitchen Knife</Name>
+    <Desc>[On hit] Inflict 1 Bleed.</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>
