@@ -9,9 +9,9 @@ using LOR_XML;
 using Omori_Om21341.Buffs;
 using Omori_Om21341.MapManagers;
 using Omori_Om21341.MechUtil;
+using UnityEngine;
 using Util_Om21341;
 using Util_Om21341.CommonBuffs;
-using UnityEngine;
 
 namespace Omori_Om21341
 {
@@ -194,9 +194,12 @@ namespace Omori_Om21341
             _notSuccumb = true;
             _omoriModel.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_UntargetableOmori_Om21341());
         }
-        private void SetOverlay(int phase) {
+
+        private void SetOverlay(int phase)
+        {
             overlay.volume = SingletonBehavior<BattleSoundManager>.Instance.VolumeBGM;
-            switch (phase) {
+            switch (phase)
+            {
                 case 1:
                     overlay.clip = CustomMapHandler.GetAudioClip("b_omori_02.ogg");
                     overlay.Play();
@@ -211,6 +214,7 @@ namespace Omori_Om21341
                     break;
             }
         }
+
         private void BattleEnding()
         {
             foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player))

@@ -74,7 +74,7 @@
     <Compile Include="MapManagers\Omori3_Om21341MapManager.cs" />
     <Compile Include="MapManagers\Omori4_Om21341MapManager.cs" />
     <Compile Include="MapManagers\Omori5_Om21341MapManager.cs" />
-    <Compile Include="MapManagers\Omori6_Om21341MapManager.cs" />
+    <Compile Include="MapManagers\OmoriBase_Om21341MapManager.cs" />
     <Compile Include="MechUtil\MechUtil_Omori.cs" />
     <Compile Include="MechUtil\NpcMechUtil_Omori.cs" />
     <Compile Include="Passives\PassiveAbility_KitchenKnife_Om21341.cs" />
