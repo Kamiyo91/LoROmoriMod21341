@@ -57,5 +57,11 @@ namespace BLL_Om21341.Models
                 }
             }
         };
+
+        public static readonly Dictionary<int, List<SephirahType>> UniqueUnitStages =
+            new Dictionary<int, List<SephirahType>>
+            {
+                {8,new List<SephirahType> { SephirahType.Hod ,SephirahType.Malkuth,SephirahType.Yesod,SephirahType.Netzach}}
+            };
     }
 }

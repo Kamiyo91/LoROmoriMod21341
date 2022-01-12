@@ -120,18 +120,12 @@ namespace Util_Om21341
 
         public static List<UnitBattleDataModel> UnitsToRecover(StageModel stageModel, UnitDataModel data)
         {
-            var hodUnit = stageModel.GetFloor(SephirahType.Hod).GetUnitBattleDataList()
-                .Where(x => x.unitData.bookItem == data.bookItem);
-            var netUnit = stageModel.GetFloor(SephirahType.Netzach).GetUnitBattleDataList()
-                .Where(x => x.unitData.bookItem == data.bookItem);
-            var yesodUnit = stageModel.GetFloor(SephirahType.Yesod).GetUnitBattleDataList()
-                .Where(x => x.unitData.bookItem == data.bookItem);
-            var malkUnit = stageModel.GetFloor(SephirahType.Malkuth).GetUnitBattleDataList()
-                .Where(x => x.unitData.bookItem == data.bookItem);
-            var list = hodUnit.ToList();
-            list.AddRange(netUnit);
-            list.AddRange(yesodUnit);
-            list.AddRange(malkUnit);
+            var list = new List<UnitBattleDataModel>();
+            foreach (var sephirah in ModParameters.UniqueUnitStages.FirstOrDefault(x => x.Key.Equals(stageModel.ClassInfo.id.id)).Value)
+            {
+                list.AddRange(stageModel.GetFloor(sephirah).GetUnitBattleDataList()
+                    .Where(x => x.unitData == data));
+            }
             return list;
         }
 

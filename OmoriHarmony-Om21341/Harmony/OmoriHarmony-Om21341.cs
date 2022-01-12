@@ -224,7 +224,7 @@ namespace OmoriHarmony_Om21341.Harmony
         {
             if (Singleton<StageController>.Instance.GetStageModel() == null ||
                 Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.packageId != ModParameters.PackageId ||
-                Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.id != 8) return;
+                !ModParameters.UniqueUnitStages.ContainsKey(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.id)) return;
             var slot =
                 typeof(UICharacterListPanel).GetField("CharacterList", AccessTools.all)?.GetValue(__instance) as
                     UICharacterList;
