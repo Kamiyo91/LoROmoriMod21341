@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BattleCardAbility ID="Happy_Om21341">
+    <Desc>[プレイ上]受動的に感情[幸せ]を追加します（[それをより多くの時間を使用すると、その効果が増加します]）と他の感情受動的にこのシーンを削除します
+[ハッピー]:ゲイン1/2/3[速攻]各シーン。[サイコロロールについて]*最大*サイコロロールを1/2/3倍にするか、*最大*サイコロロールを1/2/3倍に10％/20％/30％の確率で下げます。 各シーンの終わりには、すべての感情コインタイプを[正のコイン]に変更します</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Angry_Om21341">
+    <Desc>[プレイ上]受動的に感情[怒っている]を追加します（[それをより多くの時間を使用すると、その効果が増加します]）と他の感情受動的にこのシーンを削除します
+[怒っている]:ゲイン1/2/3[強さ],自己に与える1/2/3[武装解除]と3/6/9[脆弱]各シーン.このキャラクターがダメージゲイン1を取るたびに[負の感情コイン]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Sad_Om21341">
+    <Desc>[プレイ中]受動的に感情[悲しい]を追加します（[それをより多くの時間を使用すると、その効果が増加します]）と他の感情受動的にこのシーンを削除します
+[Sad]:ゲイン1/2/3[持久力]と1/2/3[保護],自己に与える1/2/3[バインド]それぞれScene.At 各シーンの終わりは、[負のコイン]ですべての感情コインタイプを変更します</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Neutral_Om21341">
+    <Desc>[プレイ中]パッシブに感情[ニュートラル]を追加し、他の感情パッシブを削除このシーン[ニュートラル]：一つの追加ページを描画し、各シーンを1つの光を復元します。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Headbutt_Om21341">
+    <Desc>[使用中]ユーザーが[怒り]の場合、カードを1枚引くと、このページのサイコロは「[ヒット時]自分に10点のダメージを与え、対象に25％のダメージと10点の追加ダメージを与える」という効果を得る。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Comeback_Om21341">
+    <Desc>ユーザーの現在のHpが25％未満の場合にのみ使用できます
+【戦闘開始時】カードを1枚引く。ユーザーを[ハッピー]にします。 [悲しい]が削除された場合、10/20/30 HP、10/20/30よろめき抵抗を回復し、1/2/3の光を回復し、1/2/3 [強さ]と1/2/3 [耐久力]を獲得します。 [悲しい]レベルに基づくシーン。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="LuckySlice_Om21341">
+    <Desc>[使用中]ユーザーが[ハッピー]の場合、このページで2ライトを回復し、10％多くのダメージを与えます。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Mock_Om21341">
+    <Desc>[[戦闘開始時]対象が[怒り]の場合、シーン終了時まで対象のダイスロールの最小値と最大値を1（3回積み重ね可能）下げる。[使用時]カードを1枚引く。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Stab_Om21341">
+    <Desc>[使用中]ユーザーが[悲しい]場合、カードを1枚引き、25％多くのダメージを与える。ターゲットが[ハッピー]の場合、さらに25％の追加ダメージを与え、カードを1枚引きます。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Basil_Om21341">
+    <Desc>[使用中]ライトを1つ復元します。ユーザーが[ハッピー]の場合、このページの他のコピーの[コスト]を1下げて、追加のライトを復元します。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="BrokenHope_Om21341">
+    <Desc>[使用中]カードを1枚引く。ユーザーが[悲しい]の場合、対象も[悲しい]になる。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="FlowerCrown_Om21341">
+    <Desc>[使用時]カードを1枚引く。ユーザーが[幸せ]の場合、このページの他のコピーの[コスト]を1下げる。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Friends_Om21341">
+    <Desc>[使用中]同じチームの各キャラクターが[感情バフ]を1枚持っている場合、カードを1枚引き、このページの他のコピーの[コスト]を1下げ、次のシーンで1 [強さ]と1 [耐久力]を得る。 （他の味方が生きていない場合、この効果を発動することはできません）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Hopeless_Om21341">
+    <Desc>【使用時】1ページ描画します。ユーザーが惨めな場合、このページのすべてのダイスは+2のパワーを得る。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriMassAttackErase_Om21341">
+    <Desc>[使用中]感情レベル3/5で、同じ[サイコロ]をこのページに1/2回追加します。このページの各ダイスは、「[ヒット時] 1人の恐れを与える」という効果を得る（[ハックアウェイ]と一緒に使用することはできない）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriMassAttackSlash_Om21341">
+    <Desc>[使用中]感情レベル5で、同じ[ダイス]をこのページに1回追加します。このページの各ダイスは、「[ヒット時] 1回の出血を与える」効果を獲得します（[敵を消去]と一緒に使用することはできません）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriStab_Om21341">
+    <Desc>[使用中]ユーザーが[悲しい]場合、25％多くのダメージを与えます。ターゲットが[ハッピー]の場合、さらに25％の追加ダメージを与え、カードを1枚引きます。ユーザーが惨めな場合は、このページの他のコピーのコストを1つ下げてください</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Picnic_Om21341">
+    <Desc>[使用中]カードを1枚引く。同じチームの各キャラクターが[幸せ]の場合、このページの他のコピーの[コスト]を1下げる。すべての味方（ユーザーを想定）はカードを1枚引いてライトを1つ戻す。 （他の味方が生きていない場合、この効果を発動することはできません）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="SomethingGuilt_Om21341">
+    <Desc>[戦闘開始時]ユーザーを[悲しい]にします。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="AfraidDice_Om21341">
+    <Desc>[ヒット時]恐怖のスタックを1つ与える</Desc>
+    </BattleCardAbility>
+</BattleCardAbilityDescRoot>

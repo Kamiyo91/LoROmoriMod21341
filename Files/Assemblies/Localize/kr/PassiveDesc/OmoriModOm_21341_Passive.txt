@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PassiveDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PassiveDesc ID="29">
+		<Name>행복</Name>
+    <Desc>막 시작시 신속 1을 얻는다. 모든 주사위의 최댓값이 2 감소한다. 혹은 10% 확률로 2 증가한다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="30">
+		<Name>분노</Name>
+    <Desc>막 시작시 힘 1, 무장 해제 1, 취약 3을 얻는다. 피격시 부정 감정 코인을 1 얻는다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="31">
+		<Name>슬픔</Name>
+    <Desc>막 시작시 인내 1, 보호 1, 속박 1을 얻는다. 막 종료시 그 막동안 얻은 모든 감정 코인을 긍정 감정 코인으로 변환한다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="32">
+		<Name>무표정</Name>
+    <Desc>막 시작시 책장을 1장 뽑고 빛을 1 회복한다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="35">
+		<Name>장착 불가</Name>
+    <Desc>이 핵심 책장은 장착할 수 없다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="28">
+		<Name>감정 폭발 - 분노</Name>
+    <Desc>모든 캐릭터에게 장착 가능한 특수한 책장을 사용할 수 있다. 분노는 슬픔에 강하다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="46">
+		<Name>감정 폭발 - 행복</Name>
+    <Desc>모든 캐릭터에게 장착 가능한 특수한 책장을 사용할 수 있다. 행복은 분노에 강하다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="47">
+		<Name>감정 폭발 - 슬픔</Name>
+    <Desc>모든 캐릭터에게 장착 가능한 특수한 책장을 사용할 수 있다. 슬픔은 행복에 강하다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="48">
+		<Name>감정 폭발 - 무표정</Name>
+    <Desc>모든 캐릭터에게 장착 가능한 특수한 책장을 사용할 수 있다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="51">
+		<Name>오모리</Name>
+    <Desc>고유의 E.G.O를 사용할 수 있다. 체력이 0이 되는 피해를 받을 때, 그 피해를 0으로 만들고 체력을 20 회복한 후 막 종료까지 피해를 받지 않는다. 그리고 다음 막동안 대상 지정 불가, 행동 불가 상태에 걸린다.(5막마다 한번)</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="52">
+		<Name>오모리</Name>
+    <Desc>매 막마다 무작위 감정 버프 책장을 사용한다. 체력이 0이 되는 피해를 받을 때, 그 피해를 0으로 만들고 막 종료까지 피해를 받지 않는다. 그리고 다음 막동안 대상 지정 불가, 행동 불가 상태에 걸린다. 2페이즈에 돌입했다면 특수한 광역 공격 책장을 사용하고, 3페이즈 돌입시 매 막마다 특수한 광역 공격 책장을 사용한다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="53">
+		<Name>마리의 보호?</Name>
+    <Desc>전투 시작시 반격 주사위(방어, 4~8)을 1개 얻는다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="54">
+		<Name>너는 죽어야만 해</Name>
+    <Desc>막 종료시 다음 막에 힘 3, 인내 3을 얻고 무작위 캐릭터가 다음 막동안 위력의 효과를 받지 않는다.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="55">
+		<Name>식칼</Name>
+    <Desc>공격 적중시 다음 막에 출혈 1 부여</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

@@ -1,0 +1,72 @@
+<ModInfo>
+  <FaceInfo>
+    <Front_FrontHair>Front_FrontHair</Front_FrontHair>
+    <Front_RearHair>Front_RearHair</Front_RearHair>
+    <Front_Eye>Front_Eye</Front_Eye>
+    <Front_Brow_Normal>Front_Brow_Normal</Front_Brow_Normal>
+    <Front_Brow_Attack>Front_Brow_Attack</Front_Brow_Attack>
+    <Front_Brow_Hit>Front_Brow_Hit</Front_Brow_Hit>
+    <Front_Mouth_Normal>Front_Mouth_Normal</Front_Mouth_Normal>
+    <Front_Mouth_Attack>Front_Mouth_Attack</Front_Mouth_Attack>
+    <Front_Mouth_Hit>Front_Mouth_Hit</Front_Mouth_Hit>
+    <Side_FrontHair>Side_FrontHair</Side_FrontHair>
+    <Side_Eye>Side_Eye</Side_Eye>
+    <Side_RearHair_Front>Side_RearHair_Front</Side_RearHair_Front>
+    <Side_RearHair_Rear>Side_RearHair_Rear</Side_RearHair_Rear>
+    <Side_Brow>Side_Brow</Side_Brow>
+    <Side_Mouth>Side_Mouth</Side_Mouth>
+  </FaceInfo>
+  <ClothInfo>
+    <Name>OMORI</Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="213" pivot_y="-400" />
+      <Head head_x="13" head_y="315.1" rotation="0" head_enable="False" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="213" pivot_y="-400" />
+      <Head head_x="13" head_y="315" rotation="0" head_enable="False" />
+    </Guard>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="43" pivot_y="-386" />
+      <Head head_x="163" head_y="294" rotation="-12" head_enable="False" />
+    </Evade>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="170" pivot_y="-400" />
+      <Head head_x="34" head_y="305" rotation="5" head_enable="False" />
+    </Damaged>
+    <Slash>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="234" pivot_y="-400" />
+      <Head head_x="13" head_y="303" rotation="4" head_enable="False" />
+    </Slash>
+    <Penetrate>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="230" pivot_y="-400" />
+      <Head head_x="-89" head_y="317.4" rotation="20" head_enable="False" />
+    </Penetrate>
+    <Hit>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="151" pivot_y="-427" />
+      <Head head_x="43" head_y="386" rotation="5" head_enable="False" />
+    </Hit>
+    <Move>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="220" pivot_y="-400" />
+      <Head head_x="-71" head_y="282" rotation="-1" head_enable="False" />
+    </Move>
+    <Fire>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="216" pivot_y="-400" />
+      <Head head_x="2" head_y="218" rotation="2" head_enable="False" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="216" pivot_y="-400" />
+      <Head head_x="2" head_y="218" rotation="2" head_enable="False" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>

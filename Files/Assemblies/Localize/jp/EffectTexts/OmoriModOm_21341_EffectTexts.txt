@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <effectTextList>
+-<BattleEffectText ID="OmoriModPage_Om21341">
+	<Name>大森のModページ</Name>
+	<Desc>大森のModによって追加されたページ</Desc>
+</BattleEffectText>
+<BattleEffectText ID="Angry_Om21341">
+      <Name>怒っている</Name>
+<Desc>それぞれのシーンで1[強さ]を獲得し、1[武装解除]と3[壊れやすい]を自分に与える。このキャラクターがダメージゲイン1を取るたびに[負の感情コイン]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Enraged_Om21341">
+      <Name>憤慨しています。</Name>
+<Desc>2[強さ]を獲得し、自己に与える2[武装解除]と6[壊れやすい]各シーン。このキャラクターがダメージゲイン1を取るたびに[負の感情コイン]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Furious_Om21341">
+      <Name>激怒しています</Name>
+<Desc>3[強さ]を獲得し、自己3[武装解除]と9[脆弱]それぞれのシーンに与えます。このキャラクターがダメージゲイン1を取るたびに[負の感情コイン]</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Happy_Om21341">
+      <Name>ハッピー</Name>
+<Desc>ゲイン1[速攻]各シーン。[サイコロロールについて]最大サイコロロールを1倍にするか、最大サイコロロールを1倍にすると10%の確率で下げます。 各シーンの終わりには、すべての感情コインタイプを[正のコイン]に変更します</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Ecstatic_Om21341">
+      <Name>有頂天</Name>
+<Desc>ゲイン2[速攻]各シーン。[サイコロロールについて]最大サイコロロールを2倍にするか、最大サイコロロールを2倍にすると20%の確率で下げます。 各シーンの終わりには、すべての感情コインタイプを[正のコイン]に変更します</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Manic_Om21341">
+      <Name>躁病</Name>
+<Desc>ゲイン3[速攻]各シーン。[サイコロロールについて]最大サイコロロールを3倍にするか、最大サイコロロールを3倍にすると30%の確率で下げます。 各シーンの終わりには、すべての感情コインタイプを[正のコイン]に変更します</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Sad_Om21341">
+      <Name>悲しい。</Name>
+<Desc>1[耐久]と1[保護]を獲得し、それぞれのシーンを1[バインド]自己に与える。 各シーンの終わりに[負のコイン]ですべての感情コインタイプを変更します</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Depressed_Om21341">
+      <Name>落ち込んでいる</Name>
+<Desc>2[耐久]と2[保護]を獲得し、それぞれのシーンを2[バインド]自己に与える。 各シーンの終わりに[負のコイン]ですべての感情コインタイプを変更します</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Miserable_Om21341">
+      <Name>惨めな</Name>
+<Desc>3[持久力]と3[保護]を獲得し、それぞれのシーンを自己3[バインド]に与えます。 各シーンの終わりに[負のコイン]ですべての感情コインタイプを変更します</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Neutral_Om21341">
+      <Name>ニュートラル</Name>
+<Desc>追加のページを一つ描き、シーンごとに1つのライトを復元します。</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Mock_Om21341">
+	<Name>モック</Name>
+	<Desc>最小および最大のダイスロールを{0}下げます。</Desc>
+</BattleEffectText>
+<BattleEffectText ID="ModName_Om21341">
+      <Name>大森のMod</Name>
+<Desc>Mod's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="CredenzaName_Om21341">
+      <Name>大森</Name>
+<Desc>Credenza's Name</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="Afraid_Om21341">
+      <Name>恐れ</Name>
+<Desc>シーンの終わりに{0}ヘイストを獲得します。マスアタックカード、エゴカード、エモーションカード、​​元々のコストが3を超えるカードは使用できません。50％の追加ダメージを受けます。</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPage_Om21341">
+	<Name>大森独占ページ</Name>
+	<Desc>大森のキーページのデッキにのみ設定可能</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriDropBook_Om21341">
+	<Name>Omori Drop</Name>
+	<Desc>大森の本を手に入れました。</Desc>
+</BattleEffectText>
+<BattleEffectText ID="OmoriFinalLine_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたはただ死ぬべきです</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive1_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>大森は屈服しなかった</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriSurvive2_Om21341">
+	<Name>Active Survive Skill</Name>
+	<Desc>大森は屈服しない</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたはとても多くの苦しみを引き起こしました...それでもあなたは何もしません。そして、あなたは見返りに何も稼いでいません</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたの友達は決してあなたを許しません。彼らはあなたが彼らをしたようにあなたを捨てるでしょう...そしてそれはあなたが値するものです</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたは他人に負担をかけたくないと自分に言い聞かせます...しかし真実はあなたが利己的であるということです。あなたは人々があなたに依存することを望まないだけです</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>他の人についてどう思いますか？どのくらいの間、人々にあなたの面倒を見てもらうつもりですか？あなたはあなたが気にかけていると言いますが、あなたはうそつきです</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたは他の誰かのために何もしたことがありません。あなたは役に立たない...役に立たないよりも少ない。あなたは病気です</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase1Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたのような人々は生きるに値しない</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたの友達はあなたについて間違っています。彼らが愛する人はあなたではありません。あなたは彼らにあなた自身を守るために嘘を信じさせます</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたはうそつきに他なりません...そして彼らが真実を見るとき...彼らはあなたがあなた自身を憎むのと同じくらいあなたを憎むでしょう</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>彼らが真実を知っていれば、あなたは彼らの信頼を取り戻すことは決してできないでしょう。あなたが何をしても、それは絶望的です</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたがすることは物事を悪化させることだけです。ただ死ぬほうがいい</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase2Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>ただ死ぬほうがいい</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line0_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたはマリを殺しました。彼女はあなたを愛し、あなたは彼女を殺しました</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line1_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>ヒーローは彼女を愛し、あなたは彼女を殺しました</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line2_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>オーブリーは彼女を愛し、あなたは彼女を殺した</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line3_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>ケルは彼女を愛し、あなたは彼女を殺しました</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line4_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>バジルは彼女を愛し、あなたは彼女を殺しました</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="OmoriPhase3Line5_Om21341">
+	<Name>Omori Lines</Name>
+	<Desc>あなたは彼女を愛し、あなたは彼女を殺しました</Desc>
+    </BattleEffectText>
+  </effectTextList>
+</BattleEffectTextRoot>

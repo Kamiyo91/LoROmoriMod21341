@@ -11,6 +11,7 @@ using Omori_Om21341.MapManagers;
 using Omori_Om21341.MechUtil;
 using Util_Om21341;
 using Util_Om21341.CommonBuffs;
+using UnityEngine;
 
 namespace Omori_Om21341
 {
@@ -21,16 +22,27 @@ namespace Omori_Om21341
         private bool _notSuccumb;
         private BattleUnitModel _omoriModel;
         private List<BattleUnitModel> _playerUnits;
+        public AudioSource overlay;
 
         public override void OnWaveStart()
         {
             _playerUnits = new List<BattleUnitModel>();
+            overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme);
+            overlay.clip = null;
+            overlay.name = "overlay";
+            overlay.loop = true;
+            overlay.Stop();
+            CustomMapHandler.LoadEnemyTheme("boss_OMORI.ogg");
+            CustomMapHandler.LoadEnemyTheme("boss_OMORI_loop.ogg");
+            // CustomMapHandler.LoadEnemyTheme("b_omori_01.ogg");
+            CustomMapHandler.LoadEnemyTheme("b_omori_02.ogg");
+            CustomMapHandler.LoadEnemyTheme("b_omori_03.ogg");
+            CustomMapHandler.LoadEnemyTheme("b_omori_04.ogg");
             CustomMapHandler.InitCustomMap("Omori1_Om21341", new Omori1_Om21341MapManager(), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori2_Om21341", new Omori2_Om21341MapManager(), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori3_Om21341", new Omori3_Om21341MapManager(), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori4_Om21341", new Omori4_Om21341MapManager(), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori5_Om21341", new Omori5_Om21341MapManager(), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori6_Om21341", new Omori6_Om21341MapManager(), false, true, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori2_Om21341", new Omori2_Om21341MapManager(), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori3_Om21341", new Omori3_Om21341MapManager(), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori4_Om21341", new Omori4_Om21341MapManager(), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori5_Om21341", new Omori5_Om21341MapManager(), false, false, 0.5f, 0.55f);
             CustomMapHandler.EnforceMap();
             _mechUtil = new NpcMechUtil_Omori(new NpcMechUtilBaseModel());
             Singleton<StageController>.Instance.CheckMapChange();
@@ -66,7 +78,7 @@ namespace Omori_Om21341
 
         public override void OnRoundStart()
         {
-            CustomMapHandler.EnforceMap(_notSuccumb ? _mechUtil.GetPhase() > 1 ? 5 : 4 : _mechUtil.GetPhase());
+            CustomMapHandler.EnforceMap(_notSuccumb ? 4 : _mechUtil.GetPhase());
         }
 
         public override void OnRoundStart_After()
@@ -157,6 +169,7 @@ namespace Omori_Om21341
                 if (_mechUtil.GetPhase() < 3)
                 {
                     _mechUtil.IncreasePhase();
+                    SetOverlay(_mechUtil.GetPhase());
                     if (_mechUtil.GetPhase() == 3)
                     {
                         _omoriModel.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 54));
@@ -174,24 +187,37 @@ namespace Omori_Om21341
                     return;
                 }
 
-                CustomMapHandler.EnforceMap(_mechUtil.GetPhase());
-                Singleton<StageController>.Instance.CheckMapChange();
                 UnitUtil.UnitReviveAndRecovery(_omoriModel, _omoriModel.MaxHp, true);
             }
 
             if (!(_omoriModel.hp < 2) || _notSuccumb || _mechUtil.GetPhase() >= 4) return;
             _notSuccumb = true;
             _omoriModel.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_UntargetableOmori_Om21341());
-            CustomMapHandler.EnforceMap(_mechUtil.GetPhase() > 1 ? 5 : 4);
-            Singleton<StageController>.Instance.CheckMapChange();
         }
-
+        private void SetOverlay(int phase) {
+            overlay.volume = SingletonBehavior<BattleSoundManager>.Instance.VolumeBGM;
+            switch (phase) {
+                case 1:
+                    overlay.clip = CustomMapHandler.GetAudioClip("b_omori_02.ogg");
+                    overlay.Play();
+                    break;
+                case 2:
+                    overlay.clip = CustomMapHandler.GetAudioClip("b_omori_03.ogg");
+                    overlay.Play();
+                    break;
+                case 3:
+                    overlay.clip = CustomMapHandler.GetAudioClip("b_omori_04.ogg");
+                    overlay.Play();
+                    break;
+            }
+        }
         private void BattleEnding()
         {
             foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player))
             {
                 _playerUnits.Add(unit);
                 unit.Die();
+                Object.Destroy(overlay);
             }
 
             _omoriModel.DieFake();

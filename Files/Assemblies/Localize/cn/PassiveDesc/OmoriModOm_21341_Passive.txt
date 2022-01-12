@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PassiveDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PassiveDesc ID="29">
+		<Name>快乐的</Name>
+    <Desc>每个场景获得 1 [急速]。[在掷骰子时]以 10% 的几率将 *最大* 掷骰子提高 2 或将 *最大* 掷骰子降低 2 个。在每个场景结束时，将所有情绪硬币类型更改为 [ 正币】.</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="30">
+		<Name>生气的</Name>
+    <Desc>获得1点[力量]，每个场景对自身造成1个[缴械]和3个[脆弱]。此角色每次受到伤害时获得1个[负面情绪币]。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="31">
+		<Name>伤心</Name>
+    <Desc>获得1个[耐力]和2个[保护]，每个场景给自己1个[绑定]。在每个场景结束时改变[负硬币]中的所有情绪硬币类型。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="32">
+		<Name>中性的</Name>
+    <Desc>多画一页并为每个场景恢复 1 盏灯。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="35">
+		<Name>不能装备</Name>
+    <Desc>无法配备此键盘。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="28">
+		<Name>情绪爆发 - 生气</Name>
+    <Desc>获得一个特殊的战斗页面，可用于任何角色（盟友、敌人或自己）。 [愤怒]对抗[悲伤]最强。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="46">
+		<Name>情绪爆发-快乐</Name>
+    <Desc>获得一个特殊的战斗页面，可用于任何角色（盟友、敌人或自己）。 [快乐]对抗[愤怒]最强。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="47">
+		<Name>情绪爆发 - 悲伤</Name>
+    <Desc>获得一个特殊的战斗页面，可用于任何角色（盟友、敌人或自己）。 [悲伤]对抗[快乐]最强。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="48">
+		<Name>情绪爆发 - 中性</Name>
+    <Desc>获得一个特殊的战斗页面，可用于任何角色（盟友、敌人或自己）。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="51">
+		<Name>大森</Name>
+    <Desc>在战斗开始时添加一个 EGO 页面。 【致命伤害】免疫所有伤害，直到场景结束，恢复20点生命值，此角色无法在下一个场景中选择或成为目标。（此效果在5个场景后恢复）</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="52">
+		<Name>大森</Name>
+    <Desc>此角色每回合随机使用一张【情绪增益卡】。 [对致命伤害] 在场景结束前免疫所有伤害，此角色无法选择或成为下一个场景的目标。在它改变阶段之后。在第 2 阶段开始时使用一张特殊的大众攻击卡，从第 3 阶段开始，每个场景都使用一张特殊的大众攻击卡。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="53">
+		<Name>玛丽的保护？</Name>
+    <Desc>在战斗开始时获得一个反骰子（格挡，4-8）。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="54">
+		<Name>你应该死</Name>
+    <Desc>在每个场景结束时，随机角色被赋予力量无效，并且该角色获得 3 点力量和 3 点耐力。</Desc>
+	</PassiveDesc>
+<PassiveDesc ID="55">
+		<Name>菜刀</Name>
+    <Desc>[命中时] 造成 1 次流血。</Desc>
+	</PassiveDesc>
+</PassiveDescRoot>

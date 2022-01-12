@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Book ID="12">
+    <Name>Omori's Page</Name>
+    <TextId>-1</TextId>
+    <BookIcon>Omori_Om21341</BookIcon>
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>251</HP>
+      <DeadLine>0</DeadLine>
+      <Break>999</Break>
+      <SpeedMin>2</SpeedMin>
+      <Speed>6</Speed>
+      <SpeedDiceNum>0</SpeedDiceNum>
+      <SResist>Normal</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Immune</SBResist>
+      <PBResist>Immune</PBResist>
+      <HBResist>Immune</HBResist>
+      <MaxPlayPoint>4</MaxPlayPoint>
+      <StartPlayPoint>4</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+      <Passive>52</Passive>
+      <Passive>53</Passive>
+      <Passive>55</Passive>
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>Omori_Om21341</CharacterSkin>
+    <CharacterSkinType>Custom</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>7</Chapter>
+    <Episode>-1</Episode>
+    <RangeType>Melee</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>1</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+</BookXmlRoot>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CharactersNameRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Name ID="10">감정 폭발의 책</Name>
+<Name ID="11">오모리의 책</Name>
+</CharactersNameRoot>

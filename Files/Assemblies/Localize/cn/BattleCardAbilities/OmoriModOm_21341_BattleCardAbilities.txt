@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <BattleCardAbility ID="Happy_Om21341">
+    <Desc>[在玩]在被动中添加情绪[快乐]（[使用次数越多效果越强]）并移除此场景中的其他情绪被动
+[快乐]：每个场景获得 1/2/3 [急速]。[掷骰子]在 10 时将 *最大* 掷骰子提高 1/2/3 或将 *最大*掷骰子降低 1/2/3 %/20%/30% 几率。在每个场景结束时更改 【正币】 中的所有情绪硬币类型</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Angry_Om21341">
+    <Desc>[在玩]在被动中添加情绪[愤怒]（[使用次数多会增加其效果]）并删除此场景中的其他情绪被动
+[愤怒]：获得1/2/3 [力量]，每个场景对自己造成1/2/3 [缴械] 和3/6/9 [脆弱]。角色每次受到伤害获得1 [负面情绪币]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Sad_Om21341">
+    <Desc>[在玩]在被动中添加情绪[悲伤]（[使用次数越多效果越强]）并移除此场景中的其他情绪被动
+【悲伤】：获得1/2/3【耐力】和1/2/3【保护】，每个场景对自己造成1/2/3【绑定】。 负币]</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Neutral_Om21341">
+    <Desc>[在玩]在被动中添加情感[中性]并删除此场景中的其他情感被动[中性]：每个场景多画一页并恢复1光。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Headbutt_Om21341">
+    <Desc>[使用时]如果使用者[愤怒]，抽1张卡，该页面的骰子获得“[命中时]对自己造成10点伤害，对目标造成25%额外伤害和10点额外伤害”的效果</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Comeback_Om21341">
+    <Desc>仅当使用者当前血量低于 25% 时才能使用
+【战斗开始时】抽1张卡。让用户[开心]。如果[悲伤]被移除，恢复10/20/30生命值，10/20/30蹒跚抵抗，恢复1/2/3光，获得1/2/3[力量]和1/2/3[耐力]这个基于[悲伤]级别的场景。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="LuckySlice_Om21341">
+    <Desc>[使用中] 如果用户[快乐] 恢复 2 光并使用此页面增加 10% 的伤害。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Mock_Om21341">
+    <Desc>[战斗开始时]如果目标是[愤怒]，则将目标的最小和最大骰子滚动降低1（可堆叠3次）直到场景结束。[使用时]抽1张卡。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Stab_Om21341">
+    <Desc>[使用时] 抽 1 张牌，如果使用者 [悲伤] 造成 25% 的额外伤害。 如果目标是[快乐]，则额外造成 25% 的额外伤害并抽 1 张牌。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Basil_Om21341">
+    <Desc>[使用时] 恢复 1 盏灯，如果用户[高兴] 将此页面的其他副本的成本降低 1 并恢复额外的灯。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="BrokenHope_Om21341">
+    <Desc>[使用时]抽1张卡，如果用户是[悲伤]目标也变成[悲伤]。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="FlowerCrown_Om21341">
+    <Desc>【使用时】抽1张卡，如果用户【开心】，则本页其他副本的【费用】降低1。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Friends_Om21341">
+    <Desc>【使用时】抽1张牌，如果同队的每个角色都有一个【情绪增益】，则本页其他副本的【费用】降低1，下一个场景获得1点【力量】和1点【耐力】。 （如果没有其他盟友存活，则无法触发此效果）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Hopeless_Om21341">
+    <Desc>[使用时] 绘制 1 页。 如果用户是[悲惨]，则此页面上的所有[骰子]获得+2力量。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriMassAttackErase_Om21341">
+    <Desc>[使用时] 在情绪等级 3/5 时，将相同的 [骰子] 添加到此页面 1/2 次。 此页面上的每个骰子都会获得“[命中时] 造成 1 恐惧”效果（不能与 破解 一起使用）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriMassAttackSlash_Om21341">
+    <Desc>[使用时]情绪等级5时，将相同的[骰子]添加到该页面1次。该页面上的每个骰子获得效果“[命中时]造成1流血”（不能与[消除敌人]一起使用）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="OmoriStab_Om21341">
+    <Desc>[使用时] 如果用户 [悲伤] 造成 25% 更多伤害。 如果目标是[快乐]，则额外造成 25% 的额外伤害并抽 1 张牌。 如果用户是[悲惨]，则将此页面的其他副本的[成本]降低1</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="Picnic_Om21341">
+    <Desc>【使用时】抽1张牌，如果同队的每个角色都【快乐】，则本页其他副本的【费用】降低1，所有盟友（不包括用户）抽1张牌并恢复1点光。 （如果没有其他盟友存活，则无法触发此效果）</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="SomethingGuilt_Om21341">
+    <Desc>[战斗开始时]让使用者[悲伤]。</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="AfraidDice_Om21341">
+    <Desc>[命中时] 造成 1 层恐惧</Desc>
+    </BattleCardAbility>
+</BattleCardAbilityDescRoot>

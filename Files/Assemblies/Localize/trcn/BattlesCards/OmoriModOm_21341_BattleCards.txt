@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cardDescList>
+        <BattleCardDesc ID="907">
+            <LocalizedName>清除敌人</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="32">
+            <LocalizedName>生气的</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="33">
+            <LocalizedName>现在</LocalizedName>
+        </BattleCardDesc>
+	<BattleCardDesc ID="34">
+            <LocalizedName>快乐的</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="35">
+            <LocalizedName>中性的</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="61">
+            <LocalizedName>回来</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="62">
+            <LocalizedName>头撞</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="63">
+            <LocalizedName>幸运切片</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="64">
+            <LocalizedName>嘲笑</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="65">
+            <LocalizedName>刺</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="66">
+            <LocalizedName>清除敌人</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="67">
+            <LocalizedName>破解</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="68">
+            <LocalizedName>记忆：罗勒</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="69">
+            <LocalizedName>破碎的希望</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="70">
+            <LocalizedName>记忆：花冠</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="71">
+            <LocalizedName>记忆：朋友</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="72">
+            <LocalizedName>绝望</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="73">
+            <LocalizedName>记忆：野餐</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="74">
+            <LocalizedName>某物</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="75">
+            <LocalizedName>内疚</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="76">
+            <LocalizedName>大森的刺</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="77">
+            <LocalizedName>一切开始的地方</LocalizedName>
+        </BattleCardDesc>
+        <BattleCardDesc ID="78">
+            <LocalizedName>玛丽的保护？</LocalizedName>
+        </BattleCardDesc>
+  </cardDescList>
+</BattleCardDescRoot>

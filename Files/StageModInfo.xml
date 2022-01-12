@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NormalInvitation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Workshop>
+    <ID>OmoriModOm21341.Mod</ID>
+    <Title>Omori's Mod (EN-KR-JP-CN)</Title>
+    <Description>*If you want to help with the translations you can write to me on Discord (Kamiyo#3162)*
+
+*Used Google Translate for the translations so they may be a little off*
+
+*If you encounter any bugs let me know!*
+
+*Thanks to @Akasha for the full KR translation*
+
+Omori's Invitation - Book of Emotional Burst *It contains Omori's game Major Spoilers*
+
+The Book of Emotional Burst is already added in the inventory.
+
+Thanks to @Purplelite for the help in widening the background image of Omori's Maps
+
+The cards from this passive can be used on the enemies,allies or self too. Check this Image for understanding a little how they work : https://static.wikia.nocookie.net/omori/images/9/90/Emotions_guide.png/revision/latest?cb=20210108212109
+
+Omori Base Skin : https://steamcommunity.com/sharedfiles/filedetails/?id=2426496840
+
+Omori Theme : https://www.youtube.com/watch?v=zBpUvvkKma0
+
+CustomMapUtility made by uGuardian : https://github.com/uGuardian/LoR_CustomMapUtility/tree/CustomMapUtility</Description>
+    <Tag>Invitation</Tag>
+    <PreviewImage>C:\Users\Kamiyo\Pictures\NewModScreen\Omori\OmoriThumb.jpg</PreviewImage>
+  </Workshop>
+  <InvitationFile>
+    <Stage Exist="true">
+      <Path>\Data\StageInfo.xml</Path>
+    </Stage>
+    <EnemyUnit Exist="true">
+      <Path>\Data\EnemyUnitInfo.xml</Path>
+    </EnemyUnit>
+    <EquipPage_Enemy Exist="true">
+      <Path>\Data\EquipPage_Enemy.xml</Path>
+    </EquipPage_Enemy>
+    <EquipPage_Librarian Exist="true">
+      <Path>\Data\EquipPage_Librarian.xml</Path>
+    </EquipPage_Librarian>
+    <DropBook Exist="true">
+      <Path>\Data\Dropbook.xml</Path>
+    </DropBook>
+    <CardDropTable Exist="true">
+      <Path>\Data\CardDropTable.xml</Path>
+    </CardDropTable>
+    <CardInfo Exist="true">
+      <Path>\Data\CardInfo.xml</Path>
+    </CardInfo>
+    <Deck Exist="true">
+      <Path>\Data\Deck_Enemy.xml</Path>
+    </Deck>
+    <Dialog Exist="true">
+      <Path>\Data\Combat_Dialog.xml</Path>
+    </Dialog>
+    <BookDesc Exist="true">
+      <Path>\Data\BookStory.xml</Path>
+    </BookDesc>
+    <Passive Exist="true">
+      <Path>\Data\PassiveList.xml</Path>
+    </Passive>
+  </InvitationFile>
+</NormalInvitation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CardDropTableXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <DropTable ID="10">
+    <Card>61</Card>
+    <Card>62</Card>
+    <Card>63</Card>
+    <Card>64</Card>
+    <Card>65</Card>
+  </DropTable>
+  <DropTable ID="11">
+    <Card>67</Card>
+    <Card>68</Card>
+    <Card>69</Card>
+    <Card>70</Card>
+    <Card>71</Card>
+    <Card>72</Card>
+    <Card>73</Card>
+    <Card>74</Card>
+    <Card>75</Card>
+    <Card>76</Card>
+    <Card>77</Card>
+  </DropTable>
+</CardDropTableXmlRoot>

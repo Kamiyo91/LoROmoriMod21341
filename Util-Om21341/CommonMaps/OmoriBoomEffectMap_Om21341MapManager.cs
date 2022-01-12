@@ -7,7 +7,6 @@ namespace Util_Om21341.CommonMaps
     public class OmoriBoomEffectMap_Om21341MapManager : CustomMapManager
     {
         private GameObject _aura;
-        protected internal override string[] CustomBGMs => new[] { "Silence_Om21341.mp3" };
 
         public override void InitializeMap()
         {
