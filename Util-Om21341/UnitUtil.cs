@@ -121,11 +121,10 @@ namespace Util_Om21341
         public static List<UnitBattleDataModel> UnitsToRecover(StageModel stageModel, UnitDataModel data)
         {
             var list = new List<UnitBattleDataModel>();
-            foreach (var sephirah in ModParameters.UniqueUnitStages.FirstOrDefault(x => x.Key.Equals(stageModel.ClassInfo.id.id)).Value)
-            {
+            foreach (var sephirah in ModParameters.UniqueUnitStages
+                         .FirstOrDefault(x => x.Key.Equals(stageModel.ClassInfo.id.id)).Value)
                 list.AddRange(stageModel.GetFloor(sephirah).GetUnitBattleDataList()
                     .Where(x => x.unitData == data));
-            }
             return list;
         }
 

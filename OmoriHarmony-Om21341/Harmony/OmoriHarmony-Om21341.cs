@@ -220,6 +220,7 @@ namespace OmoriHarmony_Om21341.Harmony
                 .Value
                 .Desc);
         }
+
         public static void DropBookInventoryModel_LoadFromSaveData(DropBookInventoryModel __instance)
         {
             var bookCount = __instance.GetBookCount(new LorId(ModParameters.PackageId, 10));
@@ -231,7 +232,8 @@ namespace OmoriHarmony_Om21341.Harmony
         {
             if (Singleton<StageController>.Instance.GetStageModel() == null ||
                 Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.packageId != ModParameters.PackageId ||
-                !ModParameters.UniqueUnitStages.ContainsKey(Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.id)) return;
+                !ModParameters.UniqueUnitStages.ContainsKey(Singleton<StageController>.Instance.GetStageModel()
+                    .ClassInfo.id.id)) return;
             var slot =
                 typeof(UICharacterListPanel).GetField("CharacterList", AccessTools.all)?.GetValue(__instance) as
                     UICharacterList;

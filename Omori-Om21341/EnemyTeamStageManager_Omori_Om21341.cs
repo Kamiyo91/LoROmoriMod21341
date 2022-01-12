@@ -193,6 +193,7 @@ namespace Omori_Om21341
                 _playerUnits.Add(unit);
                 unit.Die();
             }
+
             _omoriModel.DieFake();
         }
 
