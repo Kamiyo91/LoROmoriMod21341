@@ -1,12 +1,9 @@
-﻿using CustomMapUtility;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Omori_Om21341.MapManagers
 {
-    public class Omori5_Om21341MapManager : CustomMapManager
+    public class Omori5_Om21341MapManager : OmoriBase_Om21341MapManager
     {
-        protected override string[] CustomBGMs => new[] { "OmoriPhase1_Om21341.mp3" };
-
         public override void EnableMap(bool b)
         {
             sephirahColor = Color.black;
