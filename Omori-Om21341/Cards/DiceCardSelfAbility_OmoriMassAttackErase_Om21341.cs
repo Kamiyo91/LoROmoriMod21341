@@ -87,7 +87,7 @@ namespace Omori_Om21341.Cards
                 StageId = 8,
                 IsPlayer = true,
                 OneTurnEgo = true,
-                Component = new Omori2_Om21341MapManager(),
+                Component = typeof(Omori2_Om21341MapManager),
                 Bgy = 0.55f
             });
         }

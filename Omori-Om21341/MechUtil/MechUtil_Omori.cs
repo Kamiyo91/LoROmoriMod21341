@@ -65,7 +65,7 @@ namespace Omori_Om21341.MechUtil
                 Stage = "Omori5_Om21341",
                 StageId = 8,
                 IsPlayer = true,
-                Component = new Omori5_Om21341MapManager(),
+                Component = typeof(Omori5_Om21341MapManager),
                 Bgy = 0.55f
             });
         }

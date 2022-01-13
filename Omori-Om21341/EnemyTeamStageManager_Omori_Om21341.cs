@@ -38,11 +38,11 @@ namespace Omori_Om21341
             CustomMapHandler.LoadEnemyTheme("b_omori_02.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_03.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_04.ogg");
-            CustomMapHandler.InitCustomMap("Omori1_Om21341", new Omori1_Om21341MapManager(), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori2_Om21341", new Omori2_Om21341MapManager(), false, false, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori3_Om21341", new Omori3_Om21341MapManager(), false, false, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori4_Om21341", new Omori4_Om21341MapManager(), false, false, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori5_Om21341", new Omori5_Om21341MapManager(), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori1_Om21341", typeof(Omori1_Om21341MapManager), false, true, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori2_Om21341", typeof(Omori2_Om21341MapManager), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori3_Om21341", typeof(Omori3_Om21341MapManager), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori4_Om21341", typeof(Omori4_Om21341MapManager), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori5_Om21341", typeof(Omori5_Om21341MapManager), false, false, 0.5f, 0.55f);
             CustomMapHandler.EnforceMap();
             _mechUtil = new NpcMechUtil_Omori(new NpcMechUtilBaseModel());
             Singleton<StageController>.Instance.CheckMapChange();

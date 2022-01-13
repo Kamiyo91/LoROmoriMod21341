@@ -1,8 +1,10 @@
-﻿namespace BLL_Om21341.Models
+﻿using System;
+
+namespace BLL_Om21341.Models
 {
     public class MapModel
     {
-        public MapManager Component { get; set; }
+        public Type Component { get; set; }
         public string Stage { get; set; }
         public int StageId { get; set; }
         public bool IsPlayer { get; set; }

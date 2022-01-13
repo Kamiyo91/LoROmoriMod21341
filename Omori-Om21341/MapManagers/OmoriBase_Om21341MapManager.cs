@@ -6,8 +6,8 @@ namespace Omori_Om21341.MapManagers
 {
     public class OmoriBase_Om21341MapManager : OmoriBoomEffectMap_Om21341MapManager
     {
-        private readonly AudioClip introClip = CustomMapHandler.GetAudioClip("boss_OMORI.ogg");
-        private readonly AudioClip loopClip = CustomMapHandler.GetAudioClip("boss_OMORI_loop.ogg");
+        private AudioClip introClip;
+        private AudioClip loopClip;
         private EnemyTeamStageManager_Omori_Om21341 _stageManager;
         private bool loop = true;
         private AudioSource overlay;
@@ -36,8 +36,9 @@ namespace Omori_Om21341.MapManagers
         public override void InitializeMap()
         {
             base.InitializeMap();
-            _stageManager =
-                Singleton<StageController>.Instance.EnemyStageManager as EnemyTeamStageManager_Omori_Om21341;
+            introClip = CustomMapHandler.GetAudioClip("boss_OMORI.ogg");
+            loopClip = CustomMapHandler.GetAudioClip("boss_OMORI_loop.ogg");
+            _stageManager = Singleton<StageController>.Instance.EnemyStageManager as EnemyTeamStageManager_Omori_Om21341;
             overlay = _stageManager?.overlay;
         }
 
