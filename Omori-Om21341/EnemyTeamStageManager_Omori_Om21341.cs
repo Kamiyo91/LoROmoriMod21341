@@ -152,6 +152,7 @@ namespace Omori_Om21341
             CheckEndingCaseWin();
             CheckPhaseChange();
             _mechUtil.SetOneTurnCard(false);
+            TurningOffOverlay();
         }
 
         public void CallMassAttack(ref BattleDiceCardModel origin)
@@ -232,15 +233,18 @@ namespace Omori_Om21341
                 _playerUnits.Add(unit);
                 unit.Die();
             }
-
             _omoriModel.DieFake();
         }
-
         public override void OnEndBattle()
         {
             foreach (var unit in _playerUnits) unit.Revive(1);
-            Object.Destroy(overlay);
             MapUtil.UnloadBoomEffect();
+        }
+
+        private void TurningOffOverlay()
+        {
+            if (BattleObjectManager.instance.GetAliveList(Faction.Player).Count < 1) //TODO There is a Edge case that need to be solved.
+                Object.Destroy(overlay);
         }
     }
 }
