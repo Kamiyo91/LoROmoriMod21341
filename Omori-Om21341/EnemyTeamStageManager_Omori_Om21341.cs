@@ -29,7 +29,7 @@ namespace Omori_Om21341
             _playerUnits = new List<BattleUnitModel>();
             overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme);
             overlay.clip = null;
-            overlay.name = "overlay";
+            overlay.name = "overlay_OmoriOm21341";
             overlay.loop = true;
             overlay.Stop();
             CustomMapHandler.LoadEnemyTheme("boss_OMORI.ogg");
@@ -38,11 +38,16 @@ namespace Omori_Om21341
             CustomMapHandler.LoadEnemyTheme("b_omori_02.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_03.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_04.ogg");
-            CustomMapHandler.InitCustomMap("Omori1_Om21341", typeof(Omori1_Om21341MapManager), false, true, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori2_Om21341", typeof(Omori2_Om21341MapManager), false, false, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori3_Om21341", typeof(Omori3_Om21341MapManager), false, false, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori4_Om21341", typeof(Omori4_Om21341MapManager), false, false, 0.5f, 0.55f);
-            CustomMapHandler.InitCustomMap("Omori5_Om21341", typeof(Omori5_Om21341MapManager), false, false, 0.5f, 0.55f);
+            CustomMapHandler.InitCustomMap("Omori1_Om21341", typeof(Omori1_Om21341MapManager), false, true, 0.5f,
+                0.55f);
+            CustomMapHandler.InitCustomMap("Omori2_Om21341", typeof(Omori2_Om21341MapManager), false, false, 0.5f,
+                0.55f);
+            CustomMapHandler.InitCustomMap("Omori3_Om21341", typeof(Omori3_Om21341MapManager), false, false, 0.5f,
+                0.55f);
+            CustomMapHandler.InitCustomMap("Omori4_Om21341", typeof(Omori4_Om21341MapManager), false, false, 0.5f,
+                0.55f);
+            CustomMapHandler.InitCustomMap("Omori5_Om21341", typeof(Omori5_Om21341MapManager), false, false, 0.5f,
+                0.55f);
             CustomMapHandler.EnforceMap();
             _mechUtil = new NpcMechUtil_Omori(new NpcMechUtilBaseModel());
             Singleton<StageController>.Instance.CheckMapChange();
@@ -74,6 +79,11 @@ namespace Omori_Om21341
                     unit.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 48));
                     break;
             }
+        }
+
+        public void AddUnitToReviveList(BattleUnitModel unit)
+        {
+            _playerUnits.Add(unit);
         }
 
         public override void OnRoundStart()
@@ -221,7 +231,6 @@ namespace Omori_Om21341
             {
                 _playerUnits.Add(unit);
                 unit.Die();
-                Object.Destroy(overlay);
             }
 
             _omoriModel.DieFake();
@@ -230,6 +239,7 @@ namespace Omori_Om21341
         public override void OnEndBattle()
         {
             foreach (var unit in _playerUnits) unit.Revive(1);
+            Object.Destroy(overlay);
             MapUtil.UnloadBoomEffect();
         }
     }

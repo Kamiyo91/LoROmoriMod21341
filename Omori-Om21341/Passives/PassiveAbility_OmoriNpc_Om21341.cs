@@ -44,6 +44,11 @@ namespace Omori_Om21341.Passives
             }
         }
 
+        public override void OnDieOtherUnit(BattleUnitModel unit)
+        {
+            if (_stageManager.GetPhase() > 2) _stageManager.AddUnitToReviveList(unit);
+        }
+
         public override void AfterTakeDamage(BattleUnitModel attacker, int dmg)
         {
             if (owner.hp < 2)
