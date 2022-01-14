@@ -22,16 +22,16 @@ namespace Omori_Om21341
         private bool _notSuccumb;
         private BattleUnitModel _omoriModel;
         private List<BattleUnitModel> _playerUnits;
-        public AudioSource overlay;
+        public AudioSource Overlay;
 
         public override void OnWaveStart()
         {
             _playerUnits = new List<BattleUnitModel>();
-            overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme);
-            overlay.clip = null;
-            overlay.name = "overlay_OmoriOm21341";
-            overlay.loop = true;
-            overlay.Stop();
+            Overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme);
+            Overlay.clip = null;
+            Overlay.name = "overlay_OmoriOm21341";
+            Overlay.loop = true;
+            Overlay.Stop();
             CustomMapHandler.LoadEnemyTheme("boss_OMORI.ogg");
             CustomMapHandler.LoadEnemyTheme("boss_OMORI_loop.ogg");
             // CustomMapHandler.LoadEnemyTheme("b_omori_01.ogg");
@@ -207,20 +207,20 @@ namespace Omori_Om21341
 
         private void SetOverlay(int phase)
         {
-            overlay.volume = SingletonBehavior<BattleSoundManager>.Instance.VolumeBGM;
+            Overlay.volume = SingletonBehavior<BattleSoundManager>.Instance.VolumeBGM;
             switch (phase)
             {
                 case 1:
-                    overlay.clip = CustomMapHandler.GetAudioClip("b_omori_02.ogg");
-                    overlay.Play();
+                    Overlay.clip = CustomMapHandler.GetAudioClip("b_omori_02.ogg");
+                    Overlay.Play();
                     break;
                 case 2:
-                    overlay.clip = CustomMapHandler.GetAudioClip("b_omori_03.ogg");
-                    overlay.Play();
+                    Overlay.clip = CustomMapHandler.GetAudioClip("b_omori_03.ogg");
+                    Overlay.Play();
                     break;
                 case 3:
-                    overlay.clip = CustomMapHandler.GetAudioClip("b_omori_04.ogg");
-                    overlay.Play();
+                    Overlay.clip = CustomMapHandler.GetAudioClip("b_omori_04.ogg");
+                    Overlay.Play();
                     break;
             }
         }
@@ -232,8 +232,10 @@ namespace Omori_Om21341
                 _playerUnits.Add(unit);
                 unit.Die();
             }
+
             _omoriModel.DieFake();
         }
+
         public override void OnEndBattle()
         {
             foreach (var unit in _playerUnits) unit.Revive(1);
