@@ -57,38 +57,51 @@ namespace Omori_Om21341.MapManagers
         private void MusicCheck()
         {
             if (!isEnabled || !_bMapInitialized) return;
-            if (introClip == SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.clip)
+            var currentPlayingTheme = SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme;
+            if (introClip == currentPlayingTheme.clip)
             {
-                if (!SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.isPlaying)
+                if (!currentPlayingTheme.isPlaying)
                 {
-                    SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.clip = loopClip;
-                    SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.Play();
+                    currentPlayingTheme.clip = loopClip;
+                    currentPlayingTheme.Play();
                     mapBgm[0] = loopClip;
                     SingletonBehavior<BattleSoundManager>.Instance.SetEnemyThemeIndexZero(loopClip);
                     Debug.Log("BGM: Exited intro");
-                    SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.loop = true;
+                    currentPlayingTheme.loop = true;
                     loop = true;
                     return;
                 }
 
-                if (SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.loop)
+                if (currentPlayingTheme.loop)
                 {
                     Debug.Log("BGM: Intro playing, disabling loop");
-                    SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.loop = false;
+                    currentPlayingTheme.loop = false;
                     loop = false;
                 }
 
                 return;
             }
 
-            if (!loop && !SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.loop)
+            if (!loop && !currentPlayingTheme.loop)
             {
                 Debug.Log("BGM: Music changed, re-enabling loop");
-                SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.loop = true;
+                currentPlayingTheme.loop = true;
                 loop = true;
             }
 
-            if (overlay != null) overlay.volume = SingletonBehavior<BattleSoundManager>.Instance.VolumeBGM;
+            if (overlay != null) {
+                overlay.volume = currentPlayingTheme.volume;
+                if (overlay.isPlaying != currentPlayingTheme.isPlaying) {
+                    switch (currentPlayingTheme.isPlaying) {
+                        case false:
+                            overlay.Pause();
+                            break;
+                        case true:
+                            overlay.UnPause();
+                            break;
+                    }
+                }
+            }
         }
 #pragma warning disable IDE0051
         private void OnDestroy()
