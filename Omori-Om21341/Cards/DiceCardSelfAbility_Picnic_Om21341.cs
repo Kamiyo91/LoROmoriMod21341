@@ -12,6 +12,12 @@ namespace Omori_Om21341.Cards
                     .GetAliveList(Faction.Player).All(x =>
                         x.passiveDetail.PassiveList.Exists(y => !y.destroyed && y is PassiveAbility_Happy_Om21341)))
                 return;
+            foreach (var battleDiceCardModel in owner.allyCardDetail.GetAllDeck()
+                         .FindAll(x => x != card.card && x.GetID() == card.card.GetID()))
+            {
+                battleDiceCardModel.GetBufList();
+                battleDiceCardModel.AddCost(-1);
+            }
             foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player).Where(x => x != owner))
             {
                 unit.allyCardDetail.DrawCards(1);
