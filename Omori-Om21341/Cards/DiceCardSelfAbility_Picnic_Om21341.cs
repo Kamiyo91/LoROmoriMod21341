@@ -18,6 +18,7 @@ namespace Omori_Om21341.Cards
                 battleDiceCardModel.GetBufList();
                 battleDiceCardModel.AddCost(-1);
             }
+
             foreach (var unit in BattleObjectManager.instance.GetAliveList(Faction.Player).Where(x => x != owner))
             {
                 unit.allyCardDetail.DrawCards(1);

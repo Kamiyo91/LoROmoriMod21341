@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using BLL_Om21341.Models;
 using HarmonyLib;
 using LOR_DiceSystem;
@@ -12,75 +9,21 @@ using Util_Om21341;
 
 namespace OmoriHarmony_Om21341.Harmony
 {
-    public class OmoriHarmony_Om21341 : ModInitializer
+    [HarmonyPatch]
+    public class HarmonyPatch_Om21341
     {
-        public override void OnInitializeMod()
-        {
-            ModParameters.Path = Path.GetDirectoryName(
-                Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
-            var harmony = new HarmonyLib.Harmony("LOR.OmoriModOm21341_MOD");
-            var method = typeof(OmoriHarmony_Om21341).GetMethod("BookModel_SetXmlInfo");
-            harmony.Patch(typeof(BookModel).GetMethod("SetXmlInfo", AccessTools.all), null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("General_GetThumbSprite");
-            harmony.Patch(typeof(BookModel).GetMethod("GetThumbSprite", AccessTools.all), null,
-                new HarmonyMethod(method));
-            harmony.Patch(typeof(BookXmlInfo).GetMethod("GetThumbSprite", AccessTools.all), null,
-                new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("StageLibraryFloorModel_InitUnitList");
-            harmony.Patch(typeof(StageLibraryFloorModel).GetMethod("InitUnitList", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("General_SetBooksData");
-            harmony.Patch(typeof(UISettingInvenEquipPageListSlot).GetMethod("SetBooksData", AccessTools.all),
-                null, new HarmonyMethod(method));
-            harmony.Patch(typeof(UIInvenEquipPageListSlot).GetMethod("SetBooksData", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UISpriteDataManager_Init");
-            harmony.Patch(typeof(UISpriteDataManager).GetMethod("Init", AccessTools.all),
-                new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UIBookStoryChapterSlot_SetEpisodeSlots");
-            harmony.Patch(typeof(UIBookStoryChapterSlot).GetMethod("SetEpisodeSlots", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UIBattleSettingPanel_SetToggles");
-            harmony.Patch(typeof(UIBattleSettingPanel).GetMethod("SetToggles", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UnitDataModel_EquipBookPrefix");
-            var methodPostfix = typeof(OmoriHarmony_Om21341).GetMethod("UnitDataModel_EquipBookPostfix");
-            harmony.Patch(typeof(UnitDataModel).GetMethod("EquipBook", AccessTools.all),
-                new HarmonyMethod(method), new HarmonyMethod(methodPostfix));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UnitDataModel_LoadFromSaveData");
-            harmony.Patch(typeof(UnitDataModel).GetMethod("LoadFromSaveData", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UICustomizePopup_OnClickSave");
-            harmony.Patch(typeof(UICustomizePopup).GetMethod("OnClickSave", AccessTools.all),
-                new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("TextDataModel_InitTextData");
-            harmony.Patch(typeof(TextDataModel).GetMethod("InitTextData", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("StageController_BonusRewardWithPopup");
-            harmony.Patch(typeof(StageController).GetMethod("BonusRewardWithPopup", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("UICharacterListPanel_RefreshBattleUnitDataModel");
-            harmony.Patch(typeof(UICharacterListPanel).GetMethod("RefreshBattleUnitDataModel", AccessTools.all),
-                null, new HarmonyMethod(method));
-            method = typeof(OmoriHarmony_Om21341).GetMethod("DropBookInventoryModel_LoadFromSaveData");
-            harmony.Patch(typeof(DropBookInventoryModel).GetMethod("LoadFromSaveData", AccessTools.all),
-                null, new HarmonyMethod(method));
-            ModParameters.Language = GlobalGameManager.Instance.CurrentOption.language;
-            MapUtil.GetArtWorks(new DirectoryInfo(ModParameters.Path + "/ArtWork"));
-            UnitUtil.ChangeCardItem(ItemXmlDataList.instance);
-            UnitUtil.ChangePassiveItem();
-            SkinUtil.PreLoadBufIcons();
-            LocalizeUtil.AddLocalize();
-            LocalizeUtil.RemoveError();
-        }
-
-        public static void UIBookStoryChapterSlot_SetEpisodeSlots(UIBookStoryChapterSlot __instance,
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UIBookStoryChapterSlot), "SetEpisodeSlots")]
+        public static void SetEpisodeSlots(UIBookStoryChapterSlot __instance,
             List<UIBookStoryEpisodeSlot> ___EpisodeSlots)
         {
             SkinUtil.SetEpisodeSlots(__instance, ___EpisodeSlots);
         }
 
-        public static void General_GetThumbSprite(object __instance, ref Sprite __result)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BookModel), "GetThumbSprite")]
+        [HarmonyPatch(typeof(BookXmlInfo), "GetThumbSprite")]
+        public static void GetThumbSprite(object __instance, ref Sprite __result)
         {
             switch (__instance)
             {
@@ -93,7 +36,9 @@ namespace OmoriHarmony_Om21341.Harmony
             }
         }
 
-        public static void UIBattleSettingPanel_SetToggles(UIBattleSettingPanel __instance)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UIBattleSettingPanel), "SetToggles")]
+        public static void SetToggles(UIBattleSettingPanel __instance)
         {
             if (!Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.packageId
                     .Contains(ModParameters.PackageId)) return;
@@ -108,7 +53,9 @@ namespace OmoriHarmony_Om21341.Harmony
             __instance.SetAvailibleText();
         }
 
-        public static void BookModel_SetXmlInfo(BookModel __instance, ref List<DiceCardXmlInfo> ____onlyCards)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BookModel), "SetXmlInfo")]
+        public static void SetXmlInfo(BookModel __instance, ref List<DiceCardXmlInfo> ____onlyCards)
         {
             if (__instance.BookId.packageId != ModParameters.PackageId) return;
             var onlyCards = ModParameters.OnlyCardKeywords.FirstOrDefault(x => x.Item3 == __instance.BookId.id)?.Item2;
@@ -117,7 +64,9 @@ namespace OmoriHarmony_Om21341.Harmony
                     ItemXmlDataList.instance.GetCardItem(new LorId(ModParameters.PackageId, id))));
         }
 
-        public static void StageLibraryFloorModel_InitUnitList(StageLibraryFloorModel __instance,
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(StageLibraryFloorModel), "InitUnitList")]
+        public static void InitUnitList(StageLibraryFloorModel __instance,
             List<UnitBattleDataModel> ____unitList, StageModel stage)
         {
             if (stage.ClassInfo.id.packageId != ModParameters.PackageId) return;
@@ -133,14 +82,18 @@ namespace OmoriHarmony_Om21341.Harmony
             }
         }
 
-        public static void UnitDataModel_EquipBookPrefix(UnitDataModel __instance, BookModel newBook, bool force)
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(UnitDataModel), "EquipBook")]
+        public static void EquipBookPrefix(UnitDataModel __instance, bool force)
         {
             if (force) return;
             if (ModParameters.PackageId == __instance.bookItem.ClassInfo.id.packageId &&
                 ModParameters.DynamicNames.ContainsKey(__instance.bookItem.ClassInfo.id.id)) __instance.ResetTempName();
         }
 
-        public static void UnitDataModel_EquipBookPostfix(UnitDataModel __instance, BookModel newBook, bool force)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UnitDataModel), "EquipBook")]
+        public static void EquipBookPostfix(UnitDataModel __instance, BookModel newBook, bool force)
         {
             if (force) return;
             if (newBook == null || ModParameters.PackageId != newBook.ClassInfo.workshopID ||
@@ -151,7 +104,9 @@ namespace OmoriHarmony_Om21341.Harmony
             __instance.SetTempName(ModParameters.NameTexts[nameId]);
         }
 
-        public static void UnitDataModel_LoadFromSaveData(UnitDataModel __instance)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UnitDataModel), "LoadFromSaveData")]
+        public static void Unit_LoadFromSaveData(UnitDataModel __instance)
         {
             if ((!string.IsNullOrEmpty(__instance.workshopSkin) || __instance.bookItem != __instance.CustomBookItem) &&
                 __instance.bookItem.ClassInfo.id.packageId == ModParameters.PackageId &&
@@ -159,6 +114,8 @@ namespace OmoriHarmony_Om21341.Harmony
                 __instance.ResetTempName();
         }
 
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UICustomizePopup), "OnClickSave")]
         public static void UICustomizePopup_OnClickSave(UICustomizePopup __instance)
         {
             if (__instance.SelectedUnit.bookItem.ClassInfo.id.packageId != ModParameters.PackageId ||
@@ -181,20 +138,27 @@ namespace OmoriHarmony_Om21341.Harmony
             }
         }
 
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(TextDataModel), "InitTextData")]
         public static void TextDataModel_InitTextData(string currentLanguage)
         {
             ModParameters.Language = currentLanguage;
             LocalizeUtil.AddLocalize();
         }
 
-        public static void General_SetBooksData(object __instance,
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UISettingInvenEquipPageListSlot), "SetBooksData")]
+        [HarmonyPatch(typeof(UIInvenEquipPageListSlot), "SetBooksData")]
+        public static void SetBooksData(object __instance,
             List<BookModel> books, UIStoryKeyData storyKey)
         {
             var uiOrigin = __instance as UIOriginEquipPageList;
             SkinUtil.SetBooksData(uiOrigin, books, storyKey);
         }
 
-        public static void UISpriteDataManager_Init(UISpriteDataManager __instance)
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(UISpriteDataManager), "Init")]
+        public static void Init(UISpriteDataManager __instance)
         {
             foreach (var artWork in ModParameters.ArtWorks.Where(x =>
                          !x.Key.Contains("Glow") && !__instance._storyicons.Exists(y => y.type.Equals(x.Key))))
@@ -207,7 +171,9 @@ namespace OmoriHarmony_Om21341.Harmony
                 });
         }
 
-        public static void StageController_BonusRewardWithPopup(LorId stageId)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(StageController), "BonusRewardWithPopup")]
+        public static void BonusRewardWithPopup(LorId stageId)
         {
             if (stageId.packageId != ModParameters.PackageId) return;
             if (!ModParameters.ExtraReward.ContainsKey(stageId.id)) return;
@@ -221,13 +187,17 @@ namespace OmoriHarmony_Om21341.Harmony
                 .Desc);
         }
 
-        public static void DropBookInventoryModel_LoadFromSaveData(DropBookInventoryModel __instance)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(DropBookInventoryModel), "LoadFromSaveData")]
+        public static void Book_LoadFromSaveData(DropBookInventoryModel __instance)
         {
             var bookCount = __instance.GetBookCount(new LorId(ModParameters.PackageId, 10));
             if (bookCount < 99) __instance.AddBook(new LorId(ModParameters.PackageId, 10), 99 - bookCount);
         }
 
-        public static void UICharacterListPanel_RefreshBattleUnitDataModel(UICharacterListPanel __instance,
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UICharacterListPanel), "RefreshBattleUnitDataModel")]
+        public static void RefreshBattleUnitDataModel(UICharacterListPanel __instance,
             UnitDataModel data)
         {
             if (Singleton<StageController>.Instance.GetStageModel() == null ||

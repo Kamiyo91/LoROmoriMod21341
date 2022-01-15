@@ -6,11 +6,11 @@ namespace Omori_Om21341.MapManagers
 {
     public class OmoriBase_Om21341MapManager : OmoriBoomEffectMap_Om21341MapManager
     {
-        private EnemyTeamStageManager_Omori_Om21341 _stageManager;
         private AudioClip _introClip;
         private bool _loop = true;
         private AudioClip _loopClip;
         private AudioSource _overlay;
+        private EnemyTeamStageManager_Omori_Om21341 _stageManager;
 
         public override void EnableMap(bool b)
         {
@@ -48,10 +48,12 @@ namespace Omori_Om21341.MapManagers
             base.FixedUpdate();
             MusicCheck();
         }
+
         private void Update()
         {
             MusicCheck();
         }
+
         private void MusicCheck()
         {
             if (!isEnabled || !_bMapInitialized) return;
@@ -98,6 +100,7 @@ namespace Omori_Om21341.MapManagers
                     break;
             }
         }
+
         private void OnDestroy()
         {
             Destroy(_overlay);
