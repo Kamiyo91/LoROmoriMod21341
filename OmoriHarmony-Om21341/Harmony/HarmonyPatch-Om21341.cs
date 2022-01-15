@@ -114,7 +114,7 @@ namespace OmoriHarmony_Om21341.Harmony
                 __instance.ResetTempName();
         }
 
-        [HarmonyPostfix]
+        [HarmonyPrefix]
         [HarmonyPatch(typeof(UICustomizePopup), "OnClickSave")]
         public static void UICustomizePopup_OnClickSave(UICustomizePopup __instance)
         {
