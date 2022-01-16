@@ -28,13 +28,13 @@ namespace Omori_Om21341
         public override void OnWaveStart()
         {
             _playerUnits = new List<BattleUnitModel>();
-            Overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme, SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.transform.parent);
+            Overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme,
+                SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.transform.parent);
             Overlay.clip = null;
             Overlay.name = "overlay_OmoriOm21341";
             Overlay.loop = true;
             Overlay.Stop();
             CustomMapHandler.LoadEnemyTheme("boss_OMORI.ogg", out var introClip);
-            // CustomMapHandler.LoadEnemyTheme("boss_OMORI_loop.ogg");
             LoopClip = CustomMapHandler.ClipCut(introClip, 1860207, 9305332, "boss_OMORI_loop");
             CustomMapHandler.InitCustomMap("Omori1_Om21341", typeof(Omori1_Om21341MapManager), false, true, 0.5f,
                 0.55f);
@@ -46,7 +46,6 @@ namespace Omori_Om21341
                 0.55f);
             CustomMapHandler.InitCustomMap("Omori5_Om21341", typeof(Omori5_Om21341MapManager), false, false, 0.5f,
                 0.55f);
-            // CustomMapHandler.LoadEnemyTheme("b_omori_01.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_02.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_03.ogg");
             CustomMapHandler.LoadEnemyTheme("b_omori_04.ogg");

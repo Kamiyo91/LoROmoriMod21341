@@ -13,10 +13,7 @@ namespace Omori_Om21341.MapManagers
 
         public override void EnableMap(bool b)
         {
-            if (b)
-            {
-                mapBgm = new AudioClip[]{CustomMapHandler.StartEnemyTheme_LoopPair(_introClip, _loopClip)};
-            }
+            if (b) mapBgm = new[] { CustomMapHandler.StartEnemyTheme_LoopPair(_introClip, _loopClip) };
 
             base.EnableMap(b);
         }
@@ -27,9 +24,11 @@ namespace Omori_Om21341.MapManagers
             _introClip = CustomMapHandler.GetAudioClip("boss_OMORI.ogg");
             _stageManager =
                 Singleton<StageController>.Instance.EnemyStageManager as EnemyTeamStageManager_Omori_Om21341;
-            _loopClip = _stageManager?.LoopClip ?? CustomMapHandler.ClipCut(_introClip, 1860207, 9305332, "boss_OMORI_loop");
+            _loopClip = _stageManager?.LoopClip ??
+                        CustomMapHandler.ClipCut(_introClip, 1860207, 9305332, "boss_OMORI_loop");
             _overlay = _stageManager?.Overlay;
         }
+
         protected override void LateUpdate()
         {
             MusicCheck();
