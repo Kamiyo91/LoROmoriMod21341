@@ -1,15 +1,12 @@
 ﻿using System.Linq;
 using BLL_Om21341.Models;
 using EmotionalBurstPassive_Om21341.Buffs;
-using Omori_Om21341.MapManagers;
-using Util_Om21341;
 
 namespace Omori_Om21341.Cards
 {
     public class DiceCardSelfAbility_OmoriMassAttackErase_Om21341 : DiceCardSelfAbilityBase
     {
         private bool _motionChanged;
-        private bool _used;
 
         public override bool OnChooseCard(BattleUnitModel owner)
         {
@@ -59,37 +56,10 @@ namespace Omori_Om21341.Cards
 
         public override void OnUseCard()
         {
-            if (owner.emotionDetail.EmotionLevel > 2)
-            {
-                var dice = card.card.CreateDiceCardBehaviorList().FirstOrDefault();
-                card.AddDice(dice);
-                if (owner.emotionDetail.EmotionLevel > 4) card.AddDice(dice);
-            }
-
-            if (owner.faction != Faction.Player ||
-                SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
-            _used = true;
-            ChangeToOmoriEgoMap();
-        }
-
-        public override void OnRoundEnd(BattleUnitModel unit, BattleDiceCardModel self)
-        {
-            if (!_used) return;
-            _used = false;
-            MapUtil.ReturnFromEgoMap("Omori2_Om21341", 8);
-        }
-
-        private static void ChangeToOmoriEgoMap()
-        {
-            MapUtil.ChangeMap(new MapModel
-            {
-                Stage = "Omori2_Om21341",
-                StageId = 8,
-                IsPlayer = true,
-                OneTurnEgo = true,
-                Component = typeof(Omori2_Om21341MapManager),
-                Bgy = 0.55f
-            });
+            if (owner.emotionDetail.EmotionLevel <= 2) return;
+            var dice = card.card.CreateDiceCardBehaviorList().FirstOrDefault();
+            card.AddDice(dice);
+            if (owner.emotionDetail.EmotionLevel > 4) card.AddDice(dice);
         }
     }
 }

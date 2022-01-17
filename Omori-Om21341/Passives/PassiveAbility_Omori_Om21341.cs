@@ -38,7 +38,8 @@ namespace Omori_Om21341.Passives
                             .Value.Desc
                     }
                 },
-                EgoAbColorColor = AbColorType.Negative
+                EgoAbColorColor = AbColorType.Negative,
+                EgoAttackCardId = new LorId(ModParameters.PackageId, 66)
             });
             owner.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 66));
             UnitUtil.CheckSkinProjection(owner);
@@ -66,9 +67,19 @@ namespace Omori_Om21341.Passives
 
         public override void OnRoundEnd()
         {
-            _util.ReturnFromEgoMap();
             _util.RechargeCheck();
             _util.IncreaseRecharge();
+        }
+
+        public override void OnUseCard(BattlePlayingCardDataInUnitModel curCard)
+        {
+            _util.ChangeToEgoMap(curCard.card.GetID());
+        }
+
+        public override void OnRoundEndTheLast_ignoreDead()
+        {
+            _util.ReturnFromEgoMap();
+            _util.ReturnFromEgoAttackMap();
         }
     }
 }

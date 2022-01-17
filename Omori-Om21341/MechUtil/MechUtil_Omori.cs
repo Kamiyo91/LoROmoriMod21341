@@ -80,6 +80,34 @@ namespace Omori_Om21341.MechUtil
                 UnitUtil.BattleAbDialog(_model.Owner.view.dialogUI, _model.EgoAbDialogList, _model.EgoAbColorColor);
         }
 
+        private static void ChangeToOmoriEgoAttackMap()
+        {
+            MapUtil.ChangeMap(new MapModel
+            {
+                Stage = "Omori2_Om21341",
+                StageId = 8,
+                IsPlayer = true,
+                OneTurnEgo = true,
+                Component = typeof(Omori2_Om21341MapManager),
+                Bgy = 0.55f
+            });
+        }
+
+        public virtual void ChangeToEgoMap(LorId cardId)
+        {
+            if (cardId != _model.EgoAttackCardId || _model.Owner.faction != Faction.Player ||
+                SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
+            _model.EgoMapAttackused = true;
+            ChangeToOmoriEgoAttackMap();
+        }
+
+        public void ReturnFromEgoAttackMap()
+        {
+            if (!_model.EgoMapAttackused) return;
+            _model.EgoMapAttackused = false;
+            MapUtil.ReturnFromEgoMap("Omori2_Om21341", 8);
+        }
+
         public void ReturnFromEgoMap()
         {
             if (!_model.MapChanged) return;

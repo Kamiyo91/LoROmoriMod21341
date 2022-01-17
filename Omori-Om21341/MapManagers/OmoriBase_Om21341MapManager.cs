@@ -11,12 +11,12 @@ namespace Omori_Om21341.MapManagers
         private AudioSource _overlay;
         private EnemyTeamStageManager_Omori_Om21341 _stageManager;
 
-            public override void EnableMap(bool b)
-            {
-                if (b && !isEgo) mapBgm = new[] { CustomMapHandler.StartEnemyTheme_LoopPair(_introClip, _loopClip) };
+        public override void EnableMap(bool b)
+        {
+            if (b && !isEgo) mapBgm = new[] { CustomMapHandler.StartEnemyTheme_LoopPair(_introClip, _loopClip) };
 
-                base.EnableMap(b);
-            }
+            base.EnableMap(b);
+        }
 
         public override void InitializeMap()
         {
