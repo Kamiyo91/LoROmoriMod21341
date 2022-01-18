@@ -254,23 +254,13 @@ namespace Util_Om21341
 
         public static void RemoveError()
         {
-            var list = new List<string>();
-            var list2 = new List<string>();
-            list.Add("0Harmony");
-            list.Add("NAudio");
-            list.Add("Mono.Cecil");
-            list.Add("MonoMod.Utils");
-            list.Add("MonoMod.RuntimeDetour");
-            using (var enumerator = Singleton<ModContentManager>.Instance.GetErrorLogs().GetEnumerator())
+            Singleton<ModContentManager>.Instance.GetErrorLogs().RemoveAll(x => new List<string>
             {
-                while (enumerator.MoveNext())
-                {
-                    var errorLog = enumerator.Current;
-                    if (list.Exists(x => errorLog.Contains(x))) list2.Add(errorLog);
-                }
-            }
-
-            foreach (var item in list2) Singleton<ModContentManager>.Instance.GetErrorLogs().Remove(item);
+                "0Harmony",
+                "Mono.Cecil",
+                "MonoMod.RuntimeDetour",
+                "MonoMod.Utils"
+            }.Exists(y => x.Contains("The same assembly name already exists. : " + y)));
         }
     }
 }
