@@ -16,6 +16,11 @@ namespace Util_Om21341
 {
     public static class UnitUtil
     {
+        public static Faction ReturnOtherSideFaction(Faction faction)
+        {
+            return faction == Faction.Player ? Faction.Enemy : Faction.Player;
+        }
+
         public static bool CantUseCardAfraid(BattleDiceCardModel card)
         {
             return card.XmlData.Spec.Ranged == CardRange.FarArea ||

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\MechUtilModelExtensions\MechUtil_OmoriModel.cs" />
+    <Compile Include="Extensions\MechUtilModelExtensions\NpcMechUtil_OmoriModel.cs" />
     <Compile Include="Models\EffectTextModel.cs" />
     <Compile Include="Models\Enum\ColorTypeEnum.cs" />
     <Compile Include="Models\Enum\EmotionBufEnum.cs" />
