@@ -190,17 +190,18 @@ namespace Util_Om21341
         private static List<int> GetAllOnlyCardsId()
         {
             var onlyPageCardList = new List<int>();
-            foreach (var cardIds in ModParameters.OnlyCardKeywords.Select(x => x.Item2))
+            foreach (var cardIds in ModParameters.OnlyCardKeywords.Where(x => x.Item3 != 0).Select(x => x.Item2))
                 onlyPageCardList.AddRange(cardIds);
             return onlyPageCardList;
         }
 
         private static IEnumerable<string> GetKeywordsList(int id)
         {
-            var keyword = ModParameters.OnlyCardKeywords.FirstOrDefault(x => x.Item2.Contains(id))?.Item1;
-            return string.IsNullOrEmpty(keyword)
-                ? new List<string> { "OmoriModPage_Om21341" }
-                : new List<string> { "OmoriModPage_Om21341", keyword };
+            var keywords = ModParameters.OnlyCardKeywords.FirstOrDefault(x => x.Item2.Contains(id))?.Item1;
+            var stringList = new List<string> { "OmoriModPage_Om21341" };
+            if (keywords != null && keywords.Any())
+                stringList.AddRange(keywords);
+            return stringList;
         }
 
         private static DiceCardXmlInfo CardOptionChange(DiceCardXmlInfo cardXml, List<CardOption> option,

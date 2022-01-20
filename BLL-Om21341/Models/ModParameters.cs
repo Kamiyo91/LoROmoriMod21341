@@ -15,11 +15,14 @@ namespace BLL_Om21341.Models
         public static Dictionary<string, EffectTextModel> EffectTexts = new Dictionary<string, EffectTextModel>();
         public static Dictionary<string, string> NameTexts = new Dictionary<string, string>();
 
-        public static List<Tuple<string, List<int>, int>> OnlyCardKeywords = new List<Tuple<string, List<int>, int>>
-        {
-            new Tuple<string, List<int>, int>("OmoriPage_Om21341",
-                new List<int> { 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 }, 10000001)
-        };
+        public static List<Tuple<List<string>, List<int>, int>> OnlyCardKeywords =
+            new List<Tuple<List<string>, List<int>, int>>
+            {
+                new Tuple<List<string>, List<int>, int>(new List<string> { "OmoriPage_Om21341" },
+                    new List<int> { 67, 68, 69, 70, 72, 74, 75, 76, 77 }, 10000001),
+                new Tuple<List<string>, List<int>, int>(new List<string> { "OmoriPage_Om21341", "FriendsPage_Om21341" },
+                    new List<int> { 73, 71 }, 10000001)
+            };
 
         public static BlackSilence4thMapManager BoomEffectMap = null;
 
@@ -67,5 +70,10 @@ namespace BLL_Om21341.Models
                         { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach }
                 }
             };
+
+        public static readonly List<int> BooksIds = new List<int>
+        {
+            10000001
+        };
     }
 }

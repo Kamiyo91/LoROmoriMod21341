@@ -29,13 +29,28 @@ namespace Util_Om21341
                 .Name;
         }
 
-        public static void SetEpisodeSlots(UIBookStoryChapterSlot instance, List<UIBookStoryEpisodeSlot> episodeSlots)
+        public static void SetEpisodeSlots(UIBookStoryChapterSlot instance, UIBookStoryPanel panel,
+            List<UIBookStoryEpisodeSlot> episodeSlots)
         {
             if (instance.chapter != 7) return;
             var uibookStoryEpisodeSlot =
                 episodeSlots.Find(x => x.books.Find(y => y.id.packageId == ModParameters.PackageId) != null);
             if (uibookStoryEpisodeSlot == null) return;
             var books = uibookStoryEpisodeSlot.books;
+            uibookStoryEpisodeSlot.Init(
+                panel.panel.GetChapterBooksData(instance.chapter).FindAll(x =>
+                    x.id.packageId == ModParameters.PackageId && ModParameters.BooksIds.Contains(x.id.id)), instance);
+            ((TextMeshProUGUI)uibookStoryEpisodeSlot.GetType().GetField("episodeText", AccessTools.all)
+                .GetValue(uibookStoryEpisodeSlot)).text = ModParameters.EffectTexts
+                .FirstOrDefault(x => x.Key.Equals("CredenzaName_Om21341")).Value
+                .Name;
+            var image = (Image)uibookStoryEpisodeSlot.GetType().GetField("episodeIconGlow", AccessTools.all)
+                .GetValue(uibookStoryEpisodeSlot);
+            var image2 = (Image)uibookStoryEpisodeSlot.GetType().GetField("episodeIcon", AccessTools.all)
+                .GetValue(uibookStoryEpisodeSlot);
+            image2.sprite = ModParameters.ArtWorks["Omori_Om21341"];
+            image.sprite = ModParameters.ArtWorks["Omori_Om21341"];
+            instance.InstatiateAdditionalSlot();
             var uibookStoryEpisodeSlot2 = episodeSlots[episodeSlots.Count - 1];
             books.RemoveAll(x => x.id.packageId == ModParameters.PackageId);
             uibookStoryEpisodeSlot2.Init(instance.chapter, books, instance);

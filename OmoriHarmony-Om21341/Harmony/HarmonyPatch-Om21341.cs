@@ -3,8 +3,10 @@ using System.Linq;
 using BLL_Om21341.Models;
 using HarmonyLib;
 using LOR_DiceSystem;
+using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.UI;
 using Util_Om21341;
 
 namespace OmoriHarmony_Om21341.Harmony
@@ -15,9 +17,9 @@ namespace OmoriHarmony_Om21341.Harmony
         [HarmonyPostfix]
         [HarmonyPatch(typeof(UIBookStoryChapterSlot), "SetEpisodeSlots")]
         public static void SetEpisodeSlots(UIBookStoryChapterSlot __instance,
-            List<UIBookStoryEpisodeSlot> ___EpisodeSlots)
+            UIBookStoryPanel ___panel, List<UIBookStoryEpisodeSlot> ___EpisodeSlots)
         {
-            SkinUtil.SetEpisodeSlots(__instance, ___EpisodeSlots);
+            SkinUtil.SetEpisodeSlots(__instance, ___panel, ___EpisodeSlots);
         }
 
         [HarmonyPostfix]
@@ -58,9 +60,11 @@ namespace OmoriHarmony_Om21341.Harmony
         public static void SetXmlInfo(BookModel __instance, ref List<DiceCardXmlInfo> ____onlyCards)
         {
             if (__instance.BookId.packageId != ModParameters.PackageId) return;
-            var onlyCards = ModParameters.OnlyCardKeywords.FirstOrDefault(x => x.Item3 == __instance.BookId.id)?.Item2;
-            if (onlyCards != null)
-                ____onlyCards.AddRange(onlyCards.Select(id =>
+            var onlyCards = ModParameters.OnlyCardKeywords.Where(x => x.Item3 == __instance.BookId.id)
+                .Select(x => x.Item2).ToList();
+            if (!onlyCards.Any()) return;
+            foreach (var onlyCard in onlyCards)
+                ____onlyCards.AddRange(onlyCard.Select(id =>
                     ItemXmlDataList.instance.GetCardItem(new LorId(ModParameters.PackageId, id))));
         }
 
@@ -216,6 +220,21 @@ namespace OmoriHarmony_Om21341.Harmony
                 if (uicharacterSlot == null || uicharacterSlot.unitBattleData == null) continue;
                 uicharacterSlot.ReloadHpBattleSettingSlot();
             }
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(UIBookStoryPanel), "OnSelectEpisodeSlot")]
+        public static void UIBookStoryPanel_OnSelectEpisodeSlot(UIBookStoryPanel __instance,
+            UIBookStoryEpisodeSlot slot, TextMeshProUGUI ___selectedEpisodeText, Image ___selectedEpisodeIcon,
+            Image ___selectedEpisodeIconGlow)
+        {
+            if (slot == null || slot.books.Find(x => x.id.packageId == ModParameters.PackageId) == null) return;
+            ___selectedEpisodeText.text = ModParameters.EffectTexts
+                .FirstOrDefault(x => x.Key.Equals("CredenzaName_Om21341")).Value
+                .Name;
+            ___selectedEpisodeIcon.sprite = ModParameters.ArtWorks["Omori_Om21341"];
+            ___selectedEpisodeIconGlow.sprite = ModParameters.ArtWorks["Omori_Om21341"];
+            __instance.UpdateBookSlots();
         }
     }
 }
