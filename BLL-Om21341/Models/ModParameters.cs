@@ -75,5 +75,13 @@ namespace BLL_Om21341.Models
         {
             10000001
         };
+
+        public static readonly List<Tuple<LorId, LorId>> ExtraConditionPassives = new List<Tuple<LorId, LorId>>
+        {
+            new Tuple<LorId, LorId>(new LorId(PackageId, 28), new LorId(PackageId, 51)),
+            new Tuple<LorId, LorId>(new LorId(PackageId, 46), new LorId(PackageId, 51)),
+            new Tuple<LorId, LorId>(new LorId(PackageId, 47), new LorId(PackageId, 51)),
+            new Tuple<LorId, LorId>(new LorId(PackageId, 48), new LorId(PackageId, 51))
+        };
     }
 }

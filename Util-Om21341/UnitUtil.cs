@@ -50,11 +50,13 @@ namespace Util_Om21341
 
             BattleObjectManager.instance.InitUI();
         }
+
         public static bool CheckSkinUnitData(UnitDataModel unitData)
         {
             if (!string.IsNullOrEmpty(unitData.workshopSkin)) return true;
             return unitData.bookItem != unitData.CustomBookItem;
         }
+
         public static void UnitReviveAndRecovery(BattleUnitModel owner, int hp, bool recoverLight,
             bool skinChanged = false)
         {

@@ -108,6 +108,20 @@ namespace OmoriHarmony_Om21341.Harmony
         }
 
         [HarmonyPostfix]
+        [HarmonyPatch(typeof(BookModel), "CanSuccessionPassive")]
+        public static void BookModel_CanSuccessionPassive(BookModel __instance, PassiveModel targetpassive,
+            ref GivePassiveState haspassiveState, ref bool __result)
+        {
+            var passiveItemExtra =
+                ModParameters.ExtraConditionPassives.FirstOrDefault(x =>
+                    x.Item1 == targetpassive.originData.currentpassive.id);
+            if (passiveItemExtra == null || !__instance.GetPassiveModelList()
+                    .Exists(x => passiveItemExtra.Item2 == x.reservedData.currentpassive.id)) return;
+            haspassiveState = GivePassiveState.Lock;
+            __result = false;
+        }
+
+        [HarmonyPostfix]
         [HarmonyPatch(typeof(UnitDataModel), "LoadFromSaveData")]
         public static void Unit_LoadFromSaveData(UnitDataModel __instance)
         {
