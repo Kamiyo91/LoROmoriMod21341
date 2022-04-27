@@ -128,6 +128,10 @@ namespace OmoriHarmony_Om21341.Harmony
                         SephirahType.Malkuth
                     },PreBattleUnitSpecialCases.Sephirah4)
             });
+            ModParameters.BookList.AddRange(new List<LorId>
+            {
+                new LorId(PackageId,10)
+            });
         }
     }
 }
