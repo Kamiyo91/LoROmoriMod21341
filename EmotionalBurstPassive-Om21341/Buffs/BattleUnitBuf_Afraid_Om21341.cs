@@ -1,5 +1,6 @@
-﻿using BLL_Om21341.Models.Enum;
-using Util_Om21341;
+﻿using BLL_Om21341;
+using BLL_Om21341.Enum;
+using KamiyoStaticUtil.Utils;
 
 namespace EmotionalBurstPassive_Om21341.Buffs
 {
@@ -33,7 +34,7 @@ namespace EmotionalBurstPassive_Om21341.Buffs
 
         public override bool IsCardChoosable(BattleDiceCardModel card)
         {
-            return !UnitUtil.CantUseCardAfraid(card) && base.IsCardChoosable(card);
+            return !UnitUtil.CantUseCardAfraid(card, OmoriModParameters.PackageId) && base.IsCardChoosable(card);
         }
     }
 }

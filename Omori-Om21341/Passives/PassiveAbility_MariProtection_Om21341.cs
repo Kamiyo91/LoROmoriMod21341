@@ -1,4 +1,5 @@
-﻿using Util_Om21341;
+﻿using BLL_Om21341;
+using KamiyoStaticUtil.Utils;
 
 namespace Omori_Om21341.Passives
 {
@@ -6,7 +7,7 @@ namespace Omori_Om21341.Passives
     {
         public override void OnStartBattle()
         {
-            UnitUtil.ReadyCounterCard(owner, 78);
+            UnitUtil.ReadyCounterCard(owner, 78, OmoriModParameters.PackageId);
         }
     }
 }

@@ -1,5 +1,6 @@
-﻿using BLL_Om21341.Models;
-using CustomMapUtility;
+﻿using CustomMapUtility;
+using KamiyoStaticBLL.Models;
+using KamiyoStaticUtil.Utils;
 using UnityEngine;
 
 namespace Util_Om21341.CommonMaps
@@ -11,7 +12,7 @@ namespace Util_Om21341.CommonMaps
         public override void InitializeMap()
         {
             base.InitializeMap();
-            if (ModParameters.BoomEffectMap == null) MapUtil.LoadBoomEffect();
+            if (ModParameters.BoomEffectMap == null) MapStaticUtil.LoadBoomEffect();
         }
 
         public override void EnableMap(bool b)

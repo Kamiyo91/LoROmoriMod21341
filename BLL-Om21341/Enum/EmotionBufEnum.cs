@@ -1,4 +1,4 @@
-﻿namespace BLL_Om21341.Models.Enum
+﻿namespace BLL_Om21341.Enum
 {
     public enum EmotionBufEnum
     {

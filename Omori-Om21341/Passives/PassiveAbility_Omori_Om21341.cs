@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using BLL_Om21341;
+using BLL_Om21341.Enum;
 using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using BLL_Om21341.Models;
-using BLL_Om21341.Models.Enum;
 using EmotionalBurstPassive_Om21341;
+using KamiyoStaticBLL.Enums;
+using KamiyoStaticBLL.Models;
+using KamiyoStaticUtil.Utils;
 using LOR_XML;
 using Omori_Om21341.Buffs;
 using Omori_Om21341.MechUtil;
-using Util_Om21341;
 
 namespace Omori_Om21341.Passives
 {
@@ -39,9 +41,9 @@ namespace Omori_Om21341.Passives
                     }
                 },
                 EgoAbColorColor = AbColorType.Negative,
-                EgoAttackCardId = new LorId(ModParameters.PackageId, 66)
+                EgoAttackCardId = new LorId(OmoriModParameters.PackageId, 66)
             });
-            owner.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 66));
+            owner.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 66));
             UnitUtil.CheckSkinProjection(owner);
         }
 

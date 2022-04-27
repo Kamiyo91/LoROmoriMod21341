@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using BLL_Om21341.Models;
-using BLL_Om21341.Models.Enum;
+using BLL_Om21341;
+using BLL_Om21341.Enum;
 using EmotionalBurstPassive_Om21341.Buffs;
 using EmotionalBurstPassive_Om21341.Passives;
 
@@ -10,10 +10,10 @@ namespace EmotionalBurstPassive_Om21341
     {
         public static void RemoveEmotionalBurstCards(BattleUnitModel unit)
         {
-            unit.personalEgoDetail.RemoveCard(new LorId(ModParameters.PackageId, 32));
-            unit.personalEgoDetail.RemoveCard(new LorId(ModParameters.PackageId, 33));
-            unit.personalEgoDetail.RemoveCard(new LorId(ModParameters.PackageId, 34));
-            unit.personalEgoDetail.RemoveCard(new LorId(ModParameters.PackageId, 35));
+            unit.personalEgoDetail.RemoveCard(new LorId(OmoriModParameters.PackageId, 32));
+            unit.personalEgoDetail.RemoveCard(new LorId(OmoriModParameters.PackageId, 33));
+            unit.personalEgoDetail.RemoveCard(new LorId(OmoriModParameters.PackageId, 34));
+            unit.personalEgoDetail.RemoveCard(new LorId(OmoriModParameters.PackageId, 35));
         }
 
         public static void AddEmotionalBurstCard(BattleUnitModel unit, EmotionBufEnum type)
@@ -21,24 +21,24 @@ namespace EmotionalBurstPassive_Om21341
             switch (type)
             {
                 case EmotionBufEnum.Neutral:
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 35));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 35));
                     return;
                 case EmotionBufEnum.Angry:
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 32));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 32));
                     return;
                 case EmotionBufEnum.Happy:
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 34));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 34));
                     return;
                 case EmotionBufEnum.Sad:
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 33));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 33));
                     return;
                 case EmotionBufEnum.All:
                 case EmotionBufEnum.Afraid:
                 default:
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 32));
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 33));
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 34));
-                    unit.personalEgoDetail.AddCard(new LorId(ModParameters.PackageId, 35));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 32));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 33));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 34));
+                    unit.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 35));
                     return;
             }
         }

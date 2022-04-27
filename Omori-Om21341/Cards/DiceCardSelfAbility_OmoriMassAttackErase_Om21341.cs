@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using BLL_Om21341.Models;
+using BLL_Om21341;
 using EmotionalBurstPassive_Om21341.Buffs;
 
 namespace Omori_Om21341.Cards
@@ -11,7 +11,7 @@ namespace Omori_Om21341.Cards
         public override bool OnChooseCard(BattleUnitModel owner)
         {
             return !owner.cardSlotDetail.cardAry.Exists(x =>
-                x?.card?.GetID() == new LorId(ModParameters.PackageId, 67));
+                x?.card?.GetID() == new LorId(OmoriModParameters.PackageId, 67));
         }
 
         public override void OnEndAreaAttack()

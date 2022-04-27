@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using BLL_Om21341.Models;
+using BLL_Om21341;
 
 namespace Omori_Om21341.Cards
 {
@@ -43,8 +43,8 @@ namespace Omori_Om21341.Cards
         public override bool OnChooseCard(BattleUnitModel owner)
         {
             return !owner.cardSlotDetail.cardAry.Exists(x =>
-                x != null && (x.card.GetID() == new LorId(ModParameters.PackageId, 66) ||
-                              x.card.GetID() == new LorId(ModParameters.PackageId, 907)));
+                x != null && (x.card.GetID() == new LorId(OmoriModParameters.PackageId, 66) ||
+                              x.card.GetID() == new LorId(OmoriModParameters.PackageId, 907)));
         }
     }
 }

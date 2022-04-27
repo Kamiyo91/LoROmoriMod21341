@@ -1,9 +1,12 @@
-﻿using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using BLL_Om21341.Models;
+﻿using System.Collections.Generic;
+using BLL_Om21341;
+using BLL_Om21341.Extensions.MechUtilModelExtensions;
+using KamiyoStaticBLL.Models;
+using KamiyoStaticUtil.BaseClass;
+using KamiyoStaticUtil.Utils;
 using Omori_Om21341.Buffs;
 using Omori_Om21341.MapManagers;
 using Util_Om21341;
-using Util_Om21341.BaseClass;
 
 namespace Omori_Om21341.MechUtil
 {
@@ -43,14 +46,14 @@ namespace Omori_Om21341.MechUtil
             {
                 _model.SingleUse = true;
                 origin = BattleDiceCardModel.CreatePlayingCard(
-                    ItemXmlDataList.instance.GetCardItem(new LorId(ModParameters.PackageId, 907)));
+                    ItemXmlDataList.instance.GetCardItem(new LorId(OmoriModParameters.PackageId, 907)));
                 return;
             }
 
             if (GetPhase() <= 1 || _model.OneTurnCard) return;
             SetOneTurnCard(true);
             origin = BattleDiceCardModel.CreatePlayingCard(
-                ItemXmlDataList.instance.GetCardItem(new LorId(ModParameters.PackageId, 907)));
+                ItemXmlDataList.instance.GetCardItem(new LorId(OmoriModParameters.PackageId, 907)));
         }
 
         private static void ChangeToOmoriEgoMap()
@@ -58,7 +61,7 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ChangeMap(new MapModel
             {
                 Stage = "Omori5_Om21341",
-                StageId = 8,
+                StageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 IsPlayer = true,
                 Component = typeof(Omori5_Om21341MapManager),
                 Bgy = 0.55f
@@ -70,7 +73,7 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ChangeMap(new MapModel
             {
                 Stage = "Omori2_Om21341",
-                StageId = 8,
+                StageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 IsPlayer = true,
                 OneTurnEgo = true,
                 Component = typeof(Omori2_Om21341MapManager),
@@ -94,7 +97,7 @@ namespace Omori_Om21341.MechUtil
 
         public virtual void ChangeToEgoMap(LorId cardId)
         {
-            if (cardId != new LorId(ModParameters.PackageId, 907) ||
+            if (cardId != new LorId(OmoriModParameters.PackageId, 907) ||
                 SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
             _model.AttackMapChanged = true;
             ChangeToOmoriEgoAttackMap();
@@ -104,14 +107,15 @@ namespace Omori_Om21341.MechUtil
         {
             if (!_model.AttackMapChanged) return;
             _model.AttackMapChanged = false;
-            MapUtil.ReturnFromEgoMap("Omori2_Om21341", 8);
+            MapUtil.ReturnFromEgoMap("Omori2_Om21341", new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) });
         }
 
         public void ReturnFromEgoMap()
         {
             if (!_model.MapChanged) return;
             _model.MapChanged = false;
-            MapUtil.ReturnFromEgoMap("Omori5_Om21341", 8, true);
+            MapUtil.ReturnFromEgoMap("Omori5_Om21341", new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
+                true);
         }
 
         public void CheckPhaseChange()
@@ -126,7 +130,7 @@ namespace Omori_Om21341.MechUtil
                     _stageManager?.SetOverlay(GetPhase());
                     if (GetPhase() == 3)
                     {
-                        _model.Owner.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 54));
+                        _model.Owner.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 54));
                         foreach (var unit in BattleObjectManager.instance.GetAliveList(
                                      UnitUtil.ReturnOtherSideFaction(_model.Owner.faction)))
                             unit.forceRetreat = true;
@@ -165,15 +169,15 @@ namespace Omori_Om21341.MechUtil
         public void OmoriShimmering()
         {
             _model.Owner.allyCardDetail.ExhaustAllCards();
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 69));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 72));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 74));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 75));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 76));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 76));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 77));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 77));
-            _model.Owner.allyCardDetail.AddTempCard(new LorId(ModParameters.PackageId, 67));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 69));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 72));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 74));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 75));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 76));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 76));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 77));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 77));
+            _model.Owner.allyCardDetail.AddTempCard(new LorId(OmoriModParameters.PackageId, 67));
         }
 
         public void CheckEndingCaseWin()

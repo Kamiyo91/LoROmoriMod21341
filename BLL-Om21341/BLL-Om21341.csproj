@@ -35,6 +35,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="KamiyoStaticBLL">
+      <HintPath>..\..\KamiyoStaticDll\KamiyoStaticBLL\bin\Debug\KamiyoStaticBLL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,15 +53,8 @@
   <ItemGroup>
     <Compile Include="Extensions\MechUtilModelExtensions\MechUtil_OmoriModel.cs" />
     <Compile Include="Extensions\MechUtilModelExtensions\NpcMechUtil_OmoriModel.cs" />
-    <Compile Include="Models\EffectTextModel.cs" />
-    <Compile Include="Models\Enum\ColorTypeEnum.cs" />
-    <Compile Include="Models\Enum\EmotionBufEnum.cs" />
-    <Compile Include="Models\ExtraRewards.cs" />
-    <Compile Include="Models\MapModel.cs" />
-    <Compile Include="Models\MechUtilModels\MechUtilBaseModel.cs" />
-    <Compile Include="Models\MechUtilModels\NpcMechUtilBaseModel.cs" />
-    <Compile Include="Models\ModParameters.cs" />
-    <Compile Include="Models\UnitModel.cs" />
+    <Compile Include="Enum\EmotionBufEnum.cs" />
+    <Compile Include="OmoriModParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

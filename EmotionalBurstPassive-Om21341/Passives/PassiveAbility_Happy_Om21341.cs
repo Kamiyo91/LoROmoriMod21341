@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using BLL_Om21341.Models;
 using EmotionalBurstPassive_Om21341.Buffs;
-using Util_Om21341;
+using KamiyoStaticBLL.Models;
+using KamiyoStaticUtil.Utils;
 
 namespace EmotionalBurstPassive_Om21341.Passives
 {

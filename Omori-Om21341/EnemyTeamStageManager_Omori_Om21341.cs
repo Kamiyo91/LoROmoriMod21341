@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using BLL_Om21341.Models;
-using BLL_Om21341.Models.Enum;
+using BLL_Om21341;
 using CustomMapUtility;
 using EmotionalBurstPassive_Om21341.Passives;
+using KamiyoStaticBLL.Enums;
+using KamiyoStaticBLL.Models;
+using KamiyoStaticUtil.Utils;
 using LOR_XML;
 using Omori_Om21341.MapManagers;
 using Omori_Om21341.Passives;
 using UnityEngine;
-using Util_Om21341;
 
 namespace Omori_Om21341
 {
@@ -64,16 +65,16 @@ namespace Omori_Om21341
             switch (unit.UnitData.unitData.OwnerSephirah)
             {
                 case SephirahType.Malkuth:
-                    unit.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 46));
+                    unit.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 46));
                     break;
                 case SephirahType.Yesod:
-                    unit.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 28));
+                    unit.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 28));
                     break;
                 case SephirahType.Hod:
-                    unit.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 47));
+                    unit.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 47));
                     break;
                 case SephirahType.Netzach:
-                    unit.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 48));
+                    unit.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 48));
                     break;
             }
         }
@@ -163,7 +164,7 @@ namespace Omori_Om21341
         public override void OnEndBattle()
         {
             foreach (var unit in _playerUnits) unit.Revive(1);
-            MapUtil.UnloadBoomEffect();
+            MapStaticUtil.UnloadBoomEffect();
         }
     }
 }

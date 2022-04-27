@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using BLL_Om21341.Enum;
 using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using BLL_Om21341.Models.Enum;
 using EmotionalBurstPassive_Om21341.Cards;
+using KamiyoStaticUtil.CommonBuffs;
 using Omori_Om21341.Buffs;
 using Omori_Om21341.MechUtil;
-using Util_Om21341.CommonBuffs;
 
 namespace Omori_Om21341.Passives
 {
@@ -26,8 +26,8 @@ namespace Omori_Om21341.Passives
             owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_AfraidImmunity_Om21341());
             if (Singleton<StageController>.Instance.EnemyStageManager is EnemyTeamStageManager_Omori_Om21341 manager)
                 _mechUtil.SetStageManager(manager);
-            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_PlayerShimmeringBuf_Om21341());
-            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_Immortal_Om21341());
+            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_KamiyoPlayerShimmeringBuf());
+            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_KamiyoImmortal());
         }
 
         public override void OnRoundStartAfter()

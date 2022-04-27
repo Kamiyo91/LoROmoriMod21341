@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KamiyoStaticBLL">
+      <HintPath>..\..\KamiyoStaticDll\KamiyoStaticBLL\bin\Debug\KamiyoStaticBLL.dll</HintPath>
+    </Reference>
+    <Reference Include="KamiyoStaticUtil">
+      <HintPath>..\..\KamiyoStaticDll\KamiyoStaticUtil\bin\Debug\KamiyoStaticUtil.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\mscorlib.dll</HintPath>
     </Reference>
@@ -78,21 +84,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseClass\MechUtilBase.cs" />
-    <Compile Include="BaseClass\NpcMechUtilBase.cs" />
-    <Compile Include="CommonBuffs\BattleUnitBuf_ImmortalUntilRoundEndMech_Om21341.cs" />
-    <Compile Include="CommonBuffs\BattleUnitBuf_Immortal_Om21341.cs" />
-    <Compile Include="CommonBuffs\BattleUnitBuf_ImmunityToStatusAliment_Om21341.cs" />
-    <Compile Include="CommonBuffs\BattleUnitBuf_PlayerShimmeringBuf_Om21341.cs" />
-    <Compile Include="CommonBuffs\BattleUnitBuf_ImmortalUntilRoundEnd_Om21341.cs" />
     <Compile Include="CommonMaps\OmoriBoomEffectMap_Om21341MapManager.cs" />
     <Compile Include="CustomMapUtility\Assemblies\CustomMapUtility.cs" />
     <Compile Include="CustomMapUtility\Assemblies\Wav.cs" />
-    <Compile Include="LocalizeUtil.cs" />
     <Compile Include="MapUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkinUtil.cs" />
-    <Compile Include="UnitUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL-Om21341\BLL-Om21341.csproj">

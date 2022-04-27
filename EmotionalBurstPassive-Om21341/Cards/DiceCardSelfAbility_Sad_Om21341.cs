@@ -1,5 +1,5 @@
-﻿using BLL_Om21341.Models;
-using BLL_Om21341.Models.Enum;
+﻿using BLL_Om21341;
+using BLL_Om21341.Enum;
 using EmotionalBurstPassive_Om21341.Passives;
 
 namespace EmotionalBurstPassive_Om21341.Cards
@@ -27,7 +27,7 @@ namespace EmotionalBurstPassive_Om21341.Cards
             }
 
             var passive =
-                unit.passiveDetail.AddPassive(new LorId(ModParameters.PackageId, 31)) as
+                unit.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 31)) as
                     PassiveAbility_Sad_Om21341;
             passive?.ChangeNameAndSetStacks(1);
             passive?.AfterInit();

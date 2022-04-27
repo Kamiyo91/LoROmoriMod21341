@@ -1,4 +1,4 @@
-﻿using BLL_Om21341.Models.Enum;
+﻿using BLL_Om21341.Enum;
 
 namespace EmotionalBurstPassive_Om21341.Passives
 {
