@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using CustomMapUtility;
 using KamiyoStaticBLL.Models;
 using KamiyoStaticUtil.Utils;
-using UnityEngine;
 
 namespace Util_Om21341
 {
@@ -41,25 +39,6 @@ namespace Util_Om21341
             SingletonBehavior<BattleSoundManager>.Instance.SetEnemyTheme(SingletonBehavior<BattleSceneRoot>
                 .Instance.currentMapObject.mapBgm);
             SingletonBehavior<BattleSoundManager>.Instance.CheckTheme();
-        }
-
-        public static void GetArtWorks(DirectoryInfo dir)
-        {
-            if (dir.GetDirectories().Length != 0)
-            {
-                var directories = dir.GetDirectories();
-                foreach (var t in directories) GetArtWorks(t);
-            }
-
-            foreach (var fileInfo in dir.GetFiles())
-            {
-                var texture2D = new Texture2D(2, 2);
-                texture2D.LoadImage(File.ReadAllBytes(fileInfo.FullName));
-                var value = Sprite.Create(texture2D, new Rect(0f, 0f, texture2D.width, texture2D.height),
-                    new Vector2(0f, 0f));
-                var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fileInfo.FullName);
-                ModParameters.ArtWorks[fileNameWithoutExtension] = value;
-            }
         }
     }
 }

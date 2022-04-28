@@ -118,19 +118,21 @@ namespace OmoriHarmony_Om21341.Harmony
                 new Tuple<LorId, LorId>(new LorId(PackageId, 47), new LorId(PackageId, 51)),
                 new Tuple<LorId, LorId>(new LorId(PackageId, 48), new LorId(PackageId, 51))
             });
-            ModParameters.PreBattleUnits.AddRange(new List<Tuple<LorId, List<PreBattleUnitModel>, List<SephirahType>, PreBattleUnitSpecialCases>>
-            {
-                new Tuple<LorId, List<PreBattleUnitModel>, List<SephirahType>, PreBattleUnitSpecialCases>(new LorId(PackageId,8),null,new List<SephirahType>
-                    {
-                        SephirahType.Hod,
-                        SephirahType.Yesod,
-                        SephirahType.Netzach,
-                        SephirahType.Malkuth
-                    },PreBattleUnitSpecialCases.Sephirah4)
-            });
+            ModParameters.PreBattleUnits.AddRange(
+                new List<Tuple<LorId, List<PreBattleUnitModel>, List<SephirahType>, PreBattleUnitSpecialCases>>
+                {
+                    new Tuple<LorId, List<PreBattleUnitModel>, List<SephirahType>, PreBattleUnitSpecialCases>(
+                        new LorId(PackageId, 8), null, new List<SephirahType>
+                        {
+                            SephirahType.Hod,
+                            SephirahType.Yesod,
+                            SephirahType.Netzach,
+                            SephirahType.Malkuth
+                        }, PreBattleUnitSpecialCases.Sephirah4)
+                });
             ModParameters.BookList.AddRange(new List<LorId>
             {
-                new LorId(PackageId,10)
+                new LorId(PackageId, 10)
             });
         }
     }
