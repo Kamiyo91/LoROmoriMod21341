@@ -90,6 +90,10 @@
       <Project>{1df30575-b636-45b5-b748-a37d420c63f0}</Project>
       <Name>BLL-Om21341</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Omori-Om21341\Omori-Om21341.csproj">
+      <Project>{4EAC45AC-67C0-4608-A598-B7AE09EEFB71}</Project>
+      <Name>Omori-Om21341</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Util-Om21341\Util-Om21341.csproj">
       <Project>{dacdc2ea-d97b-47b0-ba6a-1e0d27800c68}</Project>
       <Name>Util-Om21341</Name>

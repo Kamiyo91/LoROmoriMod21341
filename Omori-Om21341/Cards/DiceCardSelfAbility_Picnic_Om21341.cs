@@ -5,6 +5,17 @@ namespace Omori_Om21341.Cards
 {
     public class DiceCardSelfAbility_Picnic_Om21341 : DiceCardSelfAbilityBase
     {
+        public override string[] Keywords
+        {
+            get
+            {
+                return new[]
+                {
+                    "FriendsPage_Om21341"
+                };
+            }
+        }
+
         public override void OnUseCard()
         {
             owner.allyCardDetail.DrawCards(1);

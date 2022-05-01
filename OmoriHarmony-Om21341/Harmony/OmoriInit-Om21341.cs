@@ -7,6 +7,7 @@ using KamiyoStaticBLL.Enums;
 using KamiyoStaticBLL.Models;
 using KamiyoStaticUtil.Utils;
 using MonoMod.Utils;
+using Omori_Om21341;
 
 namespace OmoriHarmony_Om21341.Harmony
 {
@@ -22,6 +23,7 @@ namespace OmoriHarmony_Om21341.Harmony
             SkinUtil.PreLoadBufIcons();
             LocalizeUtil.AddLocalLocalize(OmoriModParameters.Path, OmoriModParameters.PackageId);
             LocalizeUtil.RemoveError();
+            UnitUtil.InitKeywords(OmoriOm21341GetAssembly.GetAssembly());
         }
 
         private static void InitParameters()
@@ -42,12 +44,9 @@ namespace OmoriHarmony_Om21341.Harmony
                     {
                         new LorId(PackageId, 67), new LorId(PackageId, 68), new LorId(PackageId, 69),
                         new LorId(PackageId, 70), new LorId(PackageId, 72), new LorId(PackageId, 74),
-                        new LorId(PackageId, 75), new LorId(PackageId, 76), new LorId(PackageId, 77)
-                    }, new LorId(PackageId, 10000001)),
-                new Tuple<List<string>, List<LorId>, LorId>(
-                    new List<string> { "OmoriPage_Om21341", "FriendsPage_Om21341" },
-                    new List<LorId> { new LorId(PackageId, 73), new LorId(PackageId, 71) },
-                    new LorId(PackageId, 10000001))
+                        new LorId(PackageId, 75), new LorId(PackageId, 76), new LorId(PackageId, 77),
+                        new LorId(PackageId, 73), new LorId(PackageId, 71)
+                    }, new LorId(PackageId, 10000001))
             });
             ModParameters.DynamicNames.AddRange(new Dictionary<LorId, LorId>
             {
