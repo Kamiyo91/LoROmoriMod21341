@@ -1,6 +1,7 @@
 ﻿using BLL_Om21341;
 using BLL_Om21341.Enum;
 using EmotionalBurstPassive_Om21341.Passives;
+using KamiyoStaticUtil.Utils;
 
 namespace EmotionalBurstPassive_Om21341.Cards
 {
@@ -42,6 +43,11 @@ namespace EmotionalBurstPassive_Om21341.Cards
         public override bool IsTargetableSelf()
         {
             return true;
+        }
+
+        public override bool IsValidTarget(BattleUnitModel unit, BattleDiceCardModel self, BattleUnitModel targetUnit)
+        {
+            return UnitUtil.NotTargetableCharCheck(targetUnit);
         }
     }
 }
