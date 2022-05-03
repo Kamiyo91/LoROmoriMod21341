@@ -34,7 +34,6 @@ namespace OmoriHarmony_Om21341.Harmony
                     Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             ModParameters.PackageIds.Add(OmoriModParameters.PackageId);
             ModParameters.Path.Add(OmoriModParameters.Path);
-            ModParameters.Language = GlobalGameManager.Instance.CurrentOption.language;
             MapStaticUtil.GetArtWorks(new DirectoryInfo(OmoriModParameters.Path + "/ArtWork"));
             ModParameters.DefaultKeyword.Add(OmoriModParameters.PackageId, "OmoriModPage_Om21341");
             ModParameters.OnlyCardKeywords.AddRange(new List<Tuple<List<string>, List<LorId>, LorId>>
