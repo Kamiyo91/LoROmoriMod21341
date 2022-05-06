@@ -109,12 +109,12 @@ namespace OmoriHarmony_Om21341.Harmony
             {
                 new LorId(PackageId, 10000001)
             });
-            ModParameters.ExtraConditionPassives.AddRange(new List<Tuple<LorId, LorId>>
+            ModParameters.ExtraConditionPassives.AddRange(new List<Tuple<LorId, List<LorId>>>
             {
-                new Tuple<LorId, LorId>(new LorId(PackageId, 28), new LorId(PackageId, 51)),
-                new Tuple<LorId, LorId>(new LorId(PackageId, 46), new LorId(PackageId, 51)),
-                new Tuple<LorId, LorId>(new LorId(PackageId, 47), new LorId(PackageId, 51)),
-                new Tuple<LorId, LorId>(new LorId(PackageId, 48), new LorId(PackageId, 51))
+                new Tuple<LorId, List<LorId>>(new LorId(PackageId, 28), new List<LorId>{new LorId(PackageId, 51)}),
+                new Tuple<LorId, List<LorId>>(new LorId(PackageId, 46), new List<LorId>{new LorId(PackageId, 51)}),
+                new Tuple<LorId, List<LorId>>(new LorId(PackageId, 47), new List<LorId>{new LorId(PackageId, 51)}),
+                new Tuple<LorId, List<LorId>>(new LorId(PackageId, 48), new List<LorId>{new LorId(PackageId, 51)})
             });
             ModParameters.PreBattleUnits.AddRange(
                 new List<Tuple<LorId, List<PreBattleUnitModel>, List<SephirahType>, PreBattleUnitSpecialCases>>
