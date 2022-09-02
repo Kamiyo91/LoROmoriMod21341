@@ -33,22 +33,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="KamiyoStaticBLL">
-      <HintPath>..\..\KamiyoStaticDll\KamiyoStaticBLL\bin\Debug\KamiyoStaticBLL.dll</HintPath>
+      <HintPath>..\..\CommonDLL\KamiyoStaticBLL.dll</HintPath>
     </Reference>
     <Reference Include="KamiyoStaticUtil">
-      <HintPath>..\..\KamiyoStaticDll\KamiyoStaticUtil\bin\Debug\KamiyoStaticUtil.dll</HintPath>
+      <HintPath>..\..\CommonDLL\KamiyoStaticUtil.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\0Harmony.dll</HintPath>
+      <HintPath>..\..\CommonDLL\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\NAudio.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
