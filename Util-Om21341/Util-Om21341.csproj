@@ -32,11 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KamiyoStaticBLL">
-      <HintPath>..\..\CommonDLL\KamiyoStaticBLL.dll</HintPath>
+    <Reference Include="KamiyoStaticBLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\StaticDLL\KamiyoStaticBLL\bin\Debug\KamiyoStaticBLL.dll</HintPath>
     </Reference>
-    <Reference Include="KamiyoStaticUtil">
-      <HintPath>..\..\CommonDLL\KamiyoStaticUtil.dll</HintPath>
+    <Reference Include="KamiyoStaticUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\StaticDLL\KamiyoStaticUtil\bin\Debug\KamiyoStaticUtil.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\mscorlib.dll</HintPath>
