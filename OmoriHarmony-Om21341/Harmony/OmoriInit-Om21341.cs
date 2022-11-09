@@ -62,13 +62,12 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                         customIconColor: new Color(1f, 0.6f, 0.6f), useHSVFilter: false)),
                 new CardOptions(33, CardOption.Personal,
                     cardColorOptions: new CardColorOptions(new Color(0.6f, 0.8f, 1f),
-                        customIconColor: new Color(0.6f, 0.8f, 0.6f), useHSVFilter: false)),
+                        customIconColor: new Color(0.6f, 0.8f, 1f), useHSVFilter: false)),
                 new CardOptions(34, CardOption.Personal,
                     cardColorOptions: new CardColorOptions(new Color(1f, 1f, 0.6f),
                         customIconColor: new Color(1f, 1f, 0.6f), useHSVFilter: false)),
                 new CardOptions(35, CardOption.Personal,
-                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: Color.gray,
-                        useHSVFilter: false)),
+                    cardColorOptions: new CardColorOptions(Color.gray, iconColor:HSVColors.Black)),
                 new CardOptions(66, CardOption.EgoPersonal),
                 new CardOptions(67, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) }),
@@ -86,18 +85,15 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) }),
                 new CardOptions(74, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) },
-                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: Color.gray,
-                        useHSVFilter: false)),
+                    cardColorOptions: new CardColorOptions(Color.gray,  customIconColor: new Color(0.5f, 0.5f, 0.5f),iconColor: HSVColors.Black)),
                 new CardOptions(75, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) },
-                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: Color.gray,
-                        useHSVFilter: false)),
+                    cardColorOptions: new CardColorOptions(Color.gray,  customIconColor: new Color(0.5f, 0.5f, 0.5f),iconColor: HSVColors.Black)),
                 new CardOptions(76, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) }),
                 new CardOptions(77, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) },
-                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: Color.gray,
-                        useHSVFilter: false))
+                    cardColorOptions: new CardColorOptions(Color.gray,  customIconColor: new Color(0.5f, 0.5f, 0.5f),iconColor: HSVColors.Black))
             });
         }
 
@@ -111,9 +107,9 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     keypageColorOptions: new KeypageColorOptions(Color.gray, Color.gray)),
                 new KeypageOptions(10000015,
                     keypageColorOptions: new KeypageColorOptions(new Color(1f, 0.6f, 0.6f), new Color(1f, 0.6f, 0.6f))),
-                new KeypageOptions(10000016,
-                    keypageColorOptions: new KeypageColorOptions(new Color(0.6f, 0.8f, 1f), new Color(0.6f, 0.8f, 1f))),
                 new KeypageOptions(10000017,
+                    keypageColorOptions: new KeypageColorOptions(new Color(0.6f, 0.8f, 1f), new Color(0.6f, 0.8f, 1f))),
+                new KeypageOptions(10000016,
                     keypageColorOptions: new KeypageColorOptions(new Color(1f, 1f, 0.6f), new Color(1f, 1f, 0.6f))),
                 new KeypageOptions(10000018, keypageColorOptions: new KeypageColorOptions(Color.gray, Color.gray))
             });
