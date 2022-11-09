@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using EmotionalBurstPassive_Om21341;
-using KamiyoStaticUtil.Utils;
+using BigDLL4221.Utils;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341;
 
-namespace Omori_Om21341.Cards
+namespace OmoriMod_Om21341.Omori_Om21341.Cards
 {
     public class DiceCardSelfAbility_Friends_Om21341 : DiceCardSelfAbilityBase
     {

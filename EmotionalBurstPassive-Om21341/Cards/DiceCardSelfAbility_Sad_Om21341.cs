@@ -1,9 +1,9 @@
-﻿using BLL_Om21341;
-using BLL_Om21341.Enum;
-using EmotionalBurstPassive_Om21341.Passives;
-using KamiyoStaticUtil.Utils;
+﻿using BigDLL4221.Utils;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.BLL_Om21341.Enum;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
 
-namespace EmotionalBurstPassive_Om21341.Cards
+namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Cards
 {
     public class DiceCardSelfAbility_Sad_Om21341 : DiceCardSelfAbilityBase
     {

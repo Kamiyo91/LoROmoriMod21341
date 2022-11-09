@@ -1,6 +1,6 @@
-﻿using EmotionalBurstPassive_Om21341.Buffs;
+﻿using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
 
-namespace Omori_Om21341
+namespace OmoriMod_Om21341.Omori_Om21341
 {
     public class DiceCardAbility_AfraidDice_Om21341 : DiceCardAbilityBase
     {

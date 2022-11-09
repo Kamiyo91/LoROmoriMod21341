@@ -1,8 +1,8 @@
-﻿using Sound;
+﻿using OmoriMod_Om21341.Util_Om21341.CommonMaps;
+using Sound;
 using UnityEngine;
-using Util_Om21341.CommonMaps;
 
-namespace Omori_Om21341.DiceEffects
+namespace OmoriMod_Om21341.Omori_Om21341.DiceEffects
 {
     public class FarAreaEffect_OmoriCustomEgoAreaStrong_Om21341 : FarAreaEffect
     {

@@ -1,6 +1,6 @@
-﻿using EmotionalBurstPassive_Om21341.Buffs;
+﻿using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
 
-namespace Omori_Om21341.Cards
+namespace OmoriMod_Om21341.Omori_Om21341.Cards
 {
     public class DiceCardSelfAbility_Hopeless_Om21341 : DiceCardSelfAbilityBase
     {

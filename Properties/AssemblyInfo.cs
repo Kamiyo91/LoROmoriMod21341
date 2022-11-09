@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Omori-Om21341")]
+[assembly: AssemblyTitle("OmoriMod_Om21341")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Omori-Om21341")]
+[assembly: AssemblyProduct("OmoriMod_Om21341")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("06bf4f49-5615-45aa-b8ed-544c1626ddb7")]
+[assembly: Guid("86157d7e-7d93-4190-8fc4-c09815561d83")]
 
 // Version information for an assembly consists of the following four values:
 //

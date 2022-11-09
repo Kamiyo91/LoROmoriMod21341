@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
-using BLL_Om21341;
-using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using KamiyoStaticBLL.Models;
-using KamiyoStaticUtil.BaseClass;
-using KamiyoStaticUtil.Utils;
-using Omori_Om21341.Buffs;
-using Omori_Om21341.MapManagers;
-using Util_Om21341;
+using BigDLL4221.BaseClass;
+using BigDLL4221.Models;
+using BigDLL4221.Utils;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.BLL_Om21341.Extensions.MechUtilModelExtensions;
+using OmoriMod_Om21341.Omori_Om21341.Buffs;
+using OmoriMod_Om21341.Omori_Om21341.MapManagers;
 
-namespace Omori_Om21341.MechUtil
+namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
 {
     public class NpcMechUtil_Omori : NpcMechUtilBase
     {
@@ -61,7 +60,7 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ChangeMap(new MapModel
             {
                 Stage = "Omori5_Om21341",
-                StageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
+                OriginalMapStageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 IsPlayer = true,
                 Component = typeof(Omori5_Om21341MapManager),
                 Bgy = 0.55f
@@ -73,7 +72,7 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ChangeMap(new MapModel
             {
                 Stage = "Omori2_Om21341",
-                StageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
+                OriginalMapStageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 IsPlayer = true,
                 OneTurnEgo = true,
                 Component = typeof(Omori2_Om21341MapManager),
@@ -95,7 +94,7 @@ namespace Omori_Om21341.MechUtil
             _model.NotSuccumb = true;
         }
 
-        public virtual void ChangeToEgoMap(LorId cardId)
+        public override void ChangeToEgoMap(LorId cardId)
         {
             if (cardId != new LorId(OmoriModParameters.PackageId, 907) ||
                 SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
@@ -110,7 +109,7 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ReturnFromEgoMap("Omori2_Om21341", new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) });
         }
 
-        public void ReturnFromEgoMap()
+        public override void ReturnFromEgoMap()
         {
             if (!_model.MapChanged) return;
             _model.MapChanged = false;

@@ -3,7 +3,7 @@ using System.Linq;
 using LOR_XML;
 using UnityEngine;
 
-namespace Omori_Om21341.DiceEffects
+namespace OmoriMod_Om21341.Omori_Om21341.DiceEffects
 {
     public class FarAreaEffect_OmoriHackAway_Om21341 : FarAreaEffect
     {

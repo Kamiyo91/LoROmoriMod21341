@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using BLL_Om21341;
-using BLL_Om21341.Enum;
-using EmotionalBurstPassive_Om21341.Buffs;
-using EmotionalBurstPassive_Om21341.Passives;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.BLL_Om21341.Enum;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
 
-namespace EmotionalBurstPassive_Om21341
+namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341
 {
     public static class EmotionalBurstUtil
     {

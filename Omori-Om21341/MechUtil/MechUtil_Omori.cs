@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using BLL_Om21341;
-using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using KamiyoStaticBLL.Models;
-using KamiyoStaticUtil.BaseClass;
-using KamiyoStaticUtil.CommonBuffs;
-using KamiyoStaticUtil.Utils;
-using Omori_Om21341.MapManagers;
-using Util_Om21341;
+﻿using System.Collections.Generic;
+using System.Linq;
+using BigDLL4221.BaseClass;
+using BigDLL4221.Buffs;
+using BigDLL4221.Models;
+using BigDLL4221.Utils;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.BLL_Om21341.Extensions.MechUtilModelExtensions;
+using OmoriMod_Om21341.Omori_Om21341.MapManagers;
 
-namespace Omori_Om21341.MechUtil
+namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
 {
     public class MechUtil_Omori : MechUtilBase
     {
@@ -22,14 +21,14 @@ namespace Omori_Om21341.MechUtil
 
         public override void SurviveCheck(int dmg)
         {
-            if (_model.Owner.hp - dmg > _model.Hp || !_model.Survive) return;
+            if (_model.Owner.hp - dmg > _model.SurviveHp || !_model.Survive) return;
             _model.Survive = false;
             _model.RechargeCount = 0;
-            _model.Owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_KamiyoImmortalUntilRoundEnd());
             UnitUtil.UnitReviveAndRecovery(_model.Owner, 0, _model.RecoverLightOnSurvive);
-            _model.Owner.SetHp(_model.SetHp);
+            _model.Owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_Immortal_DLL4221());
+            _model.Owner.SetHp(_model.RecoverToHp);
             _model.Owner.bufListDetail.AddBufWithoutDuplication(
-                new BattleUnitBuf_KamiyoImmunityToStatusAlimentUntilRoundEnd());
+                new BattleUnitBuf_ImmunityToStatusAlimentType_DLL4221());
             SetSuccumbStatus(true);
         }
 
@@ -67,21 +66,24 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ChangeMap(new MapModel
             {
                 Stage = "Omori5_Om21341",
-                StageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
+                OriginalMapStageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 IsPlayer = true,
+                OneTurnEgo = false,
                 Component = typeof(Omori5_Om21341MapManager),
                 Bgy = 0.55f
             });
         }
 
-        public override void EgoActive()
+        public override bool EgoActive()
         {
-            _model.Owner.bufListDetail.AddBufWithoutDuplication(
-                (BattleUnitBuf)Activator.CreateInstance(_model.EgoType));
-            _model.Owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_KamiyoImmortalUntilRoundEnd());
+            if (!_model.EgoOptions.TryGetValue(0, out var egoOptions)) return false;
+            _model.Owner.bufListDetail.AddBufWithoutDuplication(egoOptions.EgoType);
+            _model.Owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_Immortal_DLL4221());
             _model.Owner.cardSlotDetail.RecoverPlayPoint(_model.Owner.cardSlotDetail.GetMaxPlayPoint());
-            if (_model.HasEgoAbDialog)
-                UnitUtil.BattleAbDialog(_model.Owner.view.dialogUI, _model.EgoAbDialogList, _model.EgoAbColorColor);
+            if (egoOptions.EgoAbDialogList.Any())
+                UnitUtil.BattleAbDialog(_model.Owner.view.dialogUI, egoOptions.EgoAbDialogList,
+                    egoOptions.EgoAbColorColor);
+            return true;
         }
 
         private static void ChangeToOmoriEgoAttackMap()
@@ -89,7 +91,7 @@ namespace Omori_Om21341.MechUtil
             MapUtil.ChangeMap(new MapModel
             {
                 Stage = "Omori2_Om21341",
-                StageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
+                OriginalMapStageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 IsPlayer = true,
                 OneTurnEgo = true,
                 Component = typeof(Omori2_Om21341MapManager),
@@ -97,22 +99,22 @@ namespace Omori_Om21341.MechUtil
             });
         }
 
-        public virtual void ChangeToEgoMap(LorId cardId)
+        public override void ChangeToEgoMap(LorId cardId)
         {
-            if (cardId != _model.EgoAttackCardId || _model.Owner.faction != Faction.Player ||
+            if (!_model.EgoMaps.ContainsKey(cardId) || _model.Owner.faction != Faction.Player ||
                 SingletonBehavior<BattleSceneRoot>.Instance.currentMapObject.isEgo) return;
-            _model.EgoMapAttackused = true;
+            _model.EgoMapAttackUsed = true;
             ChangeToOmoriEgoAttackMap();
         }
 
         public void ReturnFromEgoAttackMap()
         {
-            if (!_model.EgoMapAttackused) return;
-            _model.EgoMapAttackused = false;
+            if (!_model.EgoMapAttackUsed) return;
+            _model.EgoMapAttackUsed = false;
             MapUtil.ReturnFromEgoMap("Omori2_Om21341", new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) });
         }
 
-        public void ReturnFromEgoMap()
+        public override void ReturnFromEgoMap()
         {
             if (!_model.MapChanged) return;
             _model.MapChanged = false;

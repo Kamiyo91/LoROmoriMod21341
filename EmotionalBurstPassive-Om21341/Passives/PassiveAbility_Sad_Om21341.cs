@@ -1,8 +1,9 @@
 ﻿using System.Linq;
-using EmotionalBurstPassive_Om21341.Buffs;
-using KamiyoStaticBLL.Models;
+using BigDLL4221.Models;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
 
-namespace EmotionalBurstPassive_Om21341.Passives
+namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives
 {
     public class PassiveAbility_Sad_Om21341 : PassiveAbilityBase
     {
@@ -24,18 +25,24 @@ namespace EmotionalBurstPassive_Om21341.Passives
             switch (stack)
             {
                 case 1:
-                    name = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("Sad_Om21341")).Value.Name;
-                    desc = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("Sad_Om21341")).Value.Desc;
+                    name = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                        .FirstOrDefault(x => x.Key.Equals("Sad_Om21341")).Value.Name;
+                    desc = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                        .FirstOrDefault(x => x.Key.Equals("Sad_Om21341")).Value.Desc;
                     _stack = 1;
                     break;
                 case 2:
-                    name = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("Depressed_Om21341")).Value.Name;
-                    desc = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("Depressed_Om21341")).Value.Desc;
+                    name = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                        .FirstOrDefault(x => x.Key.Equals("Depressed_Om21341")).Value.Name;
+                    desc = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                        .FirstOrDefault(x => x.Key.Equals("Depressed_Om21341")).Value.Desc;
                     _stack = 2;
                     break;
                 case 3:
-                    name = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("Miserable_Om21341")).Value.Name;
-                    desc = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("Miserable_Om21341")).Value.Desc;
+                    name = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                        .FirstOrDefault(x => x.Key.Equals("Miserable_Om21341")).Value.Name;
+                    desc = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                        .FirstOrDefault(x => x.Key.Equals("Miserable_Om21341")).Value.Desc;
                     _stack = 3;
                     break;
             }

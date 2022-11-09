@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using BLL_Om21341.Enum;
-using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using EmotionalBurstPassive_Om21341.Cards;
-using KamiyoStaticUtil.CommonBuffs;
-using Omori_Om21341.Buffs;
-using Omori_Om21341.MechUtil;
+using BigDLL4221.Buffs;
+using OmoriMod_Om21341.BLL_Om21341.Enum;
+using OmoriMod_Om21341.BLL_Om21341.Extensions.MechUtilModelExtensions;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Cards;
+using OmoriMod_Om21341.Omori_Om21341.Buffs;
+using OmoriMod_Om21341.Omori_Om21341.MechUtil;
 
-namespace Omori_Om21341.Passives
+namespace OmoriMod_Om21341.Omori_Om21341.Passives
 {
     public class PassiveAbility_OmoriNpc_Om21341 : PassiveAbilityBase
     {
@@ -18,7 +18,7 @@ namespace Omori_Om21341.Passives
         public override void Init(BattleUnitModel self)
         {
             base.Init(self);
-            _mechUtil = new NpcMechUtil_Omori(new NpcMechUtil_OmoriModel { Owner = self });
+            _mechUtil = new NpcMechUtil_Omori(new NpcMechUtil_OmoriModel("PhaseOmoriOm21341") { Owner = self });
         }
 
         public override void OnWaveStart()
@@ -26,8 +26,9 @@ namespace Omori_Om21341.Passives
             owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_AfraidImmunity_Om21341());
             if (Singleton<StageController>.Instance.EnemyStageManager is EnemyTeamStageManager_Omori_Om21341 manager)
                 _mechUtil.SetStageManager(manager);
-            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_KamiyoPlayerShimmeringBuf());
-            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_KamiyoImmortal());
+            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_ChangeCardCost_DLL4221());
+            owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_Immortal_DLL4221(false, infinite: true,
+                lastOneScene: false, canRecoverHp: true, canRecoverBp: true));
         }
 
         public override void OnRoundStartAfter()

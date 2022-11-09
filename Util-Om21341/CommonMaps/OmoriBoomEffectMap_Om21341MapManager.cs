@@ -1,9 +1,8 @@
-﻿using CustomMapUtility;
-using KamiyoStaticBLL.Models;
-using KamiyoStaticUtil.Utils;
+﻿using BigDLL4221.Utils;
+using OmoriMod_Om21341.BLL_Om21341;
 using UnityEngine;
 
-namespace Util_Om21341.CommonMaps
+namespace OmoriMod_Om21341.Util_Om21341.CommonMaps
 {
     public class OmoriBoomEffectMap_Om21341MapManager : CustomMapManager
     {
@@ -12,7 +11,7 @@ namespace Util_Om21341.CommonMaps
         public override void InitializeMap()
         {
             base.InitializeMap();
-            if (ModParameters.BoomEffectMap == null) MapStaticUtil.LoadBoomEffect();
+            if (OmoriModParameters.BoomEffectMap == null) CommonUtil.LoadBoomEffect();
         }
 
         public override void EnableMap(bool b)
@@ -23,7 +22,7 @@ namespace Util_Om21341.CommonMaps
 
         public static void BoomFirst()
         {
-            var gameObject = Instantiate(ModParameters.BoomEffectMap.areaBoomEffect);
+            var gameObject = Instantiate(OmoriModParameters.BoomEffectMap.areaBoomEffect);
             var battleUnitModel = BattleObjectManager.instance.GetList(Faction.Enemy)[0];
             gameObject.transform.SetParent(battleUnitModel.view.gameObject.transform);
             gameObject.transform.localPosition = Vector3.zero;

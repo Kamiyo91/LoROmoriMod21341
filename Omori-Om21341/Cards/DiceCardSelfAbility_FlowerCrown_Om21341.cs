@@ -1,6 +1,6 @@
-﻿using EmotionalBurstPassive_Om21341.Passives;
+﻿using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
 
-namespace Omori_Om21341.Cards
+namespace OmoriMod_Om21341.Omori_Om21341.Cards
 {
     public class DiceCardSelfAbility_FlowerCrown_Om21341 : DiceCardSelfAbilityBase
     {

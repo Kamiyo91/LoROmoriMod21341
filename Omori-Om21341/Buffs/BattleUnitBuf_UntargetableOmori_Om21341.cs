@@ -1,4 +1,4 @@
-﻿namespace Omori_Om21341.Buffs
+﻿namespace OmoriMod_Om21341.Omori_Om21341.Buffs
 {
     public class BattleUnitBuf_UntargetableOmori_Om21341 : BattleUnitBuf
     {

@@ -1,7 +1,7 @@
-﻿using EmotionalBurstPassive_Om21341.Buffs;
-using EmotionalBurstPassive_Om21341.Passives;
+﻿using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
 
-namespace EmotionalBurstPassive_Om21341.Cards
+namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Cards
 {
     public class DiceCardSelfAbility_Mock_Om21341 : DiceCardSelfAbilityBase
     {

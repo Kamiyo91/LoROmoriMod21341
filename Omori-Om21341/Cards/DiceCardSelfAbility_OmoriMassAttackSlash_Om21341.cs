@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using BLL_Om21341;
+using OmoriMod_Om21341.BLL_Om21341;
 
-namespace Omori_Om21341.Cards
+namespace OmoriMod_Om21341.Omori_Om21341.Cards
 {
     public class DiceCardSelfAbility_OmoriMassAttackSlash_Om21341 : DiceCardSelfAbilityBase
     {

@@ -1,17 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using BLL_Om21341;
-using BLL_Om21341.Enum;
-using BLL_Om21341.Extensions.MechUtilModelExtensions;
-using EmotionalBurstPassive_Om21341;
-using KamiyoStaticBLL.Enums;
-using KamiyoStaticBLL.Models;
-using KamiyoStaticUtil.Utils;
+using BigDLL4221.Models;
+using BigDLL4221.Utils;
 using LOR_XML;
-using Omori_Om21341.Buffs;
-using Omori_Om21341.MechUtil;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.BLL_Om21341.Enum;
+using OmoriMod_Om21341.BLL_Om21341.Extensions.MechUtilModelExtensions;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341;
+using OmoriMod_Om21341.Omori_Om21341.Buffs;
+using OmoriMod_Om21341.Omori_Om21341.MechUtil;
 
-namespace Omori_Om21341.Passives
+namespace OmoriMod_Om21341.Omori_Om21341.Passives
 {
     public class PassiveAbility_Omori_Om21341 : PassiveAbilityBase
     {
@@ -23,25 +22,28 @@ namespace Omori_Om21341.Passives
             _util = new MechUtil_Omori(new MechUtil_OmoriModel
             {
                 Owner = owner,
-                Hp = 0,
-                SetHp = 20,
+                SurviveHp = 1,
+                RecoverToHp = 20,
                 RechargeCount = 5,
                 RecoverLightOnSurvive = true,
-                HasEgoAbDialog = true,
                 Survive = true,
-                HasEgo = true,
-                EgoType = typeof(BattleUnitBuf_UntargetableOmori_Om21341),
-                EgoAbDialogList = new List<AbnormalityCardDialog>
+                EgoOptions = new Dictionary<int, EgoOptions>
                 {
-                    new AbnormalityCardDialog
                     {
-                        id = "Omori",
-                        dialog = ModParameters.EffectTexts.FirstOrDefault(x => x.Key.Equals("OmoriSurvive1_Om21341"))
-                            .Value.Desc
+                        0, new EgoOptions(new BattleUnitBuf_UntargetableOmori_Om21341(),
+                            egoAbDialogList: new List<AbnormalityCardDialog>
+                            {
+                                new AbnormalityCardDialog
+                                {
+                                    id = "Omori",
+                                    dialog = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                                        .FirstOrDefault(x => x.Key.Equals("OmoriSurvive1_Om21341"))
+                                        .Value.Desc
+                                }
+                            })
                     }
                 },
-                EgoAbColorColor = AbColorType.Negative,
-                EgoAttackCardId = new LorId(OmoriModParameters.PackageId, 66)
+                EgoMaps = new Dictionary<LorId, MapModel> { { new LorId(OmoriModParameters.PackageId, 66), null } }
             });
             owner.personalEgoDetail.AddCard(new LorId(OmoriModParameters.PackageId, 66));
             UnitUtil.CheckSkinProjection(owner);

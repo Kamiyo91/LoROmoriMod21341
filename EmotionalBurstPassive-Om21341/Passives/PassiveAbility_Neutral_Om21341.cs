@@ -1,4 +1,4 @@
-﻿namespace EmotionalBurstPassive_Om21341.Passives
+﻿namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives
 {
     public class PassiveAbility_Neutral_Om21341 : PassiveAbilityBase
     {

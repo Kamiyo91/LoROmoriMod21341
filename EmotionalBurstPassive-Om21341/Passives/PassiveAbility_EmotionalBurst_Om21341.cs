@@ -1,6 +1,6 @@
-﻿using BLL_Om21341.Enum;
+﻿using OmoriMod_Om21341.BLL_Om21341.Enum;
 
-namespace EmotionalBurstPassive_Om21341.Passives
+namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives
 {
     public class PassiveAbility_EmotionalBurst_Om21341 : PassiveAbilityBase
     {

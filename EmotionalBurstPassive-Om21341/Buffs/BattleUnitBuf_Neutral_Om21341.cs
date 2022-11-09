@@ -1,4 +1,4 @@
-﻿namespace EmotionalBurstPassive_Om21341.Buffs
+﻿namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs
 {
     public class BattleUnitBuf_Neutral_Om21341 : BattleUnitBuf
     {

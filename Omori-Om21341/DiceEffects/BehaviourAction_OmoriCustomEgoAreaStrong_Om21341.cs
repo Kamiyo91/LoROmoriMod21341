@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Omori_Om21341.DiceEffects
+namespace OmoriMod_Om21341.Omori_Om21341.DiceEffects
 {
     public class BehaviourAction_OmoriCustomEgoAreaStrong_Om21341 : BehaviourActionBase
     {

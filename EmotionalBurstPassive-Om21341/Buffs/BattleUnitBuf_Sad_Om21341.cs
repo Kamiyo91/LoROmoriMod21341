@@ -1,6 +1,6 @@
-﻿using EmotionalBurstPassive_Om21341.Passives;
+﻿using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
 
-namespace EmotionalBurstPassive_Om21341.Buffs
+namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs
 {
     public class BattleUnitBuf_Sad_Om21341 : BattleUnitBuf
     {

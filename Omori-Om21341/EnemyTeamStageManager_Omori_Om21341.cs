@@ -1,18 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using BLL_Om21341;
-using CustomMapUtility;
-using EmotionalBurstPassive_Om21341.Passives;
-using KamiyoStaticBLL.Enums;
-using KamiyoStaticBLL.Models;
-using KamiyoStaticUtil.Utils;
+using BigDLL4221.Enum;
+using BigDLL4221.Models;
+using BigDLL4221.Utils;
 using LOR_XML;
-using Omori_Om21341.MapManagers;
-using Omori_Om21341.Passives;
+using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
+using OmoriMod_Om21341.Omori_Om21341.MapManagers;
+using OmoriMod_Om21341.Omori_Om21341.Passives;
+using OmoriMod_Om21341.Util_Om21341;
 using UnityEngine;
 
-namespace Omori_Om21341
+namespace OmoriMod_Om21341.Omori_Om21341
 {
+#pragma warning disable
     public class EnemyTeamStageManager_Omori_Om21341 : EnemyTeamStageManager
     {
         private int _linesCount;
@@ -102,13 +103,14 @@ namespace Omori_Om21341
                             {
                                 id = "Omori",
                                 dialog =
-                                    ModParameters.EffectTexts.ContainsKey(
+                                    ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts.ContainsKey(
                                         $"OmoriPhase{_omoriPassive.GetMech().GetPhase()}Line{_linesCount}_Om21341")
-                                        ? ModParameters.EffectTexts.FirstOrDefault(x =>
+                                        ? ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                                            .FirstOrDefault(x =>
                                                 x.Key.Equals(
                                                     $"OmoriPhase{_omoriPassive.GetMech().GetPhase()}Line{_linesCount}_Om21341"))
                                             .Value.Desc
-                                        : ModParameters.EffectTexts
+                                        : ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
                                             .FirstOrDefault(x => x.Key.Equals("OmoriFinalLine_Om21341")).Value.Desc
                             }
                         }, AbColorType.Negative);
@@ -121,7 +123,8 @@ namespace Omori_Om21341
                             new AbnormalityCardDialog
                             {
                                 id = "Omori",
-                                dialog = ModParameters.EffectTexts.FirstOrDefault(x =>
+                                dialog = ModParameters.LocalizedItems[OmoriModParameters.PackageId].EffectTexts
+                                    .FirstOrDefault(x =>
                                         x.Key.Equals(
                                             $"OmoriSurvive{(_omoriPassive.GetMech().GetPhase() < 2 ? 1 : 2)}_Om21341"))
                                     .Value.Desc
@@ -164,7 +167,7 @@ namespace Omori_Om21341
         public override void OnEndBattle()
         {
             foreach (var unit in _playerUnits) unit.Revive(1);
-            MapStaticUtil.UnloadBoomEffect();
+            CommonUtil.UnloadBoomEffect();
         }
     }
 }

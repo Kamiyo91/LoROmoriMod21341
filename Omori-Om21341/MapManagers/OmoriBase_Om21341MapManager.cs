@@ -1,9 +1,10 @@
-﻿using CustomMapUtility;
+﻿using BigDLL4221.Utils;
+using OmoriMod_Om21341.Util_Om21341.CommonMaps;
 using UnityEngine;
-using Util_Om21341.CommonMaps;
 
-namespace Omori_Om21341.MapManagers
+namespace OmoriMod_Om21341.Omori_Om21341.MapManagers
 {
+#pragma warning disable
     public class OmoriBase_Om21341MapManager : OmoriBoomEffectMap_Om21341MapManager
     {
         private AudioClip _introClip;

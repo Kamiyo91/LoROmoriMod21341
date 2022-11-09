@@ -1,4 +1,4 @@
-﻿namespace Omori_Om21341.Passives
+﻿namespace OmoriMod_Om21341.Omori_Om21341.Passives
 {
     public class PassiveAbility_YouShouldJustDie_Om21341 : PassiveAbilityBase
     {
