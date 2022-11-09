@@ -162,13 +162,15 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     cannotBeUsedWithPassives: new List<LorId>
                     {
                         new LorId(OmoriModParameters.PackageId, 46), new LorId(OmoriModParameters.PackageId, 47),
-                        new LorId(OmoriModParameters.PackageId, 48)
-                    }),
+                        new LorId(OmoriModParameters.PackageId, 48),new LorId(OmoriModParameters.PackageId, 51)
+                    },passiveColorOptions:new PassiveColorOptions(new Color(1f, 0.6f, 0.6f),new Color(1f, 0.6f, 0.6f))),
                 new PassiveOptions(46,
                     cannotBeUsedWithPassives: new List<LorId>
-                        { new LorId(OmoriModParameters.PackageId, 47), new LorId(OmoriModParameters.PackageId, 48) }),
+                        { new LorId(OmoriModParameters.PackageId, 47), new LorId(OmoriModParameters.PackageId, 48), new LorId(OmoriModParameters.PackageId, 28),new LorId(OmoriModParameters.PackageId, 51)}, passiveColorOptions : new PassiveColorOptions(new Color(1f, 1f, 0.6f), new Color(1f, 1f, 0.6f))),
                 new PassiveOptions(47,
-                    cannotBeUsedWithPassives: new List<LorId> { new LorId(OmoriModParameters.PackageId, 48) }),
+                    cannotBeUsedWithPassives: new List<LorId> { new LorId(OmoriModParameters.PackageId, 48),new LorId(OmoriModParameters.PackageId, 46),new LorId(OmoriModParameters.PackageId, 28),new LorId(OmoriModParameters.PackageId, 51) },passiveColorOptions:new PassiveColorOptions(new Color(0.6f, 0.8f, 1f),new Color(0.6f, 0.8f, 1f))),
+                new PassiveOptions(48,
+                    cannotBeUsedWithPassives: new List<LorId> { new LorId(OmoriModParameters.PackageId, 47),new LorId(OmoriModParameters.PackageId, 46),new LorId(OmoriModParameters.PackageId, 28),new LorId(OmoriModParameters.PackageId, 51) },passiveColorOptions:new PassiveColorOptions(Color.gray,Color.gray)),
                 new PassiveOptions(35, false),
                 new PassiveOptions(51, false,
                     cannotBeUsedWithPassives: new List<LorId>
