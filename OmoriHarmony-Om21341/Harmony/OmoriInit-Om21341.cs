@@ -67,7 +67,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     cardColorOptions: new CardColorOptions(new Color(1f, 1f, 0.6f),
                         customIconColor: new Color(1f, 1f, 0.6f), useHSVFilter: false)),
                 new CardOptions(35, CardOption.Personal,
-                    cardColorOptions: new CardColorOptions(Color.gray, iconColor:HSVColors.Black)),
+                    cardColorOptions: new CardColorOptions(Color.gray, iconColor: HSVColors.Black)),
                 new CardOptions(66, CardOption.EgoPersonal),
                 new CardOptions(67, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) }),
@@ -85,15 +85,18 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) }),
                 new CardOptions(74, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) },
-                    cardColorOptions: new CardColorOptions(Color.gray,  customIconColor: new Color(0.5f, 0.5f, 0.5f),iconColor: HSVColors.Black)),
+                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: new Color(0.5f, 0.5f, 0.5f),
+                        iconColor: HSVColors.Black)),
                 new CardOptions(75, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) },
-                    cardColorOptions: new CardColorOptions(Color.gray,  customIconColor: new Color(0.5f, 0.5f, 0.5f),iconColor: HSVColors.Black)),
+                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: new Color(0.5f, 0.5f, 0.5f),
+                        iconColor: HSVColors.Black)),
                 new CardOptions(76, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) }),
                 new CardOptions(77, CardOption.OnlyPage, new List<string> { "OmoriPage_Om21341" },
                     new List<LorId> { new LorId(OmoriModParameters.PackageId, 10000001) },
-                    cardColorOptions: new CardColorOptions(Color.gray,  customIconColor: new Color(0.5f, 0.5f, 0.5f),iconColor: HSVColors.Black))
+                    cardColorOptions: new CardColorOptions(Color.gray, customIconColor: new Color(0.5f, 0.5f, 0.5f),
+                        iconColor: HSVColors.Black))
             });
         }
 
@@ -162,15 +165,28 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     cannotBeUsedWithPassives: new List<LorId>
                     {
                         new LorId(OmoriModParameters.PackageId, 46), new LorId(OmoriModParameters.PackageId, 47),
-                        new LorId(OmoriModParameters.PackageId, 48),new LorId(OmoriModParameters.PackageId, 51)
-                    },passiveColorOptions:new PassiveColorOptions(new Color(1f, 0.6f, 0.6f),new Color(1f, 0.6f, 0.6f))),
+                        new LorId(OmoriModParameters.PackageId, 48), new LorId(OmoriModParameters.PackageId, 51)
+                    },
+                    passiveColorOptions: new PassiveColorOptions(new Color(1f, 0.6f, 0.6f), new Color(1f, 0.6f, 0.6f))),
                 new PassiveOptions(46,
                     cannotBeUsedWithPassives: new List<LorId>
-                        { new LorId(OmoriModParameters.PackageId, 47), new LorId(OmoriModParameters.PackageId, 48), new LorId(OmoriModParameters.PackageId, 28),new LorId(OmoriModParameters.PackageId, 51)}, passiveColorOptions : new PassiveColorOptions(new Color(1f, 1f, 0.6f), new Color(1f, 1f, 0.6f))),
+                    {
+                        new LorId(OmoriModParameters.PackageId, 47), new LorId(OmoriModParameters.PackageId, 48),
+                        new LorId(OmoriModParameters.PackageId, 28), new LorId(OmoriModParameters.PackageId, 51)
+                    }, passiveColorOptions: new PassiveColorOptions(new Color(1f, 1f, 0.6f), new Color(1f, 1f, 0.6f))),
                 new PassiveOptions(47,
-                    cannotBeUsedWithPassives: new List<LorId> { new LorId(OmoriModParameters.PackageId, 48),new LorId(OmoriModParameters.PackageId, 46),new LorId(OmoriModParameters.PackageId, 28),new LorId(OmoriModParameters.PackageId, 51) },passiveColorOptions:new PassiveColorOptions(new Color(0.6f, 0.8f, 1f),new Color(0.6f, 0.8f, 1f))),
+                    cannotBeUsedWithPassives: new List<LorId>
+                    {
+                        new LorId(OmoriModParameters.PackageId, 48), new LorId(OmoriModParameters.PackageId, 46),
+                        new LorId(OmoriModParameters.PackageId, 28), new LorId(OmoriModParameters.PackageId, 51)
+                    },
+                    passiveColorOptions: new PassiveColorOptions(new Color(0.6f, 0.8f, 1f), new Color(0.6f, 0.8f, 1f))),
                 new PassiveOptions(48,
-                    cannotBeUsedWithPassives: new List<LorId> { new LorId(OmoriModParameters.PackageId, 47),new LorId(OmoriModParameters.PackageId, 46),new LorId(OmoriModParameters.PackageId, 28),new LorId(OmoriModParameters.PackageId, 51) },passiveColorOptions:new PassiveColorOptions(Color.gray,Color.gray)),
+                    cannotBeUsedWithPassives: new List<LorId>
+                    {
+                        new LorId(OmoriModParameters.PackageId, 47), new LorId(OmoriModParameters.PackageId, 46),
+                        new LorId(OmoriModParameters.PackageId, 28), new LorId(OmoriModParameters.PackageId, 51)
+                    }, passiveColorOptions: new PassiveColorOptions(Color.gray, Color.gray)),
                 new PassiveOptions(35, false),
                 new PassiveOptions(51, false,
                     cannotBeUsedWithPassives: new List<LorId>
