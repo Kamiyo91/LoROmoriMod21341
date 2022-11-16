@@ -144,12 +144,31 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
         {
             ModParameters.StageOptions.Add(OmoriModParameters.PackageId, new List<StageOptions>
             {
-                new StageOptions(8, preBattleOptions: new PreBattleOptions(
-                        new List<SephirahType>
-                            { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach },
-                        battleType: PreBattleType.SephirahUnits,
-                        sephirahUnits: new List<SephirahType>
-                            { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach }),
+                new StageOptions(8, preBattleOptions: new PreBattleOptions(sephirahUnits:
+                        new Dictionary<SephirahType, List<SephirahType>>
+                        {
+                            {
+                                SephirahType.Hod,
+                                new List<SephirahType>
+                                    { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach }
+                            },
+                            {
+                                SephirahType.Malkuth,
+                                new List<SephirahType>
+                                    { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach }
+                            },
+                            {
+                                SephirahType.Yesod,
+                                new List<SephirahType>
+                                    { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach }
+                            },
+                            {
+                                SephirahType.Netzach,
+                                new List<SephirahType>
+                                    { SephirahType.Hod, SephirahType.Malkuth, SephirahType.Yesod, SephirahType.Netzach }
+                            }
+                        },
+                        battleType: PreBattleType.SephirahUnits),
                     stageRewardOptions: new RewardOptions(
                         new Dictionary<LorId, int> { { new LorId(OmoriModParameters.PackageId, 8), 5 } },
                         messageId: "OmoriDropBook_Om21341"),
