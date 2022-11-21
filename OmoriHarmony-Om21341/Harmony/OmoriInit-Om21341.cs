@@ -125,7 +125,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     customIconSpriteId: OmoriModParameters.PackageId, credenzaBooksId: new List<int>
                     {
                         10000001
-                    }));
+                    },bookDataColor:new CredenzaColorOptions(Color.gray, Color.gray)));
         }
 
         private static void OnInitSprites()
