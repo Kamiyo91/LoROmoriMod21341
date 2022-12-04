@@ -20,6 +20,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
             CardUtil.ChangeCardItem(ItemXmlDataList.instance, OmoriModParameters.PackageId);
             PassiveUtil.ChangePassiveItem(OmoriModParameters.PackageId);
             LocalizeUtil.AddGlobalLocalize(OmoriModParameters.PackageId);
+            ArtUtil.MakeCustomBook(OmoriModParameters.PackageId);
             ArtUtil.PreLoadBufIcons();
             LocalizeUtil.RemoveError();
             CardUtil.InitKeywordsList(new List<Assembly> { Assembly.GetExecutingAssembly() });
@@ -34,6 +35,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                 Uri.UnescapeDataString(new UriBuilder(Assembly.GetExecutingAssembly().CodeBase).Path));
             ModParameters.Path.Add(OmoriModParameters.PackageId, OmoriModParameters.Path);
             ModParameters.DefaultKeyword.Add(OmoriModParameters.PackageId, "OmoriModPage_Om21341");
+            ModParameters.Assemblies.Add(Assembly.GetExecutingAssembly());
             OnInitSprites();
             OnInitKeypages();
             OnInitCards();
@@ -42,8 +44,15 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
             OnInitRewards();
             OnInitStages();
             OnInitCredenza();
+            OnInitCustomSkins();
         }
-
+        private static void OnInitCustomSkins()
+        {
+            ModParameters.CustomBookSkinsOptions.Add(OmoriModParameters.PackageId, new List<CustomBookSkinsOption>
+            {
+                new CustomBookSkinsOption("Omori_Om21341", 10000001, characterNameId: 1)
+            });
+        }
         private static void OnInitRewards()
         {
             ModParameters.StartUpRewardOptions.Add(new RewardOptions(new Dictionary<LorId, int>
