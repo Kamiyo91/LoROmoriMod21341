@@ -50,7 +50,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
         {
             ModParameters.CustomBookSkinsOptions.Add(OmoriModParameters.PackageId, new List<CustomBookSkinsOption>
             {
-                new CustomBookSkinsOption("Omori_Om21341", 10000001, characterNameId: 1)
+                new CustomBookSkinsOption("Omori_Om21341", 10000001, characterNameId: 12)
             });
         }
         private static void OnInitRewards()
