@@ -179,7 +179,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                         },
                         battleType: PreBattleType.SephirahUnits),
                     stageRewardOptions: new RewardOptions(
-                        new Dictionary<LorId, int> { { new LorId(OmoriModParameters.PackageId, 8), 5 } },
+                        new Dictionary<LorId, int> { { new LorId(OmoriModParameters.PackageId, 11), 5 } },
                         messageId: "OmoriDropBook_Om21341"),
                     stageColorOptions: new StageColorOptions(Color.gray, Color.gray))
             });
