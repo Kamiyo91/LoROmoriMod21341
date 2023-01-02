@@ -3,6 +3,7 @@ using System.Linq;
 using BigDLL4221.Enum;
 using BigDLL4221.Models;
 using BigDLL4221.Utils;
+using CustomMapUtility;
 using LOR_XML;
 using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
@@ -16,6 +17,7 @@ namespace OmoriMod_Om21341.Omori_Om21341
 #pragma warning disable
     public class EnemyTeamStageManager_Omori_Om21341 : EnemyTeamStageManager
     {
+        private readonly CustomMapHandler _cmh = CustomMapHandler.GetCMU(OmoriModParameters.PackageId);
         private int _linesCount;
         private BattleUnitModel _omoriModel;
         private PassiveAbility_OmoriNpc_Om21341 _omoriPassive;
@@ -32,22 +34,22 @@ namespace OmoriMod_Om21341.Omori_Om21341
             Overlay.name = "overlay_OmoriOm21341";
             Overlay.loop = true;
             Overlay.Stop();
-            CustomMapHandler.LoadEnemyTheme("boss_OMORI.ogg", out var introClip);
-            LoopClip = CustomMapHandler.ClipCut(introClip, 1860207, 9305332, "boss_OMORI_loop");
-            CustomMapHandler.InitCustomMap("Omori1_Om21341", typeof(Omori1_Om21341MapManager), false, true, 0.5f,
+            _cmh.LoadEnemyTheme("boss_OMORI.ogg", out var introClip);
+            LoopClip = _cmh.ClipCut(introClip, 1860207, 9305332, "boss_OMORI_loop");
+            _cmh.InitCustomMap<Omori1_Om21341MapManager>("Omori1_Om21341", false, true, 0.5f,
                 0.55f);
-            CustomMapHandler.InitCustomMap("Omori2_Om21341", typeof(Omori2_Om21341MapManager), false, false, 0.5f,
+            _cmh.InitCustomMap<Omori2_Om21341MapManager>("Omori2_Om21341", false, false, 0.5f,
                 0.55f);
-            CustomMapHandler.InitCustomMap("Omori3_Om21341", typeof(Omori3_Om21341MapManager), false, false, 0.5f,
+            _cmh.InitCustomMap<Omori3_Om21341MapManager>("Omori3_Om21341", false, false, 0.5f,
                 0.55f);
-            CustomMapHandler.InitCustomMap("Omori4_Om21341", typeof(Omori4_Om21341MapManager), false, false, 0.5f,
+            _cmh.InitCustomMap<Omori4_Om21341MapManager>("Omori4_Om21341", false, false, 0.5f,
                 0.55f);
-            CustomMapHandler.InitCustomMap("Omori5_Om21341", typeof(Omori5_Om21341MapManager), false, false, 0.5f,
+            _cmh.InitCustomMap<Omori5_Om21341MapManager>("Omori5_Om21341", false, false, 0.5f,
                 0.55f);
-            CustomMapHandler.LoadEnemyTheme("b_omori_02.ogg");
-            CustomMapHandler.LoadEnemyTheme("b_omori_03.ogg");
-            CustomMapHandler.LoadEnemyTheme("b_omori_04.ogg");
-            CustomMapHandler.EnforceMap();
+            _cmh.LoadEnemyTheme("b_omori_02.ogg");
+            _cmh.LoadEnemyTheme("b_omori_03.ogg");
+            _cmh.LoadEnemyTheme("b_omori_04.ogg");
+            _cmh.EnforceMap();
             _omoriModel = BattleObjectManager.instance.GetList(Faction.Enemy).FirstOrDefault();
             _omoriPassive = _omoriModel
                 ?.passiveDetail
@@ -87,7 +89,7 @@ namespace OmoriMod_Om21341.Omori_Om21341
 
         public override void OnRoundStart()
         {
-            CustomMapHandler.EnforceMap(_omoriPassive.GetSuccumbStatus() ? 4 : GetPhase());
+            _cmh.EnforceMap(_omoriPassive.GetSuccumbStatus() ? 4 : GetPhase());
         }
 
         public override void OnRoundStart_After()
@@ -150,15 +152,15 @@ namespace OmoriMod_Om21341.Omori_Om21341
             switch (phase)
             {
                 case 1:
-                    Overlay.clip = CustomMapHandler.GetAudioClip("b_omori_02.ogg");
+                    Overlay.clip = _cmh.GetAudioClip("b_omori_02.ogg");
                     Overlay.Play();
                     break;
                 case 2:
-                    Overlay.clip = CustomMapHandler.GetAudioClip("b_omori_03.ogg");
+                    Overlay.clip = _cmh.GetAudioClip("b_omori_03.ogg");
                     Overlay.Play();
                     break;
                 case 3:
-                    Overlay.clip = CustomMapHandler.GetAudioClip("b_omori_04.ogg");
+                    Overlay.clip = _cmh.GetAudioClip("b_omori_04.ogg");
                     Overlay.Play();
                     break;
             }

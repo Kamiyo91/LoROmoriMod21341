@@ -4,6 +4,7 @@ using BigDLL4221.BaseClass;
 using BigDLL4221.Buffs;
 using BigDLL4221.Models;
 using BigDLL4221.Utils;
+using CustomMapUtility;
 using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.BLL_Om21341.Extensions.MechUtilModelExtensions;
 using OmoriMod_Om21341.Omori_Om21341.MapManagers;
@@ -14,7 +15,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
     {
         private readonly MechUtil_OmoriModel _model;
 
-        public MechUtil_Omori(MechUtil_OmoriModel model) : base(model)
+        public MechUtil_Omori(MechUtil_OmoriModel model) : base(model, OmoriModParameters.PackageId)
         {
             _model = model;
         }
@@ -63,7 +64,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
 
         private static void ChangeToOmoriEgoMap()
         {
-            MapUtil.ChangeMap(new MapModel
+            MapUtil.ChangeMap(CustomMapHandler.GetCMU(OmoriModParameters.PackageId), new MapModel
             {
                 Stage = "Omori5_Om21341",
                 OriginalMapStageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
@@ -88,7 +89,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
 
         private static void ChangeToOmoriEgoAttackMap()
         {
-            MapUtil.ChangeMap(new MapModel
+            MapUtil.ChangeMap(CustomMapHandler.GetCMU(OmoriModParameters.PackageId), new MapModel
             {
                 Stage = "Omori2_Om21341",
                 OriginalMapStageIds = new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
@@ -111,14 +112,16 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
         {
             if (!_model.EgoMapAttackUsed) return;
             _model.EgoMapAttackUsed = false;
-            MapUtil.ReturnFromEgoMap("Omori2_Om21341", new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) });
+            MapUtil.ReturnFromEgoMap(CustomMapHandler.GetCMU(OmoriModParameters.PackageId), "Omori2_Om21341",
+                new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) });
         }
 
         public override void ReturnFromEgoMap()
         {
             if (!_model.MapChanged) return;
             _model.MapChanged = false;
-            MapUtil.ReturnFromEgoMap("Omori5_Om21341", new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
+            MapUtil.ReturnFromEgoMap(CustomMapHandler.GetCMU(OmoriModParameters.PackageId), "Omori5_Om21341",
+                new List<LorId> { new LorId(OmoriModParameters.PackageId, 8) },
                 true);
         }
     }

@@ -25,7 +25,6 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
             LocalizeUtil.RemoveError();
             CardUtil.InitKeywordsList(new List<Assembly> { Assembly.GetExecutingAssembly() });
             ArtUtil.InitCustomEffects(new List<Assembly> { Assembly.GetExecutingAssembly() });
-            CustomMapHandler.ModResources.CacheInit.InitCustomMapFiles(Assembly.GetExecutingAssembly());
         }
 
         private static void OnInitParameters()
@@ -46,6 +45,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
             OnInitCredenza();
             OnInitCustomSkins();
         }
+
         private static void OnInitCustomSkins()
         {
             ModParameters.CustomBookSkinsOptions.Add(OmoriModParameters.PackageId, new List<CustomBookSkinsOption>
@@ -53,6 +53,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                 new CustomBookSkinsOption("Omori_Om21341", 10000001, characterNameId: 12)
             });
         }
+
         private static void OnInitRewards()
         {
             ModParameters.StartUpRewardOptions.Add(new RewardOptions(new Dictionary<LorId, int>
@@ -134,7 +135,7 @@ namespace OmoriMod_Om21341.OmoriHarmony_Om21341.Harmony
                     customIconSpriteId: OmoriModParameters.PackageId, credenzaBooksId: new List<int>
                     {
                         10000001
-                    },bookDataColor:new CredenzaColorOptions(Color.gray, Color.gray)));
+                    }, bookDataColor: new CredenzaColorOptions(Color.gray, Color.gray)));
         }
 
         private static void OnInitSprites()
