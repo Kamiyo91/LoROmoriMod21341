@@ -2,12 +2,12 @@
 using System.Linq;
 using BigDLL4221.Enum;
 using BigDLL4221.Models;
+using BigDLL4221.StageManagers;
 using BigDLL4221.Utils;
 using CustomMapUtility;
 using LOR_XML;
 using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
-using OmoriMod_Om21341.Omori_Om21341.MapManagers;
 using OmoriMod_Om21341.Omori_Om21341.Passives;
 using OmoriMod_Om21341.Util_Om21341;
 using UnityEngine;
@@ -15,7 +15,7 @@ using UnityEngine;
 namespace OmoriMod_Om21341.Omori_Om21341
 {
 #pragma warning disable
-    public class EnemyTeamStageManager_Omori_Om21341 : EnemyTeamStageManager
+    public class EnemyTeamStageManager_Omori_Om21341 : EnemyTeamStageManager_BaseWithCMUOnly_DLL4221
     {
         private readonly CustomMapHandler _cmh = CustomMapHandler.GetCMU(OmoriModParameters.PackageId);
         private int _linesCount;
@@ -27,6 +27,12 @@ namespace OmoriMod_Om21341.Omori_Om21341
 
         public override void OnWaveStart()
         {
+            SetParameters(_cmh,
+                new List<MapModel>
+                {
+                    OmoriModParameters.OmoriMap1, OmoriModParameters.OmoriMap2, OmoriModParameters.OmoriMap3,
+                    OmoriModParameters.OmoriMap4, OmoriModParameters.OmoriMap5
+                });
             _playerUnits = new List<BattleUnitModel>();
             Overlay = Object.Instantiate(SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme,
                 SingletonBehavior<BattleSoundManager>.Instance.CurrentPlayingTheme.transform.parent);
@@ -36,20 +42,10 @@ namespace OmoriMod_Om21341.Omori_Om21341
             Overlay.Stop();
             _cmh.LoadEnemyTheme("boss_OMORI.ogg", out var introClip);
             LoopClip = _cmh.ClipCut(introClip, 1860207, 9305332, "boss_OMORI_loop");
-            _cmh.InitCustomMap<Omori1_Om21341MapManager>("Omori1_Om21341", false, true, 0.5f,
-                0.55f);
-            _cmh.InitCustomMap<Omori2_Om21341MapManager>("Omori2_Om21341", false, false, 0.5f,
-                0.55f);
-            _cmh.InitCustomMap<Omori3_Om21341MapManager>("Omori3_Om21341", false, false, 0.5f,
-                0.55f);
-            _cmh.InitCustomMap<Omori4_Om21341MapManager>("Omori4_Om21341", false, false, 0.5f,
-                0.55f);
-            _cmh.InitCustomMap<Omori5_Om21341MapManager>("Omori5_Om21341", false, false, 0.5f,
-                0.55f);
+            base.OnWaveStart();
             _cmh.LoadEnemyTheme("b_omori_02.ogg");
             _cmh.LoadEnemyTheme("b_omori_03.ogg");
             _cmh.LoadEnemyTheme("b_omori_04.ogg");
-            _cmh.EnforceMap();
             _omoriModel = BattleObjectManager.instance.GetList(Faction.Enemy).FirstOrDefault();
             _omoriPassive = _omoriModel
                 ?.passiveDetail
@@ -89,7 +85,8 @@ namespace OmoriMod_Om21341.Omori_Om21341
 
         public override void OnRoundStart()
         {
-            _cmh.EnforceMap(_omoriPassive.GetSuccumbStatus() ? 4 : GetPhase());
+            ChangePhase(_omoriPassive.GetSuccumbStatus() ? 4 : GetPhase());
+            base.OnRoundStart();
         }
 
         public override void OnRoundStart_After()
