@@ -26,6 +26,16 @@ namespace OmoriMod_Om21341.Omori_Om21341.Passives
             owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_AfraidImmunity_Om21341());
             if (Singleton<StageController>.Instance.EnemyStageManager is EnemyTeamStageManager_Omori_Om21341 manager)
                 _mechUtil.SetStageManager(manager);
+            if (Singleton<StageController>.Instance.GetStageModel().ClassInfo.id.packageId == "RushBattle21341.Mod")
+            {
+                var passive =
+                    (PassiveAbility_OmoriMaps_Om21341)owner.passiveDetail.AddPassive(
+                        new PassiveAbility_OmoriMaps_Om21341());
+                passive.OnWaveStart();
+                passive.Hide();
+                _mechUtil.SetPassiveManager(passive);
+            }
+
             owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_ChangeCardCost_DLL4221());
             owner.bufListDetail.AddBufWithoutDuplication(new BattleUnitBuf_Immortal_DLL4221(false, infinite: true,
                 lastOneScene: false, canRecoverHp: true, canRecoverBp: true));
@@ -60,7 +70,9 @@ namespace OmoriMod_Om21341.Omori_Om21341.Passives
 
         public override void OnDieOtherUnit(BattleUnitModel unit)
         {
-            if (_mechUtil.GetPhase() > 2) _mechUtil.GetStageManager()?.AddUnitToReviveList(unit);
+            if (_mechUtil.GetPhase() <= 2) return;
+            _mechUtil.GetStageManager()?.AddUnitToReviveList(unit);
+            _mechUtil.GetPassiveManager()?.AddUnitToReviveList(unit);
         }
 
         public override void AfterTakeDamage(BattleUnitModel attacker, int dmg)

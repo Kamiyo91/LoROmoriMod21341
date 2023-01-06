@@ -7,12 +7,14 @@ using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.BLL_Om21341.Extensions.MechUtilModelExtensions;
 using OmoriMod_Om21341.Omori_Om21341.Buffs;
 using OmoriMod_Om21341.Omori_Om21341.MapManagers;
+using OmoriMod_Om21341.Omori_Om21341.Passives;
 
 namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
 {
     public class NpcMechUtil_Omori : NpcMechUtilBase
     {
         private readonly NpcMechUtil_OmoriModel _model;
+        private PassiveAbility_OmoriMaps_Om21341 _om;
         private EnemyTeamStageManager_Omori_Om21341 _stageManager;
 
         public NpcMechUtil_Omori(NpcMechUtil_OmoriModel model) : base(model, OmoriModParameters.PackageId)
@@ -33,6 +35,16 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
         public void SetStageManager(EnemyTeamStageManager_Omori_Om21341 manager)
         {
             _stageManager = manager;
+        }
+
+        public void SetPassiveManager(PassiveAbility_OmoriMaps_Om21341 passive)
+        {
+            _om = passive;
+        }
+
+        public PassiveAbility_OmoriMaps_Om21341 GetPassiveManager()
+        {
+            return _om;
         }
 
         public EnemyTeamStageManager_Omori_Om21341 GetStageManager()
@@ -130,6 +142,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
                 {
                     IncreasePhase();
                     _stageManager?.SetOverlay(GetPhase());
+                    _om?.SetOverlay(GetPhase());
                     if (GetPhase() == 3)
                     {
                         _model.Owner.passiveDetail.AddPassive(new LorId(OmoriModParameters.PackageId, 54));
@@ -139,6 +152,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
                     }
                     else
                     {
+                        _om?.SetLinesTo0();
                         _stageManager?.SetLinesTo0();
                     }
                 }
@@ -158,14 +172,14 @@ namespace OmoriMod_Om21341.Omori_Om21341.MechUtil
 
         private void BattleEnding()
         {
+            _model.Owner.DieFake();
+            if (_om != null) return;
             foreach (var unit in BattleObjectManager.instance.GetAliveList(
                          UnitUtil.ReturnOtherSideFaction(_model.Owner.faction)))
             {
                 _stageManager?.AddUnitToReviveList(unit);
                 unit.Die();
             }
-
-            _model.Owner.DieFake();
         }
 
         public void OmoriShimmering()

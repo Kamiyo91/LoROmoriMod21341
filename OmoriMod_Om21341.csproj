@@ -116,6 +116,7 @@
     <Compile Include="Omori-Om21341\MechUtil\NpcMechUtil_Omori.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_KitchenKnife_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_MariProtection_Om21341.cs" />
+    <Compile Include="Omori-Om21341\Passives\PassiveAbility_OmoriMaps_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_OmoriNpc_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_Omori_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_YouShouldJustDie_Om21341.cs" />
