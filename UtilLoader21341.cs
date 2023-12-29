@@ -233,7 +233,7 @@ namespace OmoriMod_Om21341
                 new CategoryOptionRoot
                 {
                     PackageId = OmoriModParameters.PackageId, AdditionalValue = "1",
-                    CustomIconSpriteId = "TheColorFloor_C21341", CategoryNameId = "TheColorsC21341.Mod",
+                    CustomIconSpriteId = "OmoriModOm21341.Mod", CategoryNameId = "OmoriModOm21341.Mod",
                     CredenzaBooksId = new List<int>
                         { 10000001 },
                     CategoryBooksId = new List<int>
