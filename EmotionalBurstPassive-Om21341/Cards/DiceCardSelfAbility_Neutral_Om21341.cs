@@ -1,7 +1,7 @@
-﻿using BigDLL4221.Utils;
-using OmoriMod_Om21341.BLL_Om21341;
+﻿using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives;
+using UtilLoader21341.Util;
 
 namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Cards
 {

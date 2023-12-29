@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using BigDLL4221.Utils;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341;
+using UtilLoader21341.Util;
 
 namespace OmoriMod_Om21341.Omori_Om21341.Cards
 {

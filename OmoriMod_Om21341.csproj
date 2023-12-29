@@ -31,8 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="1BigDLL4221">
-      <HintPath>..\DLL\bin\Release\1BigDLL4221.dll</HintPath>
+    <Reference Include="1CustomColorUtil">
+      <HintPath>..\CustomColorUtil\bin\Release\1CustomColorUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="1UtilLoader21341">
+      <HintPath>..\LoaderDLL\bin\Release\1UtilLoader21341.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -63,9 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL-Om21341\Enum\EmotionBufEnum.cs" />
-    <Compile Include="BLL-Om21341\Extensions\MechUtilModelExtensions\MechUtil_OmoriModel.cs" />
-    <Compile Include="BLL-Om21341\Extensions\MechUtilModelExtensions\NpcMechUtil_OmoriModel.cs" />
     <Compile Include="BLL-Om21341\OmoriModParameters.cs" />
+    <Compile Include="CustomColorLoader21341.cs" />
     <Compile Include="EmotionalBurstPassive-Om21341\Buffs\BattleUnitBuf_Afraid_Om21341.cs" />
     <Compile Include="EmotionalBurstPassive-Om21341\Buffs\BattleUnitBuf_Angry_Om21341.cs" />
     <Compile Include="EmotionalBurstPassive-Om21341\Buffs\BattleUnitBuf_Happy_Om21341.cs" />
@@ -104,18 +106,15 @@
     <Compile Include="Omori-Om21341\DiceEffects\BehaviourAction_OmoriHackAway_Om21341.cs" />
     <Compile Include="Omori-Om21341\DiceEffects\FarAreaEffect_OmoriCustomEgoAreaStrong_Om21341.cs" />
     <Compile Include="Omori-Om21341\DiceEffects\FarAreaEffect_OmoriHackAway_Om21341.cs" />
-    <Compile Include="Omori-Om21341\EnemyTeamStageManager_Omori_Om21341.cs" />
     <Compile Include="Omori-Om21341\MapManagers\Omori1_Om21341MapManager.cs" />
     <Compile Include="Omori-Om21341\MapManagers\Omori2_Om21341MapManager.cs" />
     <Compile Include="Omori-Om21341\MapManagers\Omori3_Om21341MapManager.cs" />
     <Compile Include="Omori-Om21341\MapManagers\Omori4_Om21341MapManager.cs" />
     <Compile Include="Omori-Om21341\MapManagers\Omori5_Om21341MapManager.cs" />
     <Compile Include="Omori-Om21341\MapManagers\OmoriBase_Om21341MapManager.cs" />
-    <Compile Include="Omori-Om21341\MechUtil\MechUtil_Omori.cs" />
-    <Compile Include="Omori-Om21341\MechUtil\NpcMechUtil_Omori.cs" />
+    <Compile Include="Omori-Om21341\OmoriUtil.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_KitchenKnife_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_MariProtection_Om21341.cs" />
-    <Compile Include="Omori-Om21341\Passives\PassiveAbility_OmoriMaps_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_OmoriNpc_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_Omori_Om21341.cs" />
     <Compile Include="Omori-Om21341\Passives\PassiveAbility_YouShouldJustDie_Om21341.cs" />
@@ -123,6 +122,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util-Om21341\CommonMaps\OmoriBoomEffectMap_Om21341MapManager.cs" />
     <Compile Include="Util-Om21341\CommonUtil.cs" />
+    <Compile Include="UtilLoader21341.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

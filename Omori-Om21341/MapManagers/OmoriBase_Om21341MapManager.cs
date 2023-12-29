@@ -1,7 +1,10 @@
-﻿using CustomMapUtility;
+﻿using System.Linq;
+using CustomMapUtility;
 using OmoriMod_Om21341.BLL_Om21341;
+using OmoriMod_Om21341.Omori_Om21341.Passives;
 using OmoriMod_Om21341.Util_Om21341.CommonMaps;
 using UnityEngine;
+using UtilLoader21341.Util;
 
 namespace OmoriMod_Om21341.Omori_Om21341.MapManagers
 {
@@ -12,7 +15,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.MapManagers
         private AudioClip _introClip;
         private AudioClip _loopClip;
         private AudioSource _overlay;
-        private EnemyTeamStageManager_Omori_Om21341 _stageManager;
+        private PassiveAbility_OmoriNpc_Om21341 passive;
 
         public override void EnableMap(bool b)
         {
@@ -25,11 +28,13 @@ namespace OmoriMod_Om21341.Omori_Om21341.MapManagers
         {
             base.InitializeMap();
             _introClip = _cmh.GetAudioClip("boss_OMORI.ogg");
-            _stageManager =
-                Singleton<StageController>.Instance.EnemyStageManager as EnemyTeamStageManager_Omori_Om21341;
-            _loopClip = _stageManager?.LoopClip ??
+            var unit = BattleObjectManager.instance.GetAliveList().FirstOrDefault(x =>
+                x.passiveDetail.PassiveList.Any(y => y is PassiveAbility_OmoriNpc_Om21341));
+            if (unit == null) return;
+            passive = unit.GetActivePassive<PassiveAbility_OmoriNpc_Om21341>();
+            _loopClip = passive?.LoopClip ??
                         _cmh.ClipCut(_introClip, 1860207, 9305332, "boss_OMORI_loop");
-            _overlay = _stageManager?.Overlay;
+            _overlay = passive?.Overlay;
         }
 
         protected override void LateUpdate()

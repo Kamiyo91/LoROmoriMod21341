@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using BigDLL4221.Models;
 using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
+using UtilLoader21341;
 
 namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives
 {

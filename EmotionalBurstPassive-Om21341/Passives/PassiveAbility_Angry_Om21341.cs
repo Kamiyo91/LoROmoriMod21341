@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using BigDLL4221.Models;
-using BigDLL4221.Utils;
 using OmoriMod_Om21341.BLL_Om21341;
 using OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Buffs;
+using UtilLoader21341;
+using UtilLoader21341.Util;
 
 namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives
 {
@@ -91,7 +91,7 @@ namespace OmoriMod_Om21341.EmotionalBurstPassive_Om21341.Passives
 
         public override bool BeforeTakeDamage(BattleUnitModel attacker, int dmg)
         {
-            UnitUtil.SetPassiveCombatLog(this, owner);
+            owner.SetPassiveCombatLog(this);
             owner.battleCardResultLog?.AddEmotionCoin(EmotionCoinType.Negative,
                 owner.emotionDetail.CreateEmotionCoin(EmotionCoinType.Negative));
             return base.BeforeTakeDamage(attacker, dmg);

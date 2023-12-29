@@ -1,5 +1,5 @@
-﻿using BigDLL4221.Utils;
-using OmoriMod_Om21341.BLL_Om21341;
+﻿using OmoriMod_Om21341.BLL_Om21341;
+using UtilLoader21341.Util;
 
 namespace OmoriMod_Om21341.Omori_Om21341.Passives
 {
@@ -7,7 +7,7 @@ namespace OmoriMod_Om21341.Omori_Om21341.Passives
     {
         public override void OnStartBattle()
         {
-            UnitUtil.ReadyCounterCard(owner, 78, OmoriModParameters.PackageId);
+            owner.ReadyCounterCard(78, OmoriModParameters.PackageId);
         }
     }
 }
